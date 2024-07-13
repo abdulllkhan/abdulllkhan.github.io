@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abdul Samad Zaheer Khan - Personal Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Menlo&display=swap');
+
+        body {
+            font-family: 'Menlo', monospace;
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
+            border-radius: 10px;
+        }
+
+        h1, h2, h3 {
+            color: var(--primary-color);
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            border-bottom: 1px solid var(--primary-color);
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        p, li {
+            color: var(--text-color);
+        }
+
+        .contact-info {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .contact-info a {
+            color: var(--link-color);
+            text-decoration: underline;
+            margin: 0 5px;
+        }
+
+        .contact-info p {
+            margin: 5px 0;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 10px;
+        }
+
+        ul li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--link-color);
+            font-size: 20px;
+            line-height: 20px;
+        }
+
+        .section {
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .section h2 {
+            padding: 5px 10px;
+            border-radius: 5px;
+            display: inline-block;
+        }
+
+        .toggle-button {
+            background-color: transparent;
+            color: var(--button-text-color);
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.5em;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            transition: color 0.3s;
+        }
+
+        .toggle-button:hover {
+            color: var(--button-hover-color);
+        }
+
+        .dark-mode {
+            --background-color: #1e1e1e;
+            --primary-color: #569cd6;
+            --text-color: #d4d4d4;
+            --link-color: #4fc1ff;
+            --link-hover-color: #50bfff;
+            --section-background-color: #333333;
+            --button-text-color: #d4d4d4;
+            --button-hover-color: #ffffff;
+        }
+
+        .light-mode {
+            --background-color: #ffffff;
+            --primary-color: #007acc;
+            --text-color: #000000;
+            --link-color: #0066cc;
+            --link-hover-color: #005bb5;
+            --section-background-color: #f1f1f1;
+            --button-text-color: #000000;
+            --button-hover-color: #000000;
+        }
+
+        body {
+            background-color: var(--background-color);
+        }
+
+        .container {
+            background-color: var(--section-background-color);
+        }
+    </style>
+</head>
+<body class="light-mode">
+    <button class="toggle-button" onclick="toggleMode()">
+        <i class="fa fa-moon"></i>
+    </button>
+
+    <div class="container" data-aos="fade-up">
+        <h1>Abdul Samad Zaheer Khan</h1>
+        <div class="contact-info" data-aos="fade-up">
+            <div>
+                <a href="mailto:abdulskhan47@gmail.com">abdulskhan47@gmail.com</a> | 
+                <a href="mailto:ak9943@nyu.edu">ak9943@nyu.edu</a> |
+                <a href="https://www.linkedin.com/in/abdulsamadzkhan">LinkedIn</a> | 
+                <a href="https://github.com/abdulllkhan">GitHub</a> | 
+                <a href="https://leetcode.com/abdulllkhan">LeetCode</a> 
+                <p>+1 9293265267</p>
+            </div>
+        </div>
+
+        <div class="section" id="about" data-aos="fade-up">
+            <h2>About Me</h2>
+            <p>I am a dedicated and passionate software developer with experience in various technologies. I enjoy solving complex problems and am always eager to learn new skills and improve my knowledge.</p>
+        </div>
+
+        <div class="section" id="work" data-aos="fade-up">
+            <h2>Work Experience</h2>
+            <h3>Software Development Engineer - 1, Finflux</h3>
+            <p>Bengaluru, India | Nov 2022 - July 2023</p>
+            <ul>
+                <li>Built a new standalone product ELMS that calculates the total exposure of an individual using multiple financial services of a single financial institution.</li>
+                <li>Resolved L3-Bugs which were mostly production issues of company’s main product LMS.</li>
+                <li>Skills utilized: Java 17, Spring Boot, Copilot, Git, MySQL, Liquibase, Docker, Jenkins, ArgoCD, SFTP, etc.</li>
+            </ul>
+        </div>
+
+        <div class="section" data-aos="fade-up">
+            <h2>Projects</h2>
+            <p>For detailed information on my projects, please visit the <a href="projects.html">Projects Page</a>.</p>
+        </div>
+
+        <div class="section" id="education" data-aos="fade-up">
+            <h2>Education</h2>
+            <h3>New York University</h3>
+            <p>M.Sc in Computer Engineering | New York City | Aug 2023 - May 2025</p>
+            <ul>
+                <li>Courses: Machine Learning, Data Structures and Algorithms, Computer System Architecture, Deep Learning(Spring), Applied Matrix Theory(Spring), Real Time Embedded Systems(Spring).</li>
+            </ul>
+            
+            <h3>The National Institute of Engineering</h3>
+            <p>BE in Computer Science and Engineering | Mysuru, India | Aug 2017 - June 2021</p>
+            <ul>
+                <li>Concluded Bachelors with Engineering Honors and a CGPA of 9.00.</li>
+                <li>Courses: Advanced Mathematics and Statistics, Advanced Algorithms, Parallel Programming, Formal Language, Automata Theory, Computer Networks, Object Oriented Modeling, Computer Architecture.</li>
+            </ul>
+        </div>
+
+        <div class="section" id="skills" data-aos="fade-up">
+            <h2>Skills</h2>
+            <ul>
+                <li><strong>Technical Skills:</strong> Problem Solving, Data Structures and Algorithms, OOPS, Machine Learning.</li>
+                <li><strong>Languages:</strong> C, C++, Python, Java.</li>
+                <li><strong>Tools and Frameworks:</strong> Git, RISC-V, UNIX, MySQL, Spring Boot, Docker, Liquibase, Jenkins.</li>
+            </ul>
+        </div>
+
+        <!-- <div class="section" id="courses" data-aos="fade-up">
+            <h2>Online Courses</h2>
+            <ul>
+                <li>Earned Machine Learning, AI For Everyone, Blockchain Basics, and other related certificates of upcoming technologies.</li>
+            </ul>
+        </div>
+
+        <div class="section" id="activities" data-aos="fade-up">
+            <h2>Extracurricular Activities</h2>
+            <ul>
+                <li>Core member of SASE (Society of Asian Scientists and Engineers) and IEEE.</li>
+                <li>Worked with my local community in my hometown Sirsi during the 2019 floods that occurred in Kerala and Karnataka.</li>
+                <li>Member of the Sponsorship committee of TechNIEks (annual college fest) for two consecutive years.</li>
+            </ul>
+        </div> -->
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init();
+
+        function toggleMode() {
+            const body = document.body;
+            const icon = document.querySelector('.toggle-button i');
+            if (body.classList.contains('light-mode')) {
+                body.classList.remove('light-mode');
+                body.classList.add('dark-mode');
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+            } else {
+                body.classList.remove('dark-mode');
+                body.classList.add('light-mode');
+                icon.classList.remove('fa-sun');
+                icon.classList.add('fa-moon');
+            }
+        }
+    </script>
+</body>
+</html>
