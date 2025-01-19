@@ -3,239 +3,210 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abdul Samad Zaheer Khan - Personal Website</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" />
+    <title>Abdul Resume</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Menlo&display=swap');
-
-        body {
-            font-family: 'Menlo', monospace;
-            margin: 0;
-            padding: 0;
-            transition: background-color 0.3s, color 0.3s;
+        body{
+            font-size: 1em;
         }
-
-        .container {
+        .main{
+            padding: 3rem;
+            display: flex;
+            gap: 2rem;
+        }
+        .name{
+            color: #256996;
+            font-size: 2rem;
+            font-weight: 400;
+            margin-top: 0px;
+            margin-bottom: 0.5rem;
+        }
+        .left{
+            width: 20%;
+            position: fixed;
+        }
+        .right{
             width: 80%;
-            margin: auto;
-            overflow: hidden;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            margin-top: 30px;
-            border-radius: 10px;
+            overflow-y: auto;
+            margin-left: auto;
         }
-
-        h1, h2, h3 {
-            color: var(--primary-color);
+        .title{
+            font-size: 1.5rem;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            font-weight: 700;
+            font-family: Quicksand, Helvetica Neue, Helvetica, Tahoma, Verdana, sans-serif;
         }
+        .info{
+            font-family: Verdana, Helvetica Neue, Helvetica, Tahoma, Verdana, sans-serif;
+        }
+        .right-font{
+            font-size: 1rem;
+        }
+        .pb-2{
+            padding-bottom: 0.5rem;
+        }
+        .subtitle{
+            font-size: 1rem;
+            font-weight: bold;
+            color: #323232;
+            font-family: Verdana, Helvetica Neue, Helvetica, Tahoma, Verdana, sans-serif;
+            padding-bottom: 1rem;
+        }
+        .pb-4{
+            padding-bottom: 1rem;
+        }
+        .pb-6{
+            padding-bottom: 1.5rem;
+        }
+        .font-bold{
+            font-weight: 700;
+            color: #323232;
 
-        h1 {
+        }
+        .container1{
+            width: 14rem;
+            float: right;
+        }
+        .section-padding{
+            padding-bottom: 2rem;
+        }
+        .ml-3{
+            margin-left: 5rem;
+        }
+        .email{
+            color: #256996;
             text-align: center;
-            font-size: 2.5em;
-            margin-bottom: 10px;
         }
-
-        h2 {
-            border-bottom: 1px solid var(--primary-color);
-            padding-bottom: 5px;
-            margin-bottom: 20px;
-        }
-
-        h3 {
-            margin-top: 20px;
-            margin-bottom: 10px;
-        }
-
-        p, li {
-            color: var(--text-color);
-        }
-
-        .contact-info {
-            margin-bottom: 20px;
-            text-align: center;
-        }
-
-        .contact-info a {
-            color: var(--link-color);
-            text-decoration: underline;
-            margin: 0 5px;
-        }
-
-        .contact-info p {
-            margin: 5px 0;
-        }
-
-        ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        ul li {
-            position: relative;
-            padding-left: 20px;
-            margin-bottom: 10px;
-        }
-
-        ul li::before {
-            content: "•";
-            position: absolute;
-            left: 0;
-            color: var(--link-color);
-            font-size: 20px;
-            line-height: 20px;
-        }
-
-        .section {
-            padding: 15px;
-            border-radius: 10px;
-            margin-bottom: 20px;
-        }
-
-        .section h2 {
-            padding: 5px 10px;
-            border-radius: 5px;
-            display: inline-block;
-        }
-
-        .toggle-button {
-            background-color: transparent;
-            color: var(--button-text-color);
-            border: none;
-            padding: 10px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1.5em;
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            transition: color 0.3s;
-        }
-
-        .toggle-button:hover {
-            color: var(--button-hover-color);
-        }
-
-        .dark-mode {
-            --background-color: #1e1e1e;
-            --primary-color: #569cd6;
-            --text-color: #d4d4d4;
-            --link-color: #4fc1ff;
-            --link-hover-color: #50bfff;
-            --section-background-color: #333333;
-            --button-text-color: #d4d4d4;
-            --button-hover-color: #ffffff;
-        }
-
-        .light-mode {
-            --background-color: #ffffff;
-            --primary-color: #007acc;
-            --text-color: #000000;
-            --link-color: #0066cc;
-            --link-hover-color: #005bb5;
-            --section-background-color: #f1f1f1;
-            --button-text-color: #000000;
-            --button-hover-color: #000000;
-        }
-
-        body {
-            background-color: var(--background-color);
-        }
-
-        .container {
-            background-color: var(--section-background-color);
+        .img-container{
+            height: 10rem;
         }
     </style>
 </head>
-<body class="light-mode">
-    <button class="toggle-button" onclick="toggleMode()">
-        <i class="fa fa-moon"></i>
-    </button>
-
-    <div class="container" data-aos="fade-up">
-        <h1>Abdul Samad Zaheer Khan</h1>
-        <div class="contact-info" data-aos="fade-up">
-            <div>
-                <a href="mailto:abdulskhan47@gmail.com">abdulskhan47@gmail.com</a> | 
-                <a href="mailto:ak9943@nyu.edu">ak9943@nyu.edu</a> |
-                <a href="https://www.linkedin.com/in/abdulsamadzkhan">LinkedIn</a> | 
-                <a href="https://github.com/abdulllkhan">GitHub</a> | 
-                <a href="https://leetcode.com/abdulllkhan">LeetCode</a> 
-                <p>+1 9293265267</p>
+<body>
+    <div class="main">
+        <div class="left">
+            <div class="container1">
+                <h2 class="name">
+                    Abdul Samad Zaheer Khan
+                </h2>
+                <div class="pb-6">
+                    M.Sc in Computer Engineering, NYU
+                </div>
+                <div class="pb-2 img-container">
+                    <img src="./profile.jpeg" alt="profile" width="100%" height="100%">
+                </div>
+                <div class="email">
+                    abdulskhan47@gmail.com
+                </div>
             </div>
         </div>
+        <div class="right right-font">
+            <div class="ml-3">
+                <div class="section-padding">
+                    <div class="title">
+                        ABOUT
+                    </div>
+                    <div>
+                        I am a dedicated and passionate software developer with experience in various technologies. I enjoy solving complex problems and am always eager to learn new skills and improve my knowledge.
+                    </div>
+                </div>
 
-        <div class="section" id="about" data-aos="fade-up">
-            <h2>About Me</h2>
-            <p>I am a dedicated and passionate software developer with experience in various technologies. I enjoy solving complex problems and am always eager to learn new skills and improve my knowledge.</p>
-        </div>
+                <div class="section-padding">
+                    <div class="title">
+                        Work Experience
+                    </div>
+                    <div>
+                        <li class="pb-2">
+                            Built a new standalone product ELMS that calculates the total exposure of an individual using multiple financial services of a single financial institution.
+                        </li>
+                        <li class="pb-2">
+                            Resolved L3-Bugs which were mostly production issues of company&apos;s main product LMS.
+                        </li>
+                        <li>
+                            Skills utilized: Java 17, Spring Boot, Copilot, Git, MySQL, Liquibase, Docker, Jenkins, ArgoCD, SFTP, etc.
+                        </li>
+                    </div>
+                </div>
 
-        <div class="section" id="work" data-aos="fade-up">
-            <h2>Work Experience</h2>
-            <h3>Software Development Engineer - 1, Finflux</h3>
-            <p>Bengaluru, India | Nov 2022 - July 2023</p>
-            <ul>
-                <li>Built a new standalone product ELMS that calculates the total exposure of an individual using multiple financial services of a single financial institution.</li>
-                <li>Resolved L3-Bugs which were mostly production issues of company’s main product LMS.</li>
-                <li>Skills utilized: Java 17, Spring Boot, Copilot, Git, MySQL, Liquibase, Docker, Jenkins, ArgoCD, SFTP, etc.</li>
-            </ul>
-        </div>
+                <div class="section-padding">
+                    <div class="title">
+                        Projects
+                    </div>
+                    <div class="pb-6">
+                        <div class="subtitle">
+                            Enterprise Limit Management System [ELMS]
+                        </div>
+                        <li class="pb-2">
+                            An application which calculates the exposure of individuals and groups to flag the lending system if exposure constraints are met. Solely responsible for the implementation of all calculation formulae.
+                        </li>
+                        <li class="pb-2">
+                            Provides both API call for single transaction and SFTP File Handling for bulk transactions using a cron job.
+                        </li>
+                        <li>
+                            Third-party integration for security (including token generation) and user management.
+                        </li>
+                    </div>
+                    <div>
+                        <div class="subtitle">
+                            Image Captioning using Neural Networks
+                        </div>
+                        <li class="pb-2">
+                            Modified and trained a pre-trained Natural Language Processing model InceptionResNetV2(RNN) on the Flickr8k dataset to generate captions. Calculated accuracy by computing BLEU scores.
+                        </li>
+                        <li >
+                            Converted generated captions to speech using Google Text-to-Speech API. Hosted on a website using AWS EC2 instance.
+                        </li>
+                    </div>
+                </div>
 
-        <div class="section" data-aos="fade-up">
-            <h2>Projects</h2>
-            <p>For detailed information on my projects, please visit the <a href="projects.html">Projects Page</a>.</p>
-        </div>
+                <div class="section-padding">
+                    <div class="title">
+                        Education
+                    </div>
+                    <div class="pb-6">
+                        <div class="subtitle">
+                            New York University
+                        </div>
+                        <div class="pb-2">
+                            M.Sc in Computer Engineering | New York City | Aug 2023 - May 2025
+                        </div>
+                        <li >
+                            Courses: Machine Learning, Data Structures and Algorithms, Computer System Architecture, Deep Learning(Spring), Applied Matrix Theory(Spring), Real Time Embedded Systems(Spring).
+                        </li>
+                        
+                    </div>
+                    <div>
+                        <div class="subtitle">
+                            The National Institute of Engineering
+                        </div>
+                        <div class="pb-2">
+                            BE in Computer Science and Engineering | Mysuru, India | Aug 2017 - June 2021
+                        </div>
+                        <li class="pb-2">
+                            Concluded Bachelors with Engineering Honors and a CGPA of 9.00.
+                        </li>
+                        <li>
+                            Courses: Advanced Mathematics and Statistics, Advanced Algorithms, Parallel Programming, Formal Language, Automata Theory, Computer Networks, Object Oriented Modeling, Computer Architecture.
+                        </li>
+                    </div>
+                </div>
 
-        <div class="section" data-aos="fade-up">
-            <h2>Blogs</h2>
-            <p>For my thoughts and writings, visit the <a href="blogs.html">Blogs Page</a>.</p>
-        </div>
-
-        <div class="section" id="education" data-aos="fade-up">
-            <h2>Education</h2>
-            <h3>New York University</h3>
-            <p>M.Sc in Computer Engineering | New York City | Aug 2023 - May 2025</p>
-            <ul>
-                <li>Courses: Machine Learning, Data Structures and Algorithms, Computer System Architecture, Deep Learning(Spring), Applied Matrix Theory(Spring), Real Time Embedded Systems(Spring).</li>
-            </ul>
-            
-            <h3>The National Institute of Engineering</h3>
-            <p>BE in Computer Science and Engineering | Mysuru, India | Aug 2017 - June 2021</p>
-            <ul>
-                <li>Concluded Bachelors with Engineering Honors and a CGPA of 9.00.</li>
-                <li>Courses: Advanced Mathematics and Statistics, Advanced Algorithms, Parallel Programming, Formal Language, Automata Theory, Computer Networks, Object Oriented Modeling, Computer Architecture.</li>
-            </ul>
-        </div>
-
-        <div class="section" id="skills" data-aos="fade-up">
-            <h2>Skills</h2>
-            <ul>
-                <li><strong>Technical Skills:</strong> Problem Solving, Data Structures and Algorithms, OOPS, Machine Learning.</li>
-                <li><strong>Languages:</strong> C, C++, Python, Java.</li>
-                <li><strong>Tools and Frameworks:</strong> Git, RISC-V, UNIX, MySQL, Spring Boot, Docker, Liquibase, Jenkins.</li>
-            </ul>
+                <div>
+                    <div class="title">
+                        Skills
+                    </div>
+                    <li class="pb-2">
+                        <span class="font-bold">Technical Skills:</span> Problem Solving, Data Structures and Algorithms, OOPS, Machine Learning.
+                    </li>
+                    <li class="pb-2">
+                        <span class="font-bold">Languages:</span> C, C++, Python, Java.
+                    </li>
+                    <li>
+                        <span class="font-bold">Tools and Frameworks:</span> Git, RISC-V, UNIX, MySQL, Spring Boot, Docker, Liquibase, Jenkins.
+                    </li>
+                </div>
+            </div>
         </div>
     </div>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script>
-        AOS.init();
-
-        function toggleMode() {
-            const body = document.body;
-            const icon = document.querySelector('.toggle-button i');
-            if (body.classList.contains('light-mode')) {
-                body.classList.remove('light-mode');
-                body.classList.add('dark-mode');
-                icon.classList.remove('fa-moon');
-                icon.classList.add('fa-sun');
-            } else {
-                body.classList.remove('dark-mode');
-                body.classList.add('light-mode');
-                icon.classList.remove('fa-sun');
-                icon.classList.add('fa-moon');
-            }
-        }
-    </script>
 </body>
 </html>
