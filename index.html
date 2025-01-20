@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abdul Resume</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        body{
+        body {
             font-size: 1em;
-        }
+            font-family: 'Montserrat', sans-serif;
+        }        
         .main{
             padding: 3rem;
             display: flex;
@@ -30,14 +32,15 @@
             margin-left: auto;
         }
         .title{
+            color: #007399;
             font-size: 1.5rem;
             padding-top: 1rem;
             padding-bottom: 1rem;
             font-weight: 700;
-            font-family: Quicksand, Helvetica Neue, Helvetica, Tahoma, Verdana, sans-serif;
+            font-family: 'Montserrat', sans-serif;
         }
         .info{
-            font-family: Verdana, Helvetica Neue, Helvetica, Tahoma, Verdana, sans-serif;
+            font-family: 'Montserrat', sans-serif;
         }
         .right-font{
             font-size: 1rem;
@@ -46,10 +49,11 @@
             padding-bottom: 0.5rem;
         }
         .subtitle{
+            color: #004d66;
             font-size: 1rem;
             font-weight: bold;
             color: #323232;
-            font-family: Verdana, Helvetica Neue, Helvetica, Tahoma, Verdana, sans-serif;
+            font-family: 'Montserrat', sans-serif;
             padding-bottom: 1rem;
         }
         .pb-4{
@@ -75,10 +79,11 @@
         }
         .email{
             color: #256996;
-            text-align: center;
+            text-align: left;
         }
         .img-container{
             height: 10rem;
+            display: flex;
         }
     </style>
 </head>
@@ -93,10 +98,10 @@
                     MS in Computer Engineering @ NYU
                 </div>
                 <div class="pb-2 img-container">
-                    <img src="./profile.jpeg" alt="profile" width="100%" height="100%">
+                    <img src="./profile.jpeg" alt="profile" width="80%" height="100%">
                 </div>
                 <div class="email">
-                    a k 9943 at nyu dot edu
+                    email: a k 9943 at nyu dot edu
                 </div>
             </div>
         </div>
@@ -107,102 +112,155 @@
                         ABOUT
                     </div>
                     <div>
-                        I am a dedicated and passionate software developer with experience in various technologies. I enjoy solving complex problems and am always eager to learn new skills and improve my knowledge.
+                        Masters student at NYU looking to explore and learn about the upcoming fields in computer science and information theory.
                     </div>
                 </div>
 
                 <div class="section-padding">
                     <div class="title">
-                        Work Experience
-                    </div>
-                    <div>
-                        <li class="pb-2">
-                            Built a new standalone product ELMS that calculates the total exposure of an individual using multiple financial services of a single financial institution.
-                        </li>
-                        <li class="pb-2">
-                            Resolved L3-Bugs which were mostly production issues of company&apos;s main product LMS.
-                        </li>
-                        <li>
-                            Skills utilized: Java 17, Spring Boot, Copilot, Git, MySQL, Liquibase, Docker, Jenkins, ArgoCD, SFTP, etc.
-                        </li>
-                    </div>
-                </div>
-
-                <div class="section-padding">
-                    <div class="title">
-                        Projects
-                    </div>
-                    <div class="pb-6">
-                        <div class="subtitle">
-                            Enterprise Limit Management System [ELMS]
-                        </div>
-                        <li class="pb-2">
-                            An application which calculates the exposure of individuals and groups to flag the lending system if exposure constraints are met. Solely responsible for the implementation of all calculation formulae.
-                        </li>
-                        <li class="pb-2">
-                            Provides both API call for single transaction and SFTP File Handling for bulk transactions using a cron job.
-                        </li>
-                        <li>
-                            Third-party integration for security (including token generation) and user management.
-                        </li>
-                    </div>
-                    <div>
-                        <div class="subtitle">
-                            Image Captioning using Neural Networks
-                        </div>
-                        <li class="pb-2">
-                            Modified and trained a pre-trained Natural Language Processing model InceptionResNetV2(RNN) on the Flickr8k dataset to generate captions. Calculated accuracy by computing BLEU scores.
-                        </li>
-                        <li >
-                            Converted generated captions to speech using Google Text-to-Speech API. Hosted on a website using AWS EC2 instance.
-                        </li>
-                    </div>
-                </div>
-
-                <div class="section-padding">
-                    <div class="title">
-                        Education
+                        EDUCATION
                     </div>
                     <div class="pb-6">
                         <div class="subtitle">
                             New York University
                         </div>
                         <div class="pb-2">
-                            M.Sc in Computer Engineering | New York City | Aug 2023 - May 2025
+                            Master of Science in Computer Engineering | New York, NY | Aug 2023 - May 2025
                         </div>
-                        <li >
-                            Courses: Machine Learning, Data Structures and Algorithms, Computer System Architecture, Deep Learning(Spring), Applied Matrix Theory(Spring), Real Time Embedded Systems(Spring).
+                        <li class="pb-2">
+                            Cumulative GPA: 3.73/4.00
                         </li>
-                        
+                        <li>
+                            Relevant Coursework: Mathematics, Machine Learning, Deep Learning, Quantum Computing, Physics, Finance, Computer System Architecture. 
+                        </li>
                     </div>
                     <div>
                         <div class="subtitle">
                             The National Institute of Engineering
                         </div>
                         <div class="pb-2">
-                            BE in Computer Science and Engineering | Mysuru, India | Aug 2017 - June 2021
+                            Bachelor of Engineering in Computer Science | Mysuru, India | Aug 2017 - June 2021
                         </div>
                         <li class="pb-2">
-                            Concluded Bachelors with Engineering Honors and a CGPA of 9.00.
+                            Concluded Bachelors with Honors and a CGPA of 9.00/10.00(3.78/4.00).
                         </li>
                         <li>
-                            Courses: Advanced Mathematics and Statistics, Advanced Algorithms, Parallel Programming, Formal Language, Automata Theory, Computer Networks, Object Oriented Modeling, Computer Architecture.
+                            Relevant Coursework: Advanced Mathematics and Statistics, Advanced Algorithms, Parallel Programming, Formal Language, Automata Theory, Computer Networks, Object Oriented Modeling, Computer Architecture.
+                        </li>
+                    </div>
+                </div>
+
+                <div class="section-padding">
+                    <div class="title">
+                        WORK EXPERIENCE
+                    </div>
+                    <div class="pb-6">
+                        <div class="subtitle">
+                            Software Development Intern(Computer Science Intern)
+                        </div>
+                        <div class="pb-2">
+                            Tiny Archives | New York, NY | Sept 2024 - Dec 2024
+                        </div>
+                        <li class="pb-2">
+                            Integrating IBM AI for context-based data filtering. Leveraging IBM AI to fine-tune local Copilot for enhanced developer assistance.
+                        <li class="pb-2">
+                            Enhancing product scalability significantly and integrating the Stripe payment API to facilitate swift payments.                        </li>
+                        <li>
+                            Addressed Level 3 bugs, focusing on resolving production issues in the company&apos;s primary product, the Loan Management System (LMS).
+                        </li>
+                    </div>
+                    <div class="pb-6">
+                        <div class="subtitle">
+                            Software Development Engineer - 1
+                        </div>
+                        <div class="pb-2">
+                            Finflux | Bangalore, India | Nov 2022 - July 2023
+                        </div>
+                        <li class="pb-2">
+                            Developed a standalone product, ELMS, that calculates the total exposure of a customer across multiple financial
+services within a single financial institution.
+                        <li class="pb-2">
+                            Led a team of three backend developers under the supervision of the system architect.
+                        </li>
+                        <li>
+                            Addressed Level 3 bugs, focusing on resolving production issues in the company&apos;s primary product, the Loan Management System (LMS).
+                        </li>
+                    </div>
+                </div>
+
+                <div class="section-padding">
+                    <div class="title">
+                        PROJECTS
+                    </div>
+                    <div class="pb-6">
+                        <div class="subtitle">
+                            Enterprise Limit Management System[ELMS]                        
+                        </div>
+                        <div class="pb-2">
+                            Finflux | Jan 2023 - July 2023
+                        </div>
+                        <li class="pb-2">
+                            Application designed to calculate the exposure of individuals and groups, flagging the lending system when exposure constraints are exceeded.
+                        </li>
+                        <li class="pb-2">
+                            The application mitigated the risks of default and fraud.
+                        </li>
+                        <li class="pb-2">
+                            The product aggregated personal data and transaction details for over 35 million customers.
+                        </li>
+                        <li class="pb-2">
+                            Skills Applied: Java 17, Spring Boot, Copilot, Git, MySQL, Liquibase, Docker, Jenkins, ArgoCD, SFTP, and other relevant technologies.
+                        </li>
+                    </div>
+                    <div class="pb-6">
+                        <div class="subtitle">
+                            Stock Direction Prediction Using Sentiment Analysis                      
+                        </div>
+                        <div class="pb-2">
+                            New York University | Feb 2024 - May 2024
+                        </div>
+                        <li class="pb-2">
+                            Fine-tuned language models such as FinBERT, BERT, Gemma-7B, and Llama-11B to extract sentiment.
+                        </li>
+                        <li class="pb-2">
+                            The sentiment and other features were subsequently input into a Random Forest algorithm, which predicted the direction of the stock. The model was specifically trained to forecast the direction of GameStop (GME).
+                        </li>
+                        <li class="pb-2">
+                            Sentiment analysis was performed on Reddit data, while the real-world stock price dataset was sourced from Yahoo Finance. The prediction accuracy was 0.59.
+                        </li>
+                    </div>
+                    <div class="pb-6">
+                        <div class="subtitle">
+                            OpenSigmoid - Anonymous Mailing Service                     
+                        </div>
+                        <div class="pb-2">
+                            Personal Project | July 2024 - Present
+                        </div>
+                        <li class="pb-2">
+                            Developing an novel mailing service that utilizes public blockchain wallet addresses for identification.
+                        </li>
+                        <li class="pb-2">
+                            Users demonstrate ownership of the wallet by signing a nonce. Once linked, the wallet can be used to send transactions to other wallets without disclosing user identity.
+                        </li>
+                        <li class="pb-2">
+                            Technologies used: Cryptography, Go, MySQL, NoSQL, GraphDB, Gin, Gorilla, etc.
                         </li>
                     </div>
                 </div>
 
                 <div>
                     <div class="title">
-                        Skills
+                        SKILLS
                     </div>
                     <li class="pb-2">
-                        <span class="font-bold">Technical Skills:</span> Problem Solving, Data Structures and Algorithms, OOPS, Machine Learning.
+                        <span class="font-bold">Technical Skills:</span> Mathematics, Data Structures and Algorithms, Machine Learning, Deep Learning, Quantum
+                        Computing, FPGA, Problem Solving, Infrastructure Design, Microprocessor Architecture.
                     </li>
                     <li class="pb-2">
-                        <span class="font-bold">Languages:</span> C, C++, Python, Java.
+                        <span class="font-bold">Technologies:</span> Spring Boot, Docker, Jenkins, ArgoCD, Git, MySQL, Liquibase, AWS(EC2, S3), RISC-V.
                     </li>
-                    <li>
-                        <span class="font-bold">Tools and Frameworks:</span> Git, RISC-V, UNIX, MySQL, Spring Boot, Docker, Liquibase, Jenkins.
+                    <li class="pb-2">
+                        <span class="font-bold">Languages:</span> Java, Python, Qiskit, Golang(Go), C, C++, R.
                     </li>
                 </div>
             </div>
