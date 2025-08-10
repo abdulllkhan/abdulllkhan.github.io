@@ -84,7 +84,6 @@
         }
         .email{
             color: #256996;
-            text-align: left;
         }
         .img-container{
             height: 10rem;
@@ -104,6 +103,81 @@
             margin-right: 4px;
             vertical-align: middle;
         }
+        
+        /* Mobile Responsive Styles */
+        @media (max-width: 768px) {
+            .main {
+                padding: 1rem;
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .left {
+                width: 100%;
+                position: relative;
+                margin-bottom: 2rem;
+            }
+            
+            .right {
+                width: 100%;
+                margin-left: 0;
+            }
+            
+            .container1 {
+                width: 100%;
+                float: none;
+            }
+            
+            .name {
+                font-size: 1.5rem;
+            }
+            
+            .title {
+                font-size: 1.2rem;
+            }
+            
+            .ml-3 {
+                margin-left: 0;
+            }
+            
+            .section-padding {
+                padding-bottom: 1.5rem;
+            }
+            
+            .pb-6 {
+                padding-bottom: 1rem;
+            }
+            
+            body {
+                font-size: 0.9rem;
+            }
+            
+            .right-font {
+                font-size: 0.9rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .main {
+                padding: 0.5rem;
+            }
+            
+            .name {
+                font-size: 1.3rem;
+            }
+            
+            .title {
+                font-size: 1.1rem;
+            }
+            
+            body {
+                font-size: 0.85rem;
+            }
+            
+            .email {
+                font-size: 0.9rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -120,17 +194,14 @@
                     <img src="./profile.jpeg" alt="profile" width="80%" height="100%">
                 </div> -->
                 <div class="email">
-                    email: a k 9943 at nyu dot edu
-
-<!--                     <div class="contact-links">
-                        <a href="https://github.com/abdulllkhan" target="_blank" class="contact-link">
-                            <i class="fab fa-github"></i> GitHub
-                        </a>
-                        &nbsp;|&nbsp;
-                        <a href="https://www.linkedin.com/in/abdulsamadzkhan/" target="_blank" class="contact-link">
-                            <i class="fab fa-linkedin"></i> LinkedIn
-                        </a>
-                    </div> -->
+                    <div style="margin-bottom: 0.5rem;">email: ak9943@nyu.edu</div>
+                    <a href="https://github.com/abdulllkhan" target="_blank" class="contact-link">
+                        <i class="fab fa-github"></i>GitHub
+                    </a>
+                    &nbsp;|&nbsp;
+                    <a href="https://www.linkedin.com/in/abdulsamadzkhan/" target="_blank" class="contact-link">
+                        <i class="fab fa-linkedin"></i> LinkedIn
+                    </a>
                 </div>
             </div>
         </div>
@@ -239,6 +310,23 @@
                     </div>
                     <div class="pb-6">
                         <div class="subtitle">
+                            OpenSigmoid - Anonymous Mailing Service                     
+                        </div>
+                        <div class="pb-2">
+                            Personal Project | July 2024 - Present | <a href="https://opensigmoid.com" target="_blank" class="contact-link">opensigmoid.com</a>
+                        </div>
+                        <li class="pb-2">
+                            Built a decentralized messaging platform integrating Ethereum and Solana wallets with end-to-end encryption (AES-256-GCM), supporting real-time WebSocket communication, token-gated communities, and in-chat crypto payments using Go, React, and PostgreSQL.
+                        </li>
+                        <li class="pb-2">
+                            Implemented secure Web3 authentication system with wallet-based account recovery, JWT token management, and multi-chain wallet linking, handling both traditional and blockchain-based user authentication flows.
+                        </li>
+                        <li class="pb-2">
+                            Architected real-time messaging infrastructure with WebSocket connection management, automatic reconnection logic, 5-minute heartbeat mechanism, and message delivery confirmation supporting 1-to-1, group, and channel communications.
+                        </li>
+                    </div>
+                    <div class="pb-6">
+                        <div class="subtitle">
                             Quantum-Classical Neural Network for Lung Cancer Risk Prediction
                         </div>
                         <div class="pb-2">
@@ -311,23 +399,6 @@
                             Sentiment analysis was performed on Reddit data, while the real-world stock price dataset was sourced from Yahoo Finance. The prediction accuracy was 0.59.
                         </li>
                     </div>
-                    <div class="pb-6">
-                        <div class="subtitle">
-                            OpenSigmoid - Anonymous Mailing Service                     
-                        </div>
-                        <div class="pb-2">
-                            Personal Project | July 2024 - Present
-                        </div>
-                        <li class="pb-2">
-                            Developing an novel mailing service that utilizes public blockchain wallet addresses for identification.
-                        </li>
-                        <li class="pb-2">
-                            Users demonstrate ownership of the wallet by signing a nonce. Once linked, the wallet can be used to send transactions to other wallets without disclosing user identity.
-                        </li>
-                        <li class="pb-2">
-                            Technologies used: Cryptography, Go, MySQL, NoSQL, GraphDB, Gin, Gorilla, etc.
-                        </li>
-                    </div>
                 </div>
 
                 <div class="section-padding">
@@ -371,7 +442,10 @@
                         EXTRA CURRICULARS
                     </div>
                     <li class="pb-2">
-                        Representing NYU for Poker and Contract Bridge(Attended multiple intercollege tournaments for both games).
+                        Representing NYU in Contract Bridge by attending multiple intercollege tournaments, scrimmages, and the North American Bridge Championships held in Philadelphia, 2025.
+                    </li>
+                    <li class="pb-2">
+                        Representing NYU in Poker at the <a href="https://pokeripa.com/teams/new-york-university-2024-2025/" target="_blank" class="contact-link">Intercollegiate Poker Association (IPA)</a> annual tournament in 2025.
                     </li>
                     <li class="pb-2">
                         <span class="font-bold">College Clubs:</span> IEEE, Society of Asian Scientists and Engineers(SASE), Bridge and Spades, Soccer Intramurals(5v5, 9v9).
