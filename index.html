@@ -103,7 +103,26 @@
             margin-right: 4px;
             vertical-align: middle;
         }
-        
+        .project-dropdown {
+            margin-bottom: 1.5rem;
+        }
+        .project-dropdown summary {
+            cursor: pointer;
+            font-weight: 700;
+            color: #256996;
+            font-family: 'Montserrat', sans-serif;
+            margin-bottom: 1rem;
+        }
+        .project-dropdown summary::-webkit-details-marker {
+            display: none;
+        }
+        .project-dropdown[open] summary {
+            color: #004d66;
+        }
+        .dropdown-content {
+            margin-top: 1rem;
+        }
+
         /* Mobile Responsive Styles */
         @media (max-width: 768px) {
             .main {
@@ -313,7 +332,7 @@
                             OpenSigmoid - Anonymous Mailing Service                     
                         </div>
                         <div class="pb-2">
-                            Personal Project | July 2024 - Present | <a href="https://opensigmoid.com" target="_blank" class="contact-link">opensigmoid.com</a>
+                            Personal Project | May 2025 - Present | <a href="https://opensigmoid.com" target="_blank" class="contact-link">opensigmoid.com</a>
                         </div>
                         <li class="pb-2">
                             Built a decentralized messaging platform integrating Ethereum and Solana wallets with end-to-end encryption (AES-256-GCM), supporting real-time WebSocket communication, token-gated communities, and in-chat crypto payments using Go, React, and PostgreSQL.
@@ -323,6 +342,29 @@
                         </li>
                         <li class="pb-2">
                             Architected real-time messaging infrastructure with WebSocket connection management, automatic reconnection logic, 5-minute heartbeat mechanism, and message delivery confirmation supporting 1-to-1, group, and channel communications.
+                        </li>
+                    </div>
+                    <div class="pb-6">
+                        <div class="subtitle">
+                            chromeControl - Productivity Tool
+                        </div>
+                        <div class="pb-2">
+                            Kiro Hackathon Project | August 2025 - September 2025 | <a href="https://github.com/abdulllkhan/chromecontrol" target="_blank" class="contact-link">GitHub Repo</a>
+                        </div>
+                        <li class="pb-2">
+                            Built an MCP-compliant Chrome sidebar extension that stays active across tabs, delivering real-time page analysis and contextual AI assistance with custom task automation.
+                        </li>
+                        <li class="pb-2">
+                            Architected a modular TypeScript/React codebase (background worker, content scripts, sidebar UI, shared services) enabling easy extension and maintainability.
+                        </li>
+                        <li class="pb-2">
+                            Implemented privacy-first safeguards—local processing, sensitive-data filtering, and domain-based security tiers—balancing AI capability with user trust.
+                        </li>
+                        <li class="pb-2">
+                            Delivered advanced tooling including prompt debugging, smart context building, and an intelligent text-extraction pipeline currently under active enhancement.
+                        </li>
+                        <li class="pb-2">
+                            Documented developer onboarding (quick start, API docs, troubleshooting) and established a clear contribution workflow aligned with TypeScript best practices.
                         </li>
                     </div>
                     <div class="pb-6">
@@ -345,60 +387,88 @@
                             Utilizing Qiskit to modify qubits to store model weights, which are later used for inference while verifying feasibility.
                         </li>
                     </div>
-                    <div class="pb-6">
-                        <div class="subtitle">
-                            QubitQuery RAG Assistant
+                    <details class="project-dropdown">
+                        <summary>See more projects</summary>
+                        <div class="dropdown-content">
+                            <div class="pb-6">
+                                <div class="subtitle">
+                                    Squaris - Square Packing Puzzle Game
+                                </div>
+                                <div class="pb-2">
+                                    Reddit Devvit | Sept 2025 | <a href="https://github.com/abdulllkhan/squaris" target="_blank" rel="noopener noreferrer" class="contact-link">GitHub Repo</a> | <a href="https://squaris.vercel.app/" target="_blank" rel="noopener noreferrer" class="contact-link">Live Game</a>
+                                </div>
+                                <li class="pb-2">
+                                    Built a Phaser.js and TypeScript spatial puzzle where players pack squares into a container without gaps using drag-and-drop mechanics.
+                                </li>
+                                <li class="pb-2">
+                                    Implemented a reverse-construction algorithm that generates daily solvable puzzles with difficulty tiers and adaptive container sizing.
+                                </li>
+                                <li class="pb-2">
+                                    Added productivity features—undo, shuffle, hints, timers, move tracking, and sound settings—to support varied play styles.
+                                </li>
+                                <li class="pb-2">
+                                    Delivered 29 automated tests covering puzzle generation, game logic, win conditions, and time tracking for reliability.
+                                </li>
+                                <li class="pb-2">
+                                    Designed for future Reddit Devvit integration with community leaderboards, interactive posts, and achievement systems.
+                                </li>
+                            </div>
+                            <div class="pb-6">
+                                <div class="subtitle">
+                                    QubitQuery RAG Assistant
+                                </div>
+                                <div class="pb-2">
+                                    Personal Project | June 2025
+                                </div>
+                                <li class="pb-2">
+                                    Created a self-contained RAG(Retrieval Augmented Generation) assistant to query through the lecture notes so the professors can have more productive office hours.
+                                </li>
+                                <li class="pb-2">
+                                    The implementation uses LangChain to split the lecture notes into chunks using LangChain library which are converted into embeddings using the OpenAI API and stored in the FAISS vector database.
+                                </li>
+                                <li class="pb-2">
+                                    Similarity check was performed to retrieve the most relevant chunks and fed into an LLM to answer the question in a terminal based interface.
+                                </li>
+                            </div>
+                            <div class="pb-6">
+                                <div class="subtitle">
+                                    Enterprise Limit Management System[ELMS]                        
+                                </div>
+                                <div class="pb-2">
+                                    Finflux | Jan 2023 - July 2023
+                                </div>
+                                <li class="pb-2">
+                                    Application designed to calculate the exposure of individuals and groups, flagging the lending system when exposure constraints are exceeded.
+                                </li>
+                                <li class="pb-2">
+                                    The product aggregated personal data and transaction details for over 35 million customers.
+                                </li>
+                                <li class="pb-2">
+                                    The application mitigates default and fraud risks while also being used internally to manage exposure limits and credit calculations across multiple products.
+                                </li>
+                                <li class="pb-2">
+                                    Skills Applied: Java 17, Spring Boot, Copilot, Git, MySQL, Liquibase, Docker, Jenkins, ArgoCD, SFTP, and other relevant technologies.
+                                </li>
+                            </div>
+                            <div class="pb-6">
+                                <div class="subtitle">
+                                    Stock Direction Prediction Using Sentiment Analysis                      
+                                </div>
+                                <div class="pb-2">
+                                    New York University | Feb 2024 - May 2024
+                                </div>
+                                <li class="pb-2">
+                                    Fine-tuned language models such as FinBERT, BERT, Gemma-7B, and Llama-11B to extract sentiment.
+                                </li>
+                                <li class="pb-2">
+                                    The sentiment and other features were subsequently input into a Random Forest algorithm, which predicted the direction of the stock. The model was specifically trained to forecast the direction of GameStop (GME).
+                                </li>
+                                <li class="pb-2">
+                                    Sentiment analysis was performed on Reddit data, while the real-world stock price dataset was sourced from Yahoo Finance. The prediction accuracy was 0.59.
+                                </li>
+                            </div>
                         </div>
-                        <div class="pb-2">
-                            Personal Project | June 2025
-                        </div>
-                        <li class="pb-2">
-                            Created a self-contained RAG(Retrieval Augmented Generation) assistant to query through the lecture notes so the professors can have more productive office hours.
-                        </li>
-                        <li class="pb-2">
-                            The implementation uses LangChain to split the lecture notes into chunks using LangChain library which are converted into embeddings using the OpenAI API and stored in the FAISS vector database.
-                        </li>
-                        <li class="pb-2">
-                            Similarity check was performed to retrieve the most relevant chunks and fed into an LLM to answer the question in a terminal based interface.
-                        </li>
-                    </div>
-                    <div class="pb-6">
-                        <div class="subtitle">
-                            Enterprise Limit Management System[ELMS]                        
-                        </div>
-                        <div class="pb-2">
-                            Finflux | Jan 2023 - July 2023
-                        </div>
-                        <li class="pb-2">
-                            Application designed to calculate the exposure of individuals and groups, flagging the lending system when exposure constraints are exceeded.
-                        </li>
-                        <li class="pb-2">
-                            The product aggregated personal data and transaction details for over 35 million customers.
-                        </li>
-                        <li class="pb-2">
-                            The application mitigates default and fraud risks while also being used internally to manage exposure limits and credit calculations across multiple products.
-                        </li>
-                        <li class="pb-2">
-                            Skills Applied: Java 17, Spring Boot, Copilot, Git, MySQL, Liquibase, Docker, Jenkins, ArgoCD, SFTP, and other relevant technologies.
-                        </li>
-                    </div>
-                    <div class="pb-6">
-                        <div class="subtitle">
-                            Stock Direction Prediction Using Sentiment Analysis                      
-                        </div>
-                        <div class="pb-2">
-                            New York University | Feb 2024 - May 2024
-                        </div>
-                        <li class="pb-2">
-                            Fine-tuned language models such as FinBERT, BERT, Gemma-7B, and Llama-11B to extract sentiment.
-                        </li>
-                        <li class="pb-2">
-                            The sentiment and other features were subsequently input into a Random Forest algorithm, which predicted the direction of the stock. The model was specifically trained to forecast the direction of GameStop (GME).
-                        </li>
-                        <li class="pb-2">
-                            Sentiment analysis was performed on Reddit data, while the real-world stock price dataset was sourced from Yahoo Finance. The prediction accuracy was 0.59.
-                        </li>
-                    </div>
+                    </details>
                 </div>
 
                 <div class="section-padding">
@@ -415,7 +485,7 @@
                         <span class="font-bold">AI Technologies:</span> Retrieval Augmented Generation, LangChain, Model Context Protocol, Vector Database(FAISS, Chroma).
                     </li>
                     <li class="pb-2">
-                        <span class="font-bold">Languages:</span>  Java(Spring Boot), Python, Qiskit, Golang(Go), C/C++, R, React, Angular, HTML/CSS, Node.js.
+                        <span class="font-bold">Languages:</span>  Java(Spring Boot), Python, Qiskit, Golang(Go), C/C++, R, React, TypeScript.
                     </li>
                 </div>
 
@@ -425,6 +495,12 @@
                     </div>
                     <li class="pb-2">
                         <span class="font-bold">HackNYU:</span> Built an alternative to Acorn with much more control over the risk apetite and investment types at the disposal of the user.
+                    </li>
+                    <li class="pb-2">
+                        <span class="font-bold">Kiro Hackathon:</span> Built chromeControl which is linked as a project in the projects section.
+                    </li>
+                    <li class="pb-2">
+                        <span class="font-bold">Reddit - Devvit:</span> Created the game Squaris which is hosted on <a href="https://squaris.vercel.app/" target="_blank" rel="noopener noreferrer" class="contact-link">Squaris</a>
                     </li>
                     <li class="pb-2">
                         <span class="font-bold">YQuantum:</span> Attempted the BlueQubit problem of Peaked Circuits.
@@ -448,7 +524,7 @@
                         Representing NYU in Poker at the <a href="https://pokeripa.com/teams/new-york-university-2024-2025/" target="_blank" class="contact-link">Intercollegiate Poker Association (IPA)</a> annual tournament in 2025.
                     </li>
                     <li class="pb-2">
-                        <span class="font-bold">College Clubs:</span> IEEE, Society of Asian Scientists and Engineers(SASE), Bridge and Spades, Soccer Intramurals(5v5, 9v9).
+                        <span class="font-bold">College Clubs:</span> Bridge and Spades, Society of Asian Scientists and Engineers(SASE), IEEE, Soccer Intramurals(5v5, 9v9).
                     </li>
                 </div>
             </div>
