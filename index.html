@@ -409,25 +409,25 @@
                         <div class="dropdown-content">
                             <div class="pb-6">
                                 <div class="subtitle">
-                                    Squaris - Square Packing Puzzle Game
+                                    Squaris - Spatial Packing Puzzle Game
                                 </div>
                                 <div class="pb-2">
                                     Reddit Devvit | Sept 2025 | <a href="https://github.com/abdulllkhan/squaris" target="_blank" rel="noopener noreferrer" class="contact-link">GitHub Repo</a> | <a href="https://squaris.vercel.app/" target="_blank" rel="noopener noreferrer" class="contact-link">Live Game</a>
                                 </div>
                                 <li class="pb-2">
-                                    Built a Phaser.js and TypeScript spatial puzzle where players pack squares into a container without gaps using drag-and-drop mechanics.
+                                    Built three puzzle variants (2D square tiling, 3D polycube packing on a 4×4×4 lattice, and a Tetris-style bent-polycube mode) over a single procedural-generation kernel using React 18, TypeScript, Tailwind, and React Three Fiber.
                                 </li>
                                 <li class="pb-2">
-                                    Implemented a reverse-construction algorithm that generates daily solvable puzzles with difficulty tiers and adaptive container sizing.
+                                    Implemented a reverse-construction generator that tiles the container with seeded polycube placements and shuffles the recorded solution into an inventory, guaranteeing solvability with date-seeded daily consistency.
                                 </li>
                                 <li class="pb-2">
-                                    Added productivity features—undo, shuffle, hints, timers, move tracking, and sound settings—to support varied play styles.
+                                    Generated the cube rotation group as the closure of three 90° axis rotations, yielding 24 unique orientations per polycube; verified completeness of the player-facing controls via BFS over the orientation graph.
                                 </li>
                                 <li class="pb-2">
-                                    Delivered 29 automated tests covering puzzle generation, game logic, win conditions, and time tracking for reliability.
+                                    Fixed a corner-unreachability defect by generalising the anchor cell—any cell of the active orientation can land at the cursor with the first valid placement selected—eliminating back-wall dead-ends.
                                 </li>
                                 <li class="pb-2">
-                                    Designed for future Reddit Devvit integration with community leaderboards, interactive posts, and achievement systems.
+                                    Delivered a Jest suite covering generator invariants, rotation-group completeness, smart-anchor regression, and inventory round-trips; deployed as static files on Vercel via a just-driven release pipeline.
                                 </li>
                             </div>
                             <div class="pb-6">
