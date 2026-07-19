@@ -1,772 +1,393 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abdul Samad Zaheer Khan — Founding Engineer</title>
-    <meta name="description" content="Abdul Samad Zaheer Khan — Founding Engineer at Starboard. AI systems, multi-agent architectures, and applied machine learning. MS Computer Engineering, NYU.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <link rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-      integrity="sha512-RXf+QSDCUQs6f2UadZk9eBRm+b+UcQLmSU6z9Qc4CgquOy8iuXW7KWpH8L/38J6e1HQHc8M+P4YyK5XkZwfwqw=="
-      crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <style>
-        :root{
-            --bg: #eef2f7;
-            --panel: #ffffff;
-            --ink: #1b2a3a;
-            --ink-soft: #46586b;
-            --muted: #788599;
-            --brand: #1f6f9f;
-            --brand-deep: #134b6e;
-            --accent: #058aa3;
-            --line: #e4ebf2;
-            --chip-bg: #ecf3f9;
-            --chip-ink: #1f6f9f;
-            --shadow: 0 1px 2px rgba(16,42,67,.05), 0 6px 20px rgba(16,42,67,.06);
-            --shadow-hover: 0 6px 16px rgba(16,42,67,.10), 0 18px 44px rgba(16,42,67,.14);
-            --radius: 16px;
-            --radius-sm: 10px;
-        }
-        *{ box-sizing: border-box; }
-        html{ scroll-behavior: smooth; }
-        body{
-            margin: 0;
-            font-family: 'Inter', 'Montserrat', sans-serif;
-            color: var(--ink);
-            background: var(--bg);
-            line-height: 1.6;
-            -webkit-font-smoothing: antialiased;
-        }
-        a{ color: var(--brand); }
-
-        /* ---------- Layout ---------- */
-        .sidebar{
-            position: fixed;
-            top: 0; left: 0;
-            width: 290px;
-            height: 100vh;
-            padding: 2.4rem 1.7rem;
-            background: var(--panel);
-            border-right: 1px solid var(--line);
-            overflow-y: auto;
-            display: flex;
-            flex-direction: column;
-        }
-        .content{ margin-left: 290px; }
-        .wrap{ max-width: 980px; margin: 0 auto; padding: 3.2rem 3rem 5rem; }
-
-        /* ---------- Sidebar ---------- */
-        .side-name{
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1.35rem;
-            font-weight: 700;
-            color: var(--ink);
-            margin: 0 0 .35rem;
-            line-height: 1.25;
-        }
-        .side-role{
-            font-size: .86rem;
-            color: var(--ink-soft);
-            margin-bottom: 1.3rem;
-        }
-        .side-role b{ color: var(--brand); font-weight: 600; }
-        .side-contact{ display: flex; flex-direction: column; gap: .55rem; margin-bottom: 1.6rem; }
-        .side-contact a{
-            display: inline-flex; align-items: center; gap: .6rem;
-            color: var(--ink-soft);
-            text-decoration: none;
-            font-size: .86rem;
-            transition: color .15s ease;
-        }
-        .side-contact a:hover{ color: var(--brand); }
-        .side-contact i{ width: 18px; text-align: center; color: var(--brand); }
-
-        .nav{ display: flex; flex-direction: column; gap: .15rem; margin-top: .4rem; border-top: 1px solid var(--line); padding-top: 1.3rem; }
-        .nav-link{
-            display: flex; align-items: center; gap: .7rem;
-            padding: .5rem .7rem;
-            border-radius: var(--radius-sm);
-            text-decoration: none;
-            color: var(--ink-soft);
-            font-size: .87rem;
-            font-weight: 500;
-            transition: background .15s ease, color .15s ease;
-        }
-        .nav-link::before{
-            content: ""; width: 6px; height: 6px; border-radius: 50%;
-            background: #cdd9e4; transition: background .15s ease, transform .15s ease;
-        }
-        .nav-link:hover{ background: var(--chip-bg); color: var(--brand); }
-        .nav-link.active{ background: var(--chip-bg); color: var(--brand-deep); font-weight: 600; }
-        .nav-link.active::before{ background: var(--brand); transform: scale(1.25); }
-
-        /* ---------- Hero ---------- */
-        .hero{ padding-bottom: 2.6rem; margin-bottom: 1rem; border-bottom: 1px solid var(--line); scroll-margin-top: 1rem; }
-        .hero-lead{ font-size: 1.02rem; color: var(--ink-soft); max-width: 64ch; margin: 0; }
-        .btn{
-            display: inline-flex; align-items: center; gap: .55rem;
-            padding: .62rem 1.15rem;
-            border-radius: 999px;
-            border: 1px solid var(--line);
-            background: #fff;
-            color: var(--ink-soft);
-            font-size: .88rem; font-weight: 500;
-            text-decoration: none; cursor: pointer;
-            transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease, color .15s ease;
-        }
-        .btn:hover{ transform: translateY(-2px); box-shadow: var(--shadow); border-color: #cfdce8; color: var(--brand); }
-        .btn-primary{ background: var(--brand); border-color: var(--brand); color: #fff; }
-        .btn-primary:hover{ background: var(--brand-deep); border-color: var(--brand-deep); color: #fff; }
-
-        /* ---------- Sections ---------- */
-        .sec{ padding-top: 3rem; scroll-margin-top: 1.2rem; }
-        .sec-head{ display: flex; align-items: baseline; gap: .8rem; margin-bottom: 1.5rem; }
-        .sec-num{ font-size: .8rem; font-weight: 700; color: var(--brand); font-family: 'Montserrat', sans-serif; }
-        .sec-title{
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1.45rem; font-weight: 700; color: var(--ink); margin: 0;
-        }
-        .sec-line{ flex: 1; height: 1px; background: var(--line); }
-
-        /* ---------- Card grid ---------- */
-        .grid{ display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.1rem; }
-        .grid-1{ grid-template-columns: 1fr; }
-        .card{
-            position: relative;
-            background: var(--panel);
-            border: 1px solid var(--line);
-            border-radius: var(--radius);
-            padding: 1.4rem 1.4rem 1.25rem;
-            cursor: pointer;
-            box-shadow: var(--shadow);
-            transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
-            display: flex; flex-direction: column;
-            outline: none;
-        }
-        .card:hover, .card:focus-visible{ transform: translateY(-4px); box-shadow: var(--shadow-hover); border-color: #d2e0ec; }
-        .card:focus-visible{ box-shadow: var(--shadow-hover), 0 0 0 3px rgba(31,111,159,.25); }
-        .card-top{ display: flex; align-items: flex-start; justify-content: space-between; gap: .8rem; margin-bottom: .5rem; }
-        .card-title{ font-family: 'Montserrat', sans-serif; font-size: 1.06rem; font-weight: 700; color: var(--ink); margin: 0; line-height: 1.3; }
-        .card-org{ font-size: .9rem; font-weight: 600; color: var(--brand); margin: .15rem 0 .6rem; }
-        .card-cat{ font-size: .72rem; font-weight: 600; color: var(--brand); background: var(--chip-bg); padding: .25rem .6rem; border-radius: 999px; white-space: nowrap; flex-shrink: 0; }
-        .card-meta{ font-size: .78rem; color: var(--muted); margin: 0 0 .7rem; display: flex; align-items: center; gap: .4rem; flex-wrap: wrap; }
-        .card-meta i{ font-size: .72rem; }
-        .card-sub{ font-size: .9rem; color: var(--ink-soft); margin: 0 0 1rem; flex: 1; }
-        .card-tags{ display: flex; flex-wrap: wrap; gap: .4rem; margin-bottom: 1rem; }
-        .tag{ font-size: .72rem; font-weight: 500; color: var(--chip-ink); background: var(--chip-bg); padding: .25rem .6rem; border-radius: 6px; }
-        .card-cue{ font-size: .8rem; font-weight: 600; color: var(--brand); display: inline-flex; align-items: center; gap: .4rem; transition: gap .15s ease; }
-        .card:hover .card-cue{ gap: .65rem; }
-
-        /* ---------- Education ---------- */
-        .edu{ display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.1rem; }
-        .edu-card{ background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.4rem; box-shadow: var(--shadow); }
-        .edu-school{ font-family: 'Montserrat', sans-serif; font-weight: 700; color: var(--ink); margin: 0 0 .25rem; }
-        .edu-deg{ font-size: .86rem; color: var(--ink-soft); margin: 0 0 .55rem; }
-        .edu-meta{ font-size: .78rem; color: var(--muted); margin: 0 0 .8rem; }
-        .edu-gpa{ display: inline-block; font-size: .78rem; font-weight: 600; color: var(--brand); background: var(--chip-bg); padding: .25rem .65rem; border-radius: 999px; margin-bottom: .8rem; }
-        .edu-course{ font-size: .8rem; color: var(--ink-soft); margin: 0; }
-        .edu-course b{ color: var(--ink); font-weight: 600; }
-
-        /* ---------- Beyond ---------- */
-        .mini-grid{ display: grid; grid-template-columns: repeat(2, 1fr); gap: .9rem; }
-        .mini{ background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius-sm); padding: .95rem 1.1rem; box-shadow: var(--shadow); }
-        .mini b{ color: var(--ink); font-weight: 600; }
-        .mini-txt{ font-size: .85rem; color: var(--ink-soft); }
-        .bullets{ margin: .4rem 0 0; padding-left: 1.1rem; }
-        .bullets li{ font-size: .88rem; color: var(--ink-soft); margin-bottom: .55rem; }
-        .sub-label{ font-size: .82rem; font-weight: 600; color: var(--brand); text-transform: uppercase; letter-spacing: .06em; margin: 0 0 .9rem; }
-
-        /* ---------- Modal ---------- */
-        .modal{ position: fixed; inset: 0; display: none; align-items: center; justify-content: center; padding: 1.5rem; z-index: 100; }
-        .modal.open{ display: flex; }
-        .modal-overlay{ position: absolute; inset: 0; background: rgba(15,32,49,.55); backdrop-filter: blur(3px); -webkit-backdrop-filter: blur(3px); animation: fade .2s ease; }
-        .modal-dialog{
-            position: relative; z-index: 1;
-            background: #fff;
-            width: 100%; max-width: 760px;
-            max-height: 88vh;
-            border-radius: var(--radius);
-            box-shadow: 0 24px 70px rgba(15,32,49,.35);
-            display: flex; flex-direction: column;
-            animation: pop .22s cubic-bezier(.16,1,.3,1);
-            overflow: hidden;
-        }
-        .modal-dialog.wide{ max-width: 940px; }
-        .modal-close{
-            position: absolute; top: .85rem; right: .9rem; z-index: 3;
-            width: 36px; height: 36px; border-radius: 50%;
-            border: none; background: #f0f4f8; color: var(--ink-soft);
-            font-size: 1.4rem; line-height: 1; cursor: pointer;
-            display: flex; align-items: center; justify-content: center;
-            transition: background .15s ease, color .15s ease;
-        }
-        .modal-close:hover{ background: #e2e9f0; color: var(--ink); }
-        .modal-body{ overflow-y: auto; padding: 2.2rem 2.3rem 2.4rem; }
-
-        .m-cat{ font-size: .74rem; font-weight: 600; color: var(--brand); text-transform: uppercase; letter-spacing: .08em; margin: 0 0 .5rem; }
-        .m-title{ font-family: 'Montserrat', sans-serif; font-size: 1.5rem; font-weight: 700; color: var(--ink); margin: 0 0 .55rem; line-height: 1.25; padding-right: 2rem; }
-        .m-meta{ font-size: .85rem; color: var(--muted); margin: 0 0 1.1rem; display: flex; flex-wrap: wrap; align-items: center; gap: .5rem; }
-        .m-meta a{ color: var(--brand); text-decoration: none; font-weight: 500; }
-        .m-meta a:hover{ text-decoration: underline; }
-        .m-tags{ display: flex; flex-wrap: wrap; gap: .45rem; margin: 0 0 1.4rem; }
-        .modal-body .bullets li{ font-size: .92rem; margin-bottom: .7rem; }
-        .m-links{ display: flex; flex-wrap: wrap; gap: .7rem; margin-top: 1.5rem; padding-top: 1.3rem; border-top: 1px solid var(--line); }
-
-        /* ---------- Paper modal specifics ---------- */
-        .paper-abstract{ background: var(--chip-bg); border-left: 3px solid var(--brand); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1rem 1.2rem; font-size: .9rem; color: var(--ink-soft); margin: 0 0 1.6rem; }
-        .paper-abstract b{ color: var(--ink); }
-        .paper h4{ font-family: 'Montserrat', sans-serif; font-size: 1rem; color: var(--ink); margin: 1.7rem 0 .6rem; }
-        .paper p{ font-size: .91rem; color: var(--ink-soft); margin: 0 0 .9rem; }
-        .eq{ background: #f6f9fc; border: 1px solid var(--line); border-radius: var(--radius-sm); padding: .8rem 1rem; margin: 0 0 1rem; font-family: 'Inter', sans-serif; font-size: .9rem; color: var(--ink); text-align: center; }
-        .eq small{ color: var(--muted); font-size: .76rem; }
-        .frac{ display: inline-flex; flex-direction: column; vertical-align: middle; text-align: center; line-height: 1; margin: 0 .15em; }
-        .frac span{ display: block; padding: 0 .25em; }
-        .frac .num{ border-bottom: 1px solid var(--ink-soft); }
-        table.paper-tbl{ width: 100%; border-collapse: collapse; margin: .4rem 0 1rem; font-size: .85rem; }
-        table.paper-tbl th, table.paper-tbl td{ padding: .55rem .6rem; text-align: right; border-bottom: 1px solid var(--line); }
-        table.paper-tbl th:first-child, table.paper-tbl td:first-child{ text-align: left; }
-        table.paper-tbl thead th{ color: var(--ink); font-weight: 600; border-bottom: 2px solid #d7e2ec; }
-        table.paper-tbl tr.realized td{ font-weight: 600; color: var(--brand-deep); background: var(--chip-bg); }
-        .pos{ color: #1a8f5a; }
-        .neg{ color: #c0392b; }
-        .paper-note{ font-size: .78rem; color: var(--muted); font-style: italic; margin-top: 1rem; }
-
-        /* Paper view toggle + embedded PDF */
-        .paper-toolbar{ display: flex; flex-wrap: wrap; gap: .5rem; align-items: center; margin: 0 0 1.2rem; }
-        .paper-tab{ display: inline-flex; align-items: center; gap: .45rem; padding: .5rem .9rem; border-radius: 999px; border: 1px solid var(--line); background: #fff; color: var(--ink-soft); font: inherit; font-size: .82rem; font-weight: 500; cursor: pointer; transition: background .15s ease, color .15s ease, border-color .15s ease; }
-        .paper-tab:hover{ border-color: #cfdce8; color: var(--brand); }
-        .paper-tab.active{ background: var(--brand); border-color: var(--brand); color: #fff; }
-        .paper-dl{ margin-left: auto; display: inline-flex; align-items: center; gap: .4rem; font-size: .82rem; font-weight: 500; color: var(--brand); text-decoration: none; }
-        .paper-dl:hover{ text-decoration: underline; }
-        .paper-frame{ width: 100%; height: 72vh; border: 1px solid var(--line); border-radius: var(--radius-sm); background: #f6f9fc; display: block; }
-        .paper-fallback{ font-size: .8rem; color: var(--muted); margin: .7rem 0 0; }
-        .paper-frame-fallback{ display: flex; flex-direction: column; align-items: center; justify-content: center; gap: .85rem; text-align: center; padding: 1.5rem; }
-        .paper-frame-fallback i{ font-size: 2.4rem; color: var(--brand); }
-        .paper-frame-fallback p{ margin: 0; color: var(--ink-soft); font-size: .92rem; max-width: 42ch; }
-        .paper[data-view="pdf"] .paper-reader{ display: none; }
-        .paper[data-view="reader"] .paper-pdf{ display: none; }
-
-        @keyframes fade{ from{ opacity: 0; } to{ opacity: 1; } }
-        @keyframes pop{ from{ opacity: 0; transform: translateY(14px) scale(.98); } to{ opacity: 1; transform: none; } }
-        body.no-scroll{ overflow: hidden; }
-
-        /* ---------- Responsive ---------- */
-        @media (max-width: 900px){
-            .sidebar{ position: relative; width: 100%; height: auto; flex-direction: column; border-right: none; border-bottom: 1px solid var(--line); padding: 1.8rem 1.5rem; }
-            .content{ margin-left: 0; }
-            .wrap{ padding: 2rem 1.4rem 4rem; }
-            .nav{ display: none; }
-            .grid, .edu, .mini-grid{ grid-template-columns: 1fr; }
-        }
-        @media (max-width: 480px){
-            .wrap{ padding: 1.6rem 1.1rem 3rem; }
-            .modal-body{ padding: 1.8rem 1.3rem 2rem; }
-            .modal{ padding: .7rem; }
-            .modal-dialog{ max-height: 92vh; }
-            .paper-frame{ height: 68vh; }
-        }
-        @media (prefers-reduced-motion: reduce){
-            *{ animation: none !important; transition: none !important; scroll-behavior: auto !important; }
-        }
-    </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Abdul Samad Zaheer Khan — Founding Engineer at Starboard. AI systems, multi-agent architectures, and applied machine learning.">
+<title>Abdul Samad Zaheer Khan — Founding Engineer</title>
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<style>
+  html{scroll-behavior:smooth}
+  body{margin:0;background:#f5f1e8;color:#1c1914;font-family:Georgia,'Times New Roman',serif;-webkit-font-smoothing:antialiased;--accent:#9a3b26}
+  a{color:inherit;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px;text-decoration-color:#c2b59d;transition:color .15s,text-decoration-color .15s}
+  a:hover{color:var(--accent);text-decoration-color:var(--accent)}
+  ::selection{background:#e9dcc3}
+  [data-modal]:hover{opacity:.65}
+  [data-modal]:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+  #modal[hidden]{display:none}
+  body.no-scroll{overflow:hidden}
+  @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+</style>
 </head>
 <body>
-    <!-- ============ SIDEBAR ============ -->
-    <aside class="sidebar">
-        <h1 class="side-name">Abdul Samad<br>Zaheer Khan</h1>
-        <p class="side-role"><b>Founding Engineer</b> @ Starboard<br>MS Computer Engineering, NYU</p>
 
-        <div class="side-contact">
-            <a href="mailto:ak9943@nyu.edu"><i class="fa-solid fa-envelope"></i> ak9943@nyu.edu</a>
-            <a href="https://github.com/abdulllkhan" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> github.com/abdulllkhan</a>
-            <a href="https://www.linkedin.com/in/abdulsamadzkhan/" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i> in/abdulsamadzkhan</a>
-        </div>
+<div style="display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:8px 24px;padding:15px clamp(20px,5vw,56px);border-bottom:1px solid #d9d1c0;font-family:Helvetica,Arial,sans-serif;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#7d7466">
+  <div>New York, NY</div>
+  <div style="display:flex;gap:22px;flex-wrap:wrap">
+    <a style="text-decoration:none" href="mailto:ak9943@nyu.edu">Email</a>
+    <a style="text-decoration:none" href="https://github.com/abdulllkhan">GitHub</a>
+    <a style="text-decoration:none" href="https://www.linkedin.com/in/abdulsamadzkhan/">LinkedIn</a>
+    <a style="text-decoration:none;color:var(--accent)" href="./basic.html">Basic&nbsp;version</a>
+  </div>
+</div>
 
-        <nav class="nav">
-            <a class="nav-link" href="#about">About</a>
-            <a class="nav-link" href="#education">Education</a>
-            <a class="nav-link" href="#experience">Experience</a>
-            <a class="nav-link" href="#papers">Papers</a>
-            <a class="nav-link" href="#projects">Projects</a>
-            <a class="nav-link" href="#hackathons">Hackathons</a>
-            <a class="nav-link" href="#extracurriculars">Extra-Curriculars</a>
-        </nav>
-    </aside>
+<header style="padding:60px clamp(20px,5vw,56px) 40px">
+  <h1 style="margin:0;font-size:clamp(52px,8.5vw,112px);line-height:.98;font-weight:400;letter-spacing:-.015em">Abdul Samad<br>Zaheer Khan</h1>
+  <p style="margin:26px 0 0;font-style:italic;font-size:clamp(17px,2vw,21px);color:#6f6653;max-width:620px;line-height:1.5">Founding Engineer · MS Computer Engineering, NYU</p>
+</header>
 
-    <!-- ============ CONTENT ============ -->
-    <main class="content">
-        <div class="wrap">
+<div style="margin:0 clamp(20px,5vw,56px);border-top:2px solid #1c1914"></div>
 
-            <!-- ABOUT -->
-            <header class="hero" id="about">
-                <div class="sec-head"><h3 class="sec-title">About</h3><span class="sec-line"></span></div>
-                <p class="hero-lead">Founding Engineer with an MS in Computer Engineering from NYU, specializing in AI systems, multi-agent architectures, and applied machine learning. Experienced in building production-grade AI solutions, from fine-tuning LLMs to deploying autonomous agent systems that solve real-world logistics and data processing challenges. Outside of work, I'm a competitive contract bridge and poker player with a passion for strategy games.</p>
-            </header>
+<nav style="display:flex;flex-wrap:wrap;gap:8px 26px;margin:3px clamp(20px,5vw,56px) 0;padding:12px 0;border-top:1px solid #1c1914;font-family:Helvetica,Arial,sans-serif;font-size:11px;letter-spacing:.14em;text-transform:uppercase">
+  <a style="text-decoration:none" href="#about"><span style="color:var(--accent)">01</span>&nbsp; About</a>
+  <a style="text-decoration:none" href="#education"><span style="color:var(--accent)">02</span>&nbsp; Education</a>
+  <a style="text-decoration:none" href="#experience"><span style="color:var(--accent)">03</span>&nbsp; Experience</a>
+  <a style="text-decoration:none" href="#projects"><span style="color:var(--accent)">04</span>&nbsp; Projects</a>
+  <a style="text-decoration:none" href="#writing"><span style="color:var(--accent)">05</span>&nbsp; Writing</a>
+  <a style="text-decoration:none" href="#hackathons"><span style="color:var(--accent)">06</span>&nbsp; Hackathons</a>
+</nav>
 
-            <!-- EDUCATION -->
-            <section class="sec" id="education">
-                <div class="sec-head"><span class="sec-num">01</span><h3 class="sec-title">Education</h3><span class="sec-line"></span></div>
-                <div class="edu">
-                    <div class="edu-card">
-                        <h4 class="edu-school">New York University</h4>
-                        <p class="edu-deg">Master of Science in Computer Engineering</p>
-                        <p class="edu-meta">New York, NY · Aug 2023 – May 2025</p>
-                        <span class="edu-gpa">GPA 3.8 / 4.00</span>
-                        <p class="edu-course"><b>Coursework:</b> Mathematics, Physics, Quantum Computing, Machine Learning, Deep Learning, Finance, Computer System Architecture, Network Security.</p>
-                    </div>
-                    <div class="edu-card">
-                        <h4 class="edu-school">The National Institute of Engineering</h4>
-                        <p class="edu-deg">Bachelor of Engineering in Computer Science</p>
-                        <p class="edu-meta">Mysuru, India · Aug 2017 – June 2021</p>
-                        <span class="edu-gpa">GPA 9.00 / 10.00 (3.78 / 4.00)</span>
-                        <p class="edu-course"><b>Coursework:</b> Advanced Mathematics &amp; Statistics, Advanced Algorithms, Parallel Programming, Formal Language &amp; Automata Theory, Computer Networks, Object-Oriented Modeling.</p>
-                    </div>
-                </div>
-            </section>
+<section id="about" style="display:flex;flex-wrap:wrap;gap:24px 56px;padding:56px clamp(20px,5vw,56px);border-top:1px solid #d9d1c0">
+  <div style="flex:0 0 180px;position:sticky;top:24px;align-self:flex-start;display:flex;gap:12px;align-items:baseline;font-family:Helvetica,Arial,sans-serif;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#7d7466"><span style="font-family:Georgia,serif;font-style:italic;font-size:15px;letter-spacing:0;color:var(--accent)">01</span><span>About</span></div>
+  <div style="flex:1 1 460px;min-width:300px;max-width:780px">
+    <p style="margin:0;font-size:clamp(19px,2.2vw,23px);line-height:1.55">I'm a founding engineer with an MS in Computer Engineering from NYU, specializing in AI systems, multi-agent architectures, and applied machine learning. I build production-grade AI — from fine-tuning LLMs to deploying autonomous agent systems that handle real-world logistics and data-processing problems.</p>
+    <p style="margin:20px 0 0;font-size:16px;line-height:1.6;color:#6f6653;font-style:italic">Away from the keyboard: competitive contract bridge and poker, and an interest in strategy games.</p>
+  </div>
+</section>
 
-            <!-- EXPERIENCE -->
-            <section class="sec" id="experience">
-                <div class="sec-head"><span class="sec-num">02</span><h3 class="sec-title">Experience</h3><span class="sec-line"></span></div>
-                <div class="grid">
-
-                    <article class="card" role="button" tabindex="0" data-modal="exp-starboard">
-                        <h4 class="card-title">Founding Engineer</h4>
-                        <p class="card-org">Starboard</p>
-                        <p class="card-meta"><i class="fa-solid fa-location-dot"></i> Remote (NY, NY) <span>·</span> Oct 2025 – Present</p>
-                        <p class="card-sub">Building multi-agent systems and data pipelines that autonomously process logistics data across carrier platforms.</p>
-                        <span class="card-cue">View details <i class="fa-solid fa-arrow-right"></i></span>
-                    </article>
-                    <template id="tpl-exp-starboard">
-                        <p class="m-cat">Experience · Starboard</p>
-                        <h3 class="m-title">Founding Engineer</h3>
-                        <p class="m-meta"><i class="fa-solid fa-location-dot"></i> Remote (NY, NY) <span>·</span> Oct 2025 – Present</p>
-                        <ul class="bullets">
-                            <li>Built and deployed multi-agent systems with function calling and tool use that autonomously process shipment tracking updates, monitor carrier websites, and resolve data discrepancies across logistics platforms.</li>
-                            <li>Designed web scrapers and data pipelines that extract structured shipment data from carrier portals, achieving 95%+ accuracy on real-time tracking information and automated invoice reconciliation workflows.</li>
-                            <li>Fine-tuned open-source LLMs for entity extraction and document parsing, reducing average processing time from 2.5 minutes to under 10 seconds per document while maintaining classification accuracy.</li>
-                        </ul>
-                    </template>
-
-                    <article class="card" role="button" tabindex="0" data-modal="exp-nyu">
-                        <h4 class="card-title">Research Intern</h4>
-                        <p class="card-org">NYU · CQIP</p>
-                        <p class="card-meta"><i class="fa-solid fa-location-dot"></i> New York, NY <span>·</span> Jan 2025 – May 2025</p>
-                        <p class="card-sub">Hybrid classical-quantum neural network estimating six-year lung cancer risk from a single low-dose CT scan.</p>
-                        <span class="card-cue">View details <i class="fa-solid fa-arrow-right"></i></span>
-                    </article>
-                    <template id="tpl-exp-nyu">
-                        <p class="m-cat">Experience · New York University</p>
-                        <h3 class="m-title">Research Intern</h3>
-                        <p class="m-meta"><i class="fa-solid fa-location-dot"></i> New York, NY <span>·</span> Jan 2025 – May 2025</p>
-                        <ul class="bullets">
-                            <li>Research intern under the supervision of Prof. Javad Shabani at the Center of Quantum Information Physics at NYU.</li>
-                            <li>Built a hybrid classical-quantum neural network to measure the risk of cancer over the next six years based on a single low-dose CT scan (3D image).</li>
-                            <li>Focused on developing a model with faster inference and acceptable predictive accuracy, rather than outperforming existing models like Sybil.</li>
-                        </ul>
-                    </template>
-
-                    <article class="card" role="button" tabindex="0" data-modal="exp-tiny">
-                        <h4 class="card-title">Software Development Intern</h4>
-                        <p class="card-org">Tiny Archives</p>
-                        <p class="card-meta"><i class="fa-solid fa-location-dot"></i> New York, NY <span>·</span> Sept 2024 – Dec 2024</p>
-                        <p class="card-sub">Backend archival systems for organizations and individuals, with a focus on scalability.</p>
-                        <span class="card-cue">View details <i class="fa-solid fa-arrow-right"></i></span>
-                    </article>
-                    <template id="tpl-exp-tiny">
-                        <p class="m-cat">Experience · Tiny Archives</p>
-                        <h3 class="m-title">Software Development Intern (Computer Science Intern)</h3>
-                        <p class="m-meta"><i class="fa-solid fa-location-dot"></i> New York, NY <span>·</span> Sept 2024 – Dec 2024</p>
-                        <ul class="bullets">
-                            <li>Developed and maintained backend systems using Python, Django, and PostgreSQL to archive files for organizations and individuals.</li>
-                            <li>Improved product scalability by optimizing system architecture and enhancing performance to support increased user demand and data processing.</li>
-                        </ul>
-                    </template>
-
-                    <article class="card" role="button" tabindex="0" data-modal="exp-finflux">
-                        <h4 class="card-title">Software Development Engineer&nbsp;1</h4>
-                        <p class="card-org">Finflux</p>
-                        <p class="card-meta"><i class="fa-solid fa-location-dot"></i> Bangalore, India <span>·</span> Nov 2022 – July 2023</p>
-                        <p class="card-sub">Built ELMS, a customer-exposure product, and resolved production issues in the core Loan Management System.</p>
-                        <span class="card-cue">View details <i class="fa-solid fa-arrow-right"></i></span>
-                    </article>
-                    <template id="tpl-exp-finflux">
-                        <p class="m-cat">Experience · Finflux</p>
-                        <h3 class="m-title">Software Development Engineer&nbsp;1</h3>
-                        <p class="m-meta"><i class="fa-solid fa-location-dot"></i> Bangalore, India <span>·</span> Nov 2022 – July 2023</p>
-                        <ul class="bullets">
-                            <li>Developed a standalone product, ELMS, that calculates the total exposure of a customer across multiple financial services within a single financial institution.</li>
-                            <li>Collaborated with backend engineers and engaged in client meetings to accurately understand and implement the requirements.</li>
-                            <li>Addressed Level 3 bugs, focusing on resolving production issues in the company's primary product, the Loan Management System (LMS).</li>
-                        </ul>
-                    </template>
-
-                </div>
-            </section>
-
-            <!-- PAPERS -->
-            <section class="sec" id="papers">
-                <div class="sec-head"><span class="sec-num">03</span><h3 class="sec-title">Papers</h3><span class="sec-line"></span></div>
-                <div class="grid grid-1">
-
-                    <article class="card" role="button" tabindex="0" data-modal="paper-ipl">
-                        <div class="card-top"><h4 class="card-title">Coin-Flip Pricing in a Tournament-Winner Market</h4><span class="card-cat">2026</span></div>
-                        <p class="card-meta"><i class="fa-solid fa-file-lines"></i> A Paired-Contract Trade on the 2026 IPL Champion</p>
-                        <p class="card-sub">A trade I placed on Kalshi (RCB + GT) for the IPL champion. The market's coin-flip pricing (0.75) understated a top-two seed's true edge (base rate 93.3%), making my paired position positive expected value — and it returned ~27.7%.</p>
-                        <div class="card-tags"><span class="tag">Prediction Markets</span><span class="tag">Probability</span><span class="tag">Bayesian Inference</span><span class="tag">Expected Value</span></div>
-                        <span class="card-cue">Read the paper <i class="fa-solid fa-arrow-right"></i></span>
-                    </article>
-                    <template id="tpl-paper-ipl">
-                        <div class="paper" data-view="reader">
-                            <p class="m-cat">Paper · June 2026</p>
-                            <h3 class="m-title">Coin-Flip Pricing in a Tournament-Winner Market: A Paired-Contract Trade on the 2026 IPL Champion</h3>
-                            <p class="m-meta">Abdul Samad Zaheer Khan <span>·</span> <a href="mailto:ak9943@nyu.edu">ak9943@nyu.edu</a></p>
-                            <div class="m-tags"><span class="tag">Prediction Markets</span><span class="tag">Probability</span><span class="tag">Bayesian Inference</span><span class="tag">Expected Value</span><span class="tag">Kalshi</span></div>
-
-                            <div class="paper-toolbar">
-                                <button class="paper-tab" type="button" data-view="pdf"><i class="fa-solid fa-file-pdf"></i> Original PDF</button>
-                                <button class="paper-tab active" type="button" data-view="reader"><i class="fa-solid fa-align-left"></i> Reader view</button>
-                                <a class="paper-dl" href="./ipl_paper.pdf" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i> Open / download</a>
-                            </div>
-
-                            <div class="paper-pdf">
-                                <object class="paper-frame" data="./ipl_paper.pdf#view=FitH" type="application/pdf"></object>
-                                <div class="paper-frame paper-frame-fallback" hidden>
-                                    <i class="fa-solid fa-file-pdf"></i>
-                                    <p>Inline PDF preview is blocked when the page is opened as a local file. It embeds normally on the live site — or open the PDF directly.</p>
-                                    <a class="btn btn-primary" href="./ipl_paper.pdf" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i> Open the PDF</a>
-                                </div>
-                                <p class="paper-fallback">Prefer text? Switch to <b>Reader view</b> above.</p>
-                            </div>
-
-                            <div class="paper-reader">
-                            <p class="paper-abstract">I document and analyze a trade I placed in a binary prediction market for the winner of the 2026 Indian Premier League (IPL). The market quoted the two top-seeded teams — Royal Challengers Bengaluru (RCB) and Gujarat Titans (GT) — at $0.38 and $0.37 respectively. I bought one Yes contract in each, for a combined cost of $0.75 and a $1.00 payoff if either won — my wager that a top-two seed would claim the title. I show that the quoted prices were consistent with a model in which every playoff fixture is an independent fair coin toss, which assigns the two top seeds a combined <b>75%</b> win probability. Against this, the historical base rate under the current (post-2011) playoff format is 14 of 15 champions drawn from the top two (<b>93.3%</b>), and a Bayesian posterior under a uniform prior centers at <b>88.2%</b>. My position was therefore positive expected value for any true probability above the fee-inclusive break-even of <b>78.3%</b>. Ex post, both top seeds reached the final — so my position was already a winner before the match began — and RCB won by five wickets, realizing a net return of approximately <b>27.7%</b>. I want to be clear that this favorable outcome confirms but does not establish the quality of my decision.</p>
-
-                            <h4>1. Market Setup and Trade Construction</h4>
-                            <p>The Kalshi "IPL Champion" market lists one contract per franchise, each settling at $1.00 if that franchise wins the title and $0.00 otherwise. When I looked at the market, the four surviving playoff teams were priced (best Yes ask) at RCB $0.38, GT $0.37, Sunrisers Hyderabad (SRH) $0.15, and Rajasthan Royals (RR) $0.14. The four implied probabilities sum to approximately 1.05, reflecting a market over-round (margin) of roughly 5%. My trade is a static, long, paired position: I bought one RCB Yes and one GT Yes contract. My combined outlay is c = $0.38 + $0.37 = $0.75, and because the two events are mutually exclusive, the position returns exactly $1.00 if either team wins and $0.00 otherwise. To me this is the cleanest, most direct way to express my core proposition: "a top-two seed wins the IPL."</p>
-
-                            <h4>2. Assumptions</h4>
-                            <p>My analysis rests on the following explicit assumptions: <b>(1) Settlement</b> — each contract is binary; exactly one franchise wins, so outcomes are mutually exclusive and collectively exhaustive. <b>(2) Seeding &amp; format</b> — under the post-2011 format, Qualifier 1 pits seeds 1 and 2, the Eliminator pits seeds 3 and 4, Qualifier 2 pits the Q1 loser against the Eliminator winner, and the Final pits the Q1 winner against the Q2 winner, so top-two seeds enjoy a "second life." <b>(3) Executable prices</b> — I assume the quoted asks are achievable at my intended size, with negligible market impact. <b>(4) Fee model</b> — I approximate Kalshi taker fees as fee = ⌈0.07·N·p(1−p)⌉ cents per contract. <b>(5) Hold to settlement</b> — I assume the position is held to resolution, with no intermediate trading in the base case. <b>(6) Coin-flip benchmark</b> — to characterize the market's implied pricing only, I treat each fixture as an independent 50/50 outcome (a descriptive device, not my own belief about the matches). <b>(7) Base-rate window</b> — I compute the historical base rate over the 15 seasons (2011–2025) under the current format.</p>
-
-                            <h4>3. Probability Model and Base Rate</h4>
-                            <p>Under the coin-flip benchmark, a top-two seed wins by either winning Q1 then the Final, or losing Q1, winning Q2, then the Final:</p>
-                            <div class="eq">
-                                Pr(top-two seed wins) =
-                                <span class="frac"><span class="num">1</span><span>2</span></span>·<span class="frac"><span class="num">1</span><span>2</span></span>
-                                +
-                                <span class="frac"><span class="num">1</span><span>2</span></span>·<span class="frac"><span class="num">1</span><span>2</span></span>·<span class="frac"><span class="num">1</span><span>2</span></span>
-                                = <span class="frac"><span class="num">3</span><span>8</span></span>
-                                <br><small>win Q1, win Final &nbsp;+&nbsp; lose Q1, win Q2, win Final</small>
-                            </div>
-                            <p>while a bottom-two seed must win three consecutive matches:</p>
-                            <div class="eq">Pr(bottom-two seed wins) = (<span class="frac"><span class="num">1</span><span>2</span></span>)<sup>3</sup> = <span class="frac"><span class="num">1</span><span>8</span></span></div>
-                            <p>These sum to 2·(3/8) + 2·(1/8) = 1. The model assigns the top two a combined <b>0.75</b>, matching the observed 0.38 + 0.37 = 0.75 — in other words, the market is effectively pricing every knockout as a fair coin toss, an assumption I think is too generous to the lower seeds.</p>
-                            <p><b>Historical base rate.</b> Across 2011–2025, the champion emerged from the top two in 14 of 15 seasons; the sole exception is SRH in 2016, which won from third via the Eliminator route. My point estimate is therefore p̂ = 14/15 ≈ <b>0.933</b>.</p>
-                            <p><b>Bayesian update.</b> Treating the record as 14 successes and 1 failure under a uniform Beta(1, 1) prior yields a Beta(15, 2) posterior with mean 15/17 ≈ <b>0.882</b> and an approximate 95% credible interval of [0.71, 0.98]. Even after I discount heavily for the small sample, my central estimate (0.882) still materially exceeds the market-implied 0.75.</p>
-
-                            <h4>4. Expected-Value Analysis</h4>
-                            <p>At fill, my per-contract fees are ⌈0.07(0.38)(0.62)⌉ and ⌈0.07(0.37)(0.63)⌉ — about $0.0165 and $0.0163 at scale — for a combined fee of ≈ $0.033 and an effective cost c<sub>eff</sub> ≈ $0.783. Letting p be the true probability that a top-two seed wins, the expected value of my position per unit is EV(p) = p·$1.00 − c<sub>eff</sub>, with fee-inclusive break-even p⋆ = c<sub>eff</sub> ≈ <b>0.783</b>. My position is profitable in expectation for any p &gt; 0.783.</p>
-                            <table class="paper-tbl">
-                                <thead><tr><th>Scenario</th><th>p</th><th>EV ($)</th><th>Return on cost</th></tr></thead>
-                                <tbody>
-                                    <tr><td>Market-implied (coin flip)</td><td>0.750</td><td class="neg">−0.033</td><td class="neg">−4.2%</td></tr>
-                                    <tr><td>Conservative belief</td><td>0.850</td><td class="pos">+0.067</td><td class="pos">+8.6%</td></tr>
-                                    <tr><td>Bayesian posterior mean</td><td>0.882</td><td class="pos">+0.099</td><td class="pos">+12.6%</td></tr>
-                                    <tr><td>Historical base rate</td><td>0.933</td><td class="pos">+0.150</td><td class="pos">+19.2%</td></tr>
-                                    <tr class="realized"><td>Realized (ex post)</td><td>1.000</td><td>+0.217</td><td>+27.7%</td></tr>
-                                </tbody>
-                            </table>
-                            <p class="paper-note">Table 1: Expected value of my paired RCB+GT position. Return on cost uses c<sub>eff</sub> ≈ $0.783. Conditional on the realized final pairing, the gross return ignoring fees is $0.25/$0.75 = 33.3%.</p>
-
-                            <h4>5. Qualitative Robustness Checks</h4>
-                            <p>Beyond the base rate, I see three structural considerations that push the true p above 0.75. <b>Venue:</b> the Final was at GT's home ground (Narendra Modi Stadium, Ahmedabad), where GT held a strong record — including an unbeaten mark against the most in-form challenger (SRH) — while earlier knockout venues were approximately neutral. <b>Squad balance:</b> GT fielded the deepest combined pace and spin resources, and RCB paired the strongest top order with a leading new-ball attack; the two non-top-two teams carried identifiable weaknesses (SRH a thin spin attack and top-heavy batting; RR a depleted all-round unit and a first-time playoff captain). <b>Impact Player rule:</b> it compresses the value of all-rounders, so the comparison I care about is specialist bowling depth, where the top seeds led. None of these is decisive on its own, but in my view each tilts p above the coin-flip benchmark.</p>
-
-                            <h4>6. Ex-Post Resolution</h4>
-                            <p>The 2026 Final was contested by RCB and GT. Because both top-two seeds reached the Final, my position became a certain winner the moment the pairing was set (after Q2): one of my two contracts was guaranteed to settle at $1.00. In the match itself, RCB won the toss and bowled; GT posted 155/8 in their 20 overs, and RCB chased 161/5 in 18.0 overs to win by five wickets, anchored by an unbeaten 75 off 42 balls from V. Kohli. My position therefore realized its maximum: a gross return of 33.3% and, net of estimated fees, approximately <b>27.7%</b> — right in line with what I had targeted at the outset.</p>
-
-                            <h4>7. Discussion, Limitations, and Conclusion</h4>
-                            <p>The way it played out was the most favorable branch of the outcome tree: with both top seeds in the Final, my principal downside — a deep run by the in-form SRH — was eliminated outright. Even so, I want to separate outcome from decision quality. My position was positive expected value ex ante for any belief exceeding the 78.3% break-even, comfortably below both the base rate and my posterior mean; but a sound positive-EV bet of this kind can still lose with non-trivial probability, so winning corroborates my thesis without proving it. I also recognize the limitations: the historical sample is small (n = 15) with a wide credible interval; my realized return is a single draw; and my model assumes static prices, independent fixtures, and a stylized fee schedule, and it ignores conditions, injuries, and cross-match correlation. Subject to those caveats, my conclusion is that the market's coin-flip pricing understated the structural advantages of a top-two seeding — an extra path to the Final and stronger underlying teams — which is what created the positive-expectation opportunity that, this time, resolved in my favor.</p>
-
-                            <p class="paper-note">This note is descriptive and analytical; it is not investment advice.</p>
-                            </div>
-                        </div>
-                    </template>
-
-                </div>
-            </section>
-
-            <!-- PROJECTS -->
-            <section class="sec" id="projects">
-                <div class="sec-head"><span class="sec-num">04</span><h3 class="sec-title">Projects</h3><span class="sec-line"></span></div>
-                <div class="grid">
-
-                    <article class="card" role="button" tabindex="0" data-modal="proj-opensigmoid">
-                        <div class="card-top"><h4 class="card-title">OpenSigmoid</h4><span class="card-cat">Personal</span></div>
-                        <p class="card-meta">May 2025 – Present</p>
-                        <p class="card-sub">Decentralized, end-to-end encrypted Web3 messaging with token-gated communities and in-chat crypto payments.</p>
-                        <div class="card-tags"><span class="tag">Go</span><span class="tag">React</span><span class="tag">PostgreSQL</span><span class="tag">Web3</span><span class="tag">WebSockets</span></div>
-                        <span class="card-cue">View details <i class="fa-solid fa-arrow-right"></i></span>
-                    </article>
-                    <template id="tpl-proj-opensigmoid">
-                        <p class="m-cat">Project · Personal</p>
-                        <h3 class="m-title">OpenSigmoid — Anonymous Mailing Service</h3>
-                        <p class="m-meta">May 2025 – Present</p>
-                        <div class="m-tags"><span class="tag">Go</span><span class="tag">React</span><span class="tag">PostgreSQL</span><span class="tag">AES-256-GCM</span><span class="tag">WebSockets</span><span class="tag">Ethereum</span><span class="tag">Solana</span></div>
-                        <ul class="bullets">
-                            <li>Built a decentralized messaging platform integrating Ethereum and Solana wallets with end-to-end encryption (AES-256-GCM), supporting real-time WebSocket communication, token-gated communities, and in-chat crypto payments using Go, React, and PostgreSQL.</li>
-                            <li>Implemented a secure Web3 authentication system with wallet-based account recovery, JWT token management, and multi-chain wallet linking, handling both traditional and blockchain-based user authentication flows.</li>
-                            <li>Architected real-time messaging infrastructure with WebSocket connection management, automatic reconnection logic, a 5-minute heartbeat mechanism, and message delivery confirmation supporting 1-to-1, group, and channel communications.</li>
-                        </ul>
-                        <div class="m-links"><a class="btn" href="https://opensigmoid.com" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i> Visit site</a></div>
-                    </template>
-
-                    <article class="card" role="button" tabindex="0" data-modal="proj-chrome">
-                        <div class="card-top"><h4 class="card-title">chromeControl</h4><span class="card-cat">Hackathon</span></div>
-                        <p class="card-meta">Aug 2025 – Sept 2025</p>
-                        <p class="card-sub">MCP-compliant Chrome sidebar extension delivering real-time page analysis and contextual AI assistance.</p>
-                        <div class="card-tags"><span class="tag">TypeScript</span><span class="tag">React</span><span class="tag">MCP</span><span class="tag">Chrome Extension</span></div>
-                        <span class="card-cue">View details <i class="fa-solid fa-arrow-right"></i></span>
-                    </article>
-                    <template id="tpl-proj-chrome">
-                        <p class="m-cat">Project · Kiro Hackathon</p>
-                        <h3 class="m-title">chromeControl — Productivity Tool</h3>
-                        <p class="m-meta">Aug 2025 – Sept 2025</p>
-                        <div class="m-tags"><span class="tag">TypeScript</span><span class="tag">React</span><span class="tag">MCP</span><span class="tag">Chrome Extension</span></div>
-                        <ul class="bullets">
-                            <li>Built an MCP-compliant Chrome sidebar extension that stays active across tabs, delivering real-time page analysis and contextual AI assistance with custom task automation.</li>
-                            <li>Architected a modular TypeScript/React codebase (background worker, content scripts, sidebar UI, shared services) enabling easy extension and maintainability.</li>
-                            <li>Implemented privacy-first safeguards — local processing, sensitive-data filtering, and domain-based security tiers — balancing AI capability with user trust.</li>
-                            <li>Delivered advanced tooling including prompt debugging, smart context building, and an intelligent text-extraction pipeline under active enhancement.</li>
-                            <li>Documented developer onboarding (quick start, API docs, troubleshooting) and established a clear contribution workflow aligned with TypeScript best practices.</li>
-                        </ul>
-                        <div class="m-links"><a class="btn" href="https://github.com/abdulllkhan/chromecontrol" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> GitHub Repo</a></div>
-                    </template>
-
-                    <article class="card" role="button" tabindex="0" data-modal="proj-quantum">
-                        <div class="card-top"><h4 class="card-title">Quantum-Classical NN</h4><span class="card-cat">NYU</span></div>
-                        <p class="card-meta">Jan 2025 – May 2025</p>
-                        <p class="card-sub">Hybrid quantum-classical network predicting six-year lung cancer risk from a single low-dose CT scan.</p>
-                        <div class="card-tags"><span class="tag">Qiskit</span><span class="tag">Quantum ML</span><span class="tag">CT Imaging</span></div>
-                        <span class="card-cue">View details <i class="fa-solid fa-arrow-right"></i></span>
-                    </article>
-                    <template id="tpl-proj-quantum">
-                        <p class="m-cat">Project · New York University</p>
-                        <h3 class="m-title">Quantum-Classical Neural Network for Lung Cancer Risk Prediction</h3>
-                        <p class="m-meta">Jan 2025 – May 2025</p>
-                        <div class="m-tags"><span class="tag">Qiskit</span><span class="tag">Quantum ML</span><span class="tag">Deep Learning</span><span class="tag">Medical Imaging</span></div>
-                        <ul class="bullets">
-                            <li>Developed a hybrid quantum-classical neural network to predict future lung cancer risk from a single low-dose CT scan.</li>
-                            <li>Simulated a hybrid classical-quantum neural network to measure the risk of cancer over the next six years based on a single low-dose CT scan.</li>
-                            <li>Verified feasibility by over-fitting the model on a single image, due to the exponential cost of running operations on entangled qubits on a quantum chip.</li>
-                            <li>Utilized Qiskit to modify qubits to store model weights, later used for inference while verifying feasibility.</li>
-                        </ul>
-                    </template>
-
-                    <article class="card" role="button" tabindex="0" data-modal="proj-squaris">
-                        <div class="card-top"><h4 class="card-title">Squaris</h4><span class="card-cat">Reddit Devvit</span></div>
-                        <p class="card-meta">Sept 2025</p>
-                        <p class="card-sub">Three procedurally-generated polycube packing puzzles spanning 2D tiling and 3D lattice modes.</p>
-                        <div class="card-tags"><span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">R3F</span><span class="tag">Three.js</span></div>
-                        <span class="card-cue">View details <i class="fa-solid fa-arrow-right"></i></span>
-                    </article>
-                    <template id="tpl-proj-squaris">
-                        <p class="m-cat">Project · Reddit Devvit</p>
-                        <h3 class="m-title">Squaris — Spatial Packing Puzzle Game</h3>
-                        <p class="m-meta">Sept 2025</p>
-                        <div class="m-tags"><span class="tag">React 18</span><span class="tag">TypeScript</span><span class="tag">Tailwind</span><span class="tag">React Three Fiber</span><span class="tag">Jest</span><span class="tag">Vercel</span></div>
-                        <ul class="bullets">
-                            <li>Built three puzzle variants (2D square tiling, 3D polycube packing on a 4×4×4 lattice, and a Tetris-style bent-polycube mode) over a single procedural-generation kernel using React 18, TypeScript, Tailwind, and React Three Fiber.</li>
-                            <li>Implemented a reverse-construction generator that tiles the container with seeded polycube placements and shuffles the recorded solution into an inventory, guaranteeing solvability with date-seeded daily consistency.</li>
-                            <li>Generated the cube rotation group as the closure of three 90° axis rotations, yielding 24 unique orientations per polycube; verified completeness of the player-facing controls via BFS over the orientation graph.</li>
-                            <li>Fixed a corner-unreachability defect by generalising the anchor cell — any cell of the active orientation can land at the cursor with the first valid placement selected — eliminating back-wall dead-ends.</li>
-                            <li>Delivered a Jest suite covering generator invariants, rotation-group completeness, smart-anchor regression, and inventory round-trips; deployed as static files on Vercel via a just-driven release pipeline.</li>
-                        </ul>
-                        <div class="m-links"><a class="btn" href="https://github.com/abdulllkhan/squaris" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> GitHub</a><a class="btn" href="https://squaris.vercel.app/" target="_blank" rel="noopener"><i class="fa-solid fa-gamepad"></i> Play live</a></div>
-                    </template>
-
-                    <article class="card" role="button" tabindex="0" data-modal="proj-qubitquery">
-                        <div class="card-top"><h4 class="card-title">QubitQuery RAG Assistant</h4><span class="card-cat">Personal</span></div>
-                        <p class="card-meta">June 2025</p>
-                        <p class="card-sub">Self-contained RAG assistant over lecture notes to make professors' office hours more productive.</p>
-                        <div class="card-tags"><span class="tag">LangChain</span><span class="tag">FAISS</span><span class="tag">OpenAI</span><span class="tag">RAG</span></div>
-                        <span class="card-cue">View details <i class="fa-solid fa-arrow-right"></i></span>
-                    </article>
-                    <template id="tpl-proj-qubitquery">
-                        <p class="m-cat">Project · Personal</p>
-                        <h3 class="m-title">QubitQuery RAG Assistant</h3>
-                        <p class="m-meta">June 2025</p>
-                        <div class="m-tags"><span class="tag">LangChain</span><span class="tag">FAISS</span><span class="tag">OpenAI API</span><span class="tag">Embeddings</span><span class="tag">RAG</span></div>
-                        <ul class="bullets">
-                            <li>Created a self-contained RAG (Retrieval-Augmented Generation) assistant to query lecture notes so professors can have more productive office hours.</li>
-                            <li>The implementation uses LangChain to split the lecture notes into chunks, which are converted into embeddings using the OpenAI API and stored in the FAISS vector database.</li>
-                            <li>A similarity check retrieves the most relevant chunks, which are fed into an LLM to answer the question through a terminal-based interface.</li>
-                        </ul>
-                    </template>
-
-                    <article class="card" role="button" tabindex="0" data-modal="proj-elms">
-                        <div class="card-top"><h4 class="card-title">Enterprise Limit Management System</h4><span class="card-cat">Finflux</span></div>
-                        <p class="card-meta">Jan 2023 – July 2023</p>
-                        <p class="card-sub">Exposure &amp; limit management aggregating personal and transaction data for 35M+ customers.</p>
-                        <div class="card-tags"><span class="tag">Java 17</span><span class="tag">Spring Boot</span><span class="tag">MySQL</span><span class="tag">Docker</span></div>
-                        <span class="card-cue">View details <i class="fa-solid fa-arrow-right"></i></span>
-                    </article>
-                    <template id="tpl-proj-elms">
-                        <p class="m-cat">Project · Finflux</p>
-                        <h3 class="m-title">Enterprise Limit Management System (ELMS)</h3>
-                        <p class="m-meta">Jan 2023 – July 2023</p>
-                        <div class="m-tags"><span class="tag">Java 17</span><span class="tag">Spring Boot</span><span class="tag">MySQL</span><span class="tag">Liquibase</span><span class="tag">Docker</span><span class="tag">Jenkins</span><span class="tag">ArgoCD</span></div>
-                        <ul class="bullets">
-                            <li>Application designed to calculate the exposure of individuals and groups, flagging the lending system when exposure constraints are exceeded.</li>
-                            <li>The product aggregated personal data and transaction details for over 35 million customers.</li>
-                            <li>Mitigates default and fraud risks while also being used internally to manage exposure limits and credit calculations across multiple products.</li>
-                            <li>Skills applied: Java 17, Spring Boot, Copilot, Git, MySQL, Liquibase, Docker, Jenkins, ArgoCD, SFTP, and other relevant technologies.</li>
-                        </ul>
-                    </template>
-
-                    <article class="card" role="button" tabindex="0" data-modal="proj-stock">
-                        <div class="card-top"><h4 class="card-title">Stock Direction Prediction</h4><span class="card-cat">NYU</span></div>
-                        <p class="card-meta">Feb 2024 – May 2024</p>
-                        <p class="card-sub">Fine-tuned FinBERT and LLMs feeding a Random Forest to forecast GameStop's price direction.</p>
-                        <div class="card-tags"><span class="tag">FinBERT</span><span class="tag">BERT</span><span class="tag">Llama</span><span class="tag">Random Forest</span></div>
-                        <span class="card-cue">View details <i class="fa-solid fa-arrow-right"></i></span>
-                    </article>
-                    <template id="tpl-proj-stock">
-                        <p class="m-cat">Project · New York University</p>
-                        <h3 class="m-title">Stock Direction Prediction Using Sentiment Analysis</h3>
-                        <p class="m-meta">Feb 2024 – May 2024</p>
-                        <div class="m-tags"><span class="tag">FinBERT</span><span class="tag">BERT</span><span class="tag">Gemma-7B</span><span class="tag">Llama-11B</span><span class="tag">Random Forest</span></div>
-                        <ul class="bullets">
-                            <li>Fine-tuned language models such as FinBERT, BERT, Gemma-7B, and Llama-11B to extract sentiment.</li>
-                            <li>The sentiment and other features were input into a Random Forest algorithm, which predicted the direction of the stock — specifically trained to forecast GameStop (GME).</li>
-                            <li>Sentiment analysis was performed on Reddit data, while the real-world stock price dataset was sourced from Yahoo Finance. The prediction accuracy was 0.59.</li>
-                        </ul>
-                    </template>
-
-                </div>
-            </section>
-
-            <!-- HACKATHONS -->
-            <section class="sec" id="hackathons">
-                <div class="sec-head"><span class="sec-num">05</span><h3 class="sec-title">Hackathons</h3><span class="sec-line"></span></div>
-                <div class="mini-grid">
-                    <div class="mini"><b>HackNYU</b><div class="mini-txt">Built an Acorns alternative with far more control over risk appetite and investment types.</div></div>
-                    <div class="mini"><b>Kiro Hackathon</b><div class="mini-txt">Built chromeControl, an MCP-compliant Chrome AI assistant (see Projects).</div></div>
-                    <div class="mini"><b>Reddit · Devvit</b><div class="mini-txt">Created the game <a href="https://squaris.vercel.app/" target="_blank" rel="noopener">Squaris</a>, a spatial packing puzzle.</div></div>
-                    <div class="mini"><b>YQuantum</b><div class="mini-txt">Attempted the BlueQubit problem of Peaked Circuits.</div></div>
-                    <div class="mini"><b>IMC Prosperity 3</b><div class="mini-txt">Financial modelling for max profit — both Algorithmic and Manual Trading tracks.</div></div>
-                    <div class="mini"><b>Hackfinity</b><div class="mini-txt">Built a RAG/LangChain chatbot helping students grasp hard-to-find topics.</div></div>
-                </div>
-            </section>
-
-            <!-- EXTRA-CURRICULARS -->
-            <section class="sec" id="extracurriculars">
-                <div class="sec-head"><span class="sec-num">06</span><h3 class="sec-title">Extra-Curriculars</h3><span class="sec-line"></span></div>
-                <ul class="bullets">
-                    <li>Represented NYU in Contract Bridge — intercollege tournaments, scrimmages, and the North American Bridge Championships (Philadelphia, 2025).</li>
-                    <li>Represented NYU in Poker at the <a href="https://pokeripa.com/teams/new-york-university-2024-2025/" target="_blank" rel="noopener">Intercollegiate Poker Association (IPA)</a> annual tournament, 2025.</li>
-                    <li><b>Clubs:</b> Bridge &amp; Spades, Society of Asian Scientists and Engineers (SASE), IEEE, Soccer Intramurals (5v5, 9v9).</li>
-                </ul>
-            </section>
-
-        </div>
-    </main>
-
-    <!-- ============ MODAL ============ -->
-    <div class="modal" id="modal" aria-hidden="true">
-        <div class="modal-overlay" data-close></div>
-        <div class="modal-dialog" role="dialog" aria-modal="true" aria-label="Details">
-            <button class="modal-close" type="button" aria-label="Close" data-close>&times;</button>
-            <div class="modal-body" id="modal-body"></div>
-        </div>
+<section id="education" style="display:flex;flex-wrap:wrap;gap:24px 56px;padding:56px clamp(20px,5vw,56px);border-top:1px solid #d9d1c0">
+  <div style="flex:0 0 180px;position:sticky;top:24px;align-self:flex-start;display:flex;gap:12px;align-items:baseline;font-family:Helvetica,Arial,sans-serif;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#7d7466"><span style="font-family:Georgia,serif;font-style:italic;font-size:15px;letter-spacing:0;color:var(--accent)">02</span><span>Education</span></div>
+  <div style="flex:1 1 460px;min-width:300px;max-width:780px">
+    <div style="display:flex;flex-wrap:wrap;gap:4px 32px;align-items:baseline;padding:0 0 24px">
+      <div style="flex:1 1 320px;min-width:240px">
+        <div style="font-size:20px"><strong>New York University</strong> <span style="font-style:italic;color:#6f6653">· MS, Computer Engineering</span></div>
+        <p style="margin:8px 0 0;font-size:13.5px;line-height:1.6;color:#7d7466;max-width:620px"><span style="font-family:Helvetica,Arial,sans-serif;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase">Coursework</span> — Quantum Computing, Machine Learning, Deep Learning, Computer System Architecture, Network Security, Mathematics, Physics, Finance.</p>
+      </div>
+      <div style="flex:0 0 auto;margin-left:auto;text-align:right;font-family:Helvetica,Arial,sans-serif;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#7d7466;line-height:1.9">2023 – 2025<br>GPA 3.8 / 4.00</div>
     </div>
+    <div style="display:flex;flex-wrap:wrap;gap:4px 32px;align-items:baseline;border-top:1px solid #d9d1c0;padding:24px 0 0">
+      <div style="flex:1 1 320px;min-width:240px">
+        <div style="font-size:20px"><strong>The National Institute of Engineering</strong> <span style="font-style:italic;color:#6f6653">· BE, Computer Science</span></div>
+        <p style="margin:8px 0 0;font-size:13.5px;line-height:1.6;color:#7d7466;max-width:620px"><span style="font-family:Helvetica,Arial,sans-serif;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase">Coursework</span> — Advanced Mathematics &amp; Statistics, Advanced Algorithms, Parallel Programming, Formal Language &amp; Automata Theory, Computer Networks.</p>
+      </div>
+      <div style="flex:0 0 auto;margin-left:auto;text-align:right;font-family:Helvetica,Arial,sans-serif;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#7d7466;line-height:1.9">2017 – 2021<br>GPA 9.00 / 10.00</div>
+    </div>
+  </div>
+</section>
 
-    <script>
-        (function () {
-            var modal = document.getElementById('modal');
-            var body = document.getElementById('modal-body');
-            var lastFocused = null;
+<section id="experience" style="display:flex;flex-wrap:wrap;gap:24px 56px;padding:56px clamp(20px,5vw,56px);border-top:1px solid #d9d1c0">
+  <div style="flex:0 0 180px;position:sticky;top:24px;align-self:flex-start;display:flex;gap:12px;align-items:baseline;font-family:Helvetica,Arial,sans-serif;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#7d7466"><span style="font-family:Georgia,serif;font-style:italic;font-size:15px;letter-spacing:0;color:var(--accent)">03</span><span>Experience</span></div>
+  <div style="flex:1 1 460px;min-width:300px;max-width:780px">
+    <div style="display:flex;flex-wrap:wrap;gap:4px 32px;align-items:baseline;padding:0 0 24px">
+      <div style="flex:1 1 320px;min-width:240px">
+        <div style="font-size:20px"><strong>Founding Engineer</strong> <span style="font-style:italic;color:#6f6653">· Starboard</span></div>
+        <p style="margin:8px 0 0;font-size:15.5px;line-height:1.55;color:#3d382e;max-width:600px">Multi-agent systems with tool use that autonomously process shipment tracking, monitor carrier portals, and reconcile data across logistics platforms. Fine-tuned open-source LLMs for document parsing.</p>
+        <div role="button" tabindex="0" data-modal="starboard" style="margin:14px 0 0;display:inline-block;cursor:pointer;font-family:Helvetica,Arial,sans-serif;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)">View details →</div>
+      </div>
+      <div style="flex:0 0 auto;margin-left:auto;text-align:right;font-family:Helvetica,Arial,sans-serif;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#7d7466;line-height:1.9">Oct 2025 – Present<br>Remote · New York</div>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:4px 32px;align-items:baseline;border-top:1px solid #d9d1c0;padding:24px 0">
+      <div style="flex:1 1 320px;min-width:240px">
+        <div style="font-size:20px"><strong>Research Intern</strong> <span style="font-style:italic;color:#6f6653">· NYU, Center for Quantum Information Physics</span></div>
+        <p style="margin:8px 0 0;font-size:15.5px;line-height:1.55;color:#3d382e;max-width:600px">Hybrid classical–quantum neural network estimating six-year lung-cancer risk from a single low-dose CT scan.</p>
+        <div role="button" tabindex="0" data-modal="cqip" style="margin:14px 0 0;display:inline-block;cursor:pointer;font-family:Helvetica,Arial,sans-serif;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)">View details →</div>
+      </div>
+      <div style="flex:0 0 auto;margin-left:auto;text-align:right;font-family:Helvetica,Arial,sans-serif;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#7d7466;line-height:1.9">Jan – May 2025<br>New York</div>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:4px 32px;align-items:baseline;border-top:1px solid #d9d1c0;padding:24px 0">
+      <div style="flex:1 1 320px;min-width:240px">
+        <div style="font-size:20px"><strong>Software Development Intern</strong> <span style="font-style:italic;color:#6f6653">· Tiny Archives</span></div>
+        <p style="margin:8px 0 0;font-size:15.5px;line-height:1.55;color:#3d382e;max-width:600px">Built and scaled backend archival systems for organizations and individuals with Python, Django, and PostgreSQL.</p>
+        <div role="button" tabindex="0" data-modal="tiny" style="margin:14px 0 0;display:inline-block;cursor:pointer;font-family:Helvetica,Arial,sans-serif;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)">View details →</div>
+      </div>
+      <div style="flex:0 0 auto;margin-left:auto;text-align:right;font-family:Helvetica,Arial,sans-serif;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#7d7466;line-height:1.9">Sept – Dec 2024<br>New York</div>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:4px 32px;align-items:baseline;border-top:1px solid #d9d1c0;padding:24px 0 0">
+      <div style="flex:1 1 320px;min-width:240px">
+        <div style="font-size:20px"><strong>Software Development Engineer I</strong> <span style="font-style:italic;color:#6f6653">· Finflux</span></div>
+        <p style="margin:8px 0 0;font-size:15.5px;line-height:1.55;color:#3d382e;max-width:600px">Built ELMS, an exposure and limit-management engine covering 35M+ customers, and resolved production issues in the core Loan Management System.</p>
+        <div role="button" tabindex="0" data-modal="finflux" style="margin:14px 0 0;display:inline-block;cursor:pointer;font-family:Helvetica,Arial,sans-serif;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)">View details →</div>
+      </div>
+      <div style="flex:0 0 auto;margin-left:auto;text-align:right;font-family:Helvetica,Arial,sans-serif;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#7d7466;line-height:1.9">Nov 2022 – July 2023<br>Bangalore</div>
+    </div>
+  </div>
+</section>
 
-            function openModal(id) {
-                var tpl = document.getElementById('tpl-' + id);
-                if (!tpl) return;
-                body.innerHTML = tpl.innerHTML;
-                var dialog = modal.querySelector('.modal-dialog');
-                if (dialog) dialog.classList.toggle('wide', !!body.querySelector('.paper'));
-                if (location.protocol === 'file:') {
-                    var pdfObj = body.querySelector('.paper-pdf object');
-                    var pdfFb = body.querySelector('.paper-frame-fallback');
-                    if (pdfObj && pdfFb) { pdfObj.style.display = 'none'; pdfFb.hidden = false; }
-                }
-                body.scrollTop = 0;
-                modal.classList.add('open');
-                modal.setAttribute('aria-hidden', 'false');
-                document.body.classList.add('no-scroll');
-                lastFocused = document.activeElement;
-                var btn = modal.querySelector('.modal-close');
-                if (btn) btn.focus();
-            }
-            function closeModal() {
-                modal.classList.remove('open');
-                modal.setAttribute('aria-hidden', 'true');
-                document.body.classList.remove('no-scroll');
-                body.innerHTML = '';
-                if (lastFocused && lastFocused.focus) lastFocused.focus();
-            }
+<section id="projects" style="display:flex;flex-wrap:wrap;gap:24px 56px;padding:56px clamp(20px,5vw,56px);border-top:1px solid #d9d1c0">
+  <div style="flex:0 0 180px;position:sticky;top:24px;align-self:flex-start;display:flex;gap:12px;align-items:baseline;font-family:Helvetica,Arial,sans-serif;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#7d7466"><span style="font-family:Georgia,serif;font-style:italic;font-size:15px;letter-spacing:0;color:var(--accent)">04</span><span>Projects</span></div>
+  <div style="flex:1 1 460px;min-width:300px;max-width:780px;display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:0 44px">
+    <div style="border-top:1px solid #d9d1c0;padding:20px 0 26px">
+      <div style="display:flex;justify-content:space-between;gap:12px;align-items:baseline"><a href="https://opensigmoid.com/" style="font-size:19px;font-weight:700;text-decoration:none">OpenSigmoid</a><span style="font-family:Helvetica,Arial,sans-serif;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:#7d7466;white-space:nowrap">Personal · 2025 –</span></div>
+      <p style="margin:8px 0 12px;font-size:14.5px;line-height:1.55;color:#3d382e">Decentralized, end-to-end encrypted Web3 messaging with token-gated communities and in-chat crypto payments.</p>
+      <div style="font-family:Helvetica,Arial,sans-serif;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)">Go · React · PostgreSQL · WebSockets</div>
+      <div role="button" tabindex="0" data-modal="opensigmoid" style="margin:14px 0 0;display:inline-block;cursor:pointer;font-family:Helvetica,Arial,sans-serif;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)">View details →</div>
+    </div>
+    <div style="border-top:1px solid #d9d1c0;padding:20px 0 26px">
+      <div style="display:flex;justify-content:space-between;gap:12px;align-items:baseline"><a href="https://github.com/abdulllkhan/chromecontrol" style="font-size:19px;font-weight:700;text-decoration:none">chromeControl</a><span style="font-family:Helvetica,Arial,sans-serif;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:#7d7466;white-space:nowrap">Hackathon · 2025</span></div>
+      <p style="margin:8px 0 12px;font-size:14.5px;line-height:1.55;color:#3d382e">MCP-compliant Chrome sidebar extension delivering real-time page analysis and contextual AI assistance across tabs.</p>
+      <div style="font-family:Helvetica,Arial,sans-serif;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)">TypeScript · React · MCP</div>
+      <div role="button" tabindex="0" data-modal="chrome" style="margin:14px 0 0;display:inline-block;cursor:pointer;font-family:Helvetica,Arial,sans-serif;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)">View details →</div>
+    </div>
+    <div style="border-top:1px solid #d9d1c0;padding:20px 0 26px">
+      <div style="display:flex;justify-content:space-between;gap:12px;align-items:baseline"><span style="font-size:19px;font-weight:700">Quantum-Classical NN</span><span style="font-family:Helvetica,Arial,sans-serif;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:#7d7466;white-space:nowrap">NYU · 2025</span></div>
+      <p style="margin:8px 0 12px;font-size:14.5px;line-height:1.55;color:#3d382e">Hybrid quantum-classical network predicting six-year lung-cancer risk from a single low-dose CT scan.</p>
+      <div style="font-family:Helvetica,Arial,sans-serif;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)">Qiskit · PyTorch · CT Imaging</div>
+      <div role="button" tabindex="0" data-modal="quantum" style="margin:14px 0 0;display:inline-block;cursor:pointer;font-family:Helvetica,Arial,sans-serif;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)">View details →</div>
+    </div>
+    <div style="border-top:1px solid #d9d1c0;padding:20px 0 26px">
+      <div style="display:flex;justify-content:space-between;gap:12px;align-items:baseline"><a href="https://squaris.vercel.app/" style="font-size:19px;font-weight:700;text-decoration:none">Squaris</a><span style="font-family:Helvetica,Arial,sans-serif;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:#7d7466;white-space:nowrap">Reddit Devvit · 2025</span></div>
+      <p style="margin:8px 0 12px;font-size:14.5px;line-height:1.55;color:#3d382e">Three procedurally-generated polycube packing puzzles spanning 2D tiling and 3D lattice modes.</p>
+      <div style="font-family:Helvetica,Arial,sans-serif;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)">React · TypeScript · Three.js</div>
+      <div role="button" tabindex="0" data-modal="squaris" style="margin:14px 0 0;display:inline-block;cursor:pointer;font-family:Helvetica,Arial,sans-serif;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)">View details →</div>
+    </div>
+    <div style="border-top:1px solid #d9d1c0;padding:20px 0 26px">
+      <div style="display:flex;justify-content:space-between;gap:12px;align-items:baseline"><a href="https://github.com/abdulllkhan/rag_llm" style="font-size:19px;font-weight:700;text-decoration:none">QubitQuery</a><span style="font-family:Helvetica,Arial,sans-serif;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:#7d7466;white-space:nowrap">Personal · 2025</span></div>
+      <p style="margin:8px 0 12px;font-size:14.5px;line-height:1.55;color:#3d382e">Self-contained RAG assistant over lecture notes to make professors' office hours more productive.</p>
+      <div style="font-family:Helvetica,Arial,sans-serif;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)">LangChain · FAISS · OpenAI</div>
+      <div role="button" tabindex="0" data-modal="qubitquery" style="margin:14px 0 0;display:inline-block;cursor:pointer;font-family:Helvetica,Arial,sans-serif;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)">View details →</div>
+    </div>
+    <div style="border-top:1px solid #d9d1c0;padding:20px 0 26px">
+      <div style="display:flex;justify-content:space-between;gap:12px;align-items:baseline"><span style="font-size:19px;font-weight:700">ELMS</span><span style="font-family:Helvetica,Arial,sans-serif;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:#7d7466;white-space:nowrap">Finflux · 2023</span></div>
+      <p style="margin:8px 0 12px;font-size:14.5px;line-height:1.55;color:#3d382e">Enterprise exposure and limit management aggregating personal and transaction data for 35M+ customers.</p>
+      <div style="font-family:Helvetica,Arial,sans-serif;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)">Java 17 · Spring Boot · MySQL</div>
+      <div role="button" tabindex="0" data-modal="elms" style="margin:14px 0 0;display:inline-block;cursor:pointer;font-family:Helvetica,Arial,sans-serif;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)">View details →</div>
+    </div>
+    <div style="border-top:1px solid #d9d1c0;padding:20px 0 26px">
+      <div style="display:flex;justify-content:space-between;gap:12px;align-items:baseline"><span style="font-size:19px;font-weight:700">Stock Direction Prediction</span><span style="font-family:Helvetica,Arial,sans-serif;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:#7d7466;white-space:nowrap">NYU · 2024</span></div>
+      <p style="margin:8px 0 12px;font-size:14.5px;line-height:1.55;color:#3d382e">Fine-tuned FinBERT and LLMs feeding a Random Forest to forecast GameStop's price direction.</p>
+      <div style="font-family:Helvetica,Arial,sans-serif;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)">FinBERT · Llama · Random Forest</div>
+      <div role="button" tabindex="0" data-modal="stock" style="margin:14px 0 0;display:inline-block;cursor:pointer;font-family:Helvetica,Arial,sans-serif;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)">View details →</div>
+    </div>
+  </div>
+</section>
 
-            var cards = document.querySelectorAll('.card');
-            for (var i = 0; i < cards.length; i++) {
-                (function (card) {
-                    card.addEventListener('click', function () { openModal(card.getAttribute('data-modal')); });
-                    card.addEventListener('keydown', function (e) {
-                        if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') {
-                            e.preventDefault();
-                            openModal(card.getAttribute('data-modal'));
-                        }
-                    });
-                })(cards[i]);
-            }
+<section id="writing" style="display:flex;flex-wrap:wrap;gap:24px 56px;padding:56px clamp(20px,5vw,56px);border-top:1px solid #d9d1c0">
+  <div style="flex:0 0 180px;position:sticky;top:24px;align-self:flex-start;display:flex;gap:12px;align-items:baseline;font-family:Helvetica,Arial,sans-serif;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#7d7466"><span style="font-family:Georgia,serif;font-style:italic;font-size:15px;letter-spacing:0;color:var(--accent)">05</span><span>Writing</span></div>
+  <div style="flex:1 1 460px;min-width:300px;max-width:780px">
+    <div style="font-family:Helvetica,Arial,sans-serif;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:#7d7466">2026 · Independent</div>
+    <h3 style="margin:12px 0 6px;font-size:clamp(24px,3vw,32px);font-weight:400;font-style:italic;line-height:1.25">Coin-Flip Pricing in a Tournament-Winner Market</h3>
+    <p style="margin:0 0 14px;font-size:15px;color:#6f6653;font-style:italic">A paired-contract trade on the 2026 IPL champion.</p>
+    <p style="margin:0 0 16px;font-size:15.5px;line-height:1.6;color:#3d382e;max-width:620px">The market priced the two finalists like a coin flip (0.75 combined) while the base rate for a top-two seed winning sat at 93.3%. A paired RCB + GT position on Kalshi captured the gap — positive expected value, returning ~27.7%.</p>
+    <div style="font-family:Helvetica,Arial,sans-serif;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)">Prediction Markets · Probability · Bayesian Inference · Expected Value</div>
+    <div style="margin-top:16px;font-size:15px"><a href="./ipl_paper.pdf">Read the paper (PDF)</a></div>
+    <div role="button" tabindex="0" data-modal="paper" style="margin:14px 0 0;display:inline-block;cursor:pointer;font-family:Helvetica,Arial,sans-serif;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)">View abstract →</div>
+  </div>
+</section>
 
-            modal.addEventListener('click', function (e) {
-                if (e.target.hasAttribute('data-close')) closeModal();
-            });
-            body.addEventListener('click', function (e) {
-                var tab = e.target.closest ? e.target.closest('.paper-tab') : null;
-                if (!tab) return;
-                var paper = body.querySelector('.paper');
-                if (!paper) return;
-                paper.setAttribute('data-view', tab.getAttribute('data-view'));
-                var tabs = body.querySelectorAll('.paper-tab');
-                for (var k = 0; k < tabs.length; k++) tabs[k].classList.toggle('active', tabs[k] === tab);
-            });
-            document.addEventListener('keydown', function (e) {
-                if (e.key === 'Escape' && modal.classList.contains('open')) closeModal();
-            });
+<section id="hackathons" style="display:flex;flex-wrap:wrap;gap:24px 56px;padding:56px clamp(20px,5vw,56px);border-top:1px solid #d9d1c0">
+  <div style="flex:0 0 180px;position:sticky;top:24px;align-self:flex-start;display:flex;gap:12px;align-items:baseline;font-family:Helvetica,Arial,sans-serif;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#7d7466"><span style="font-family:Georgia,serif;font-style:italic;font-size:15px;letter-spacing:0;color:var(--accent)">06</span><span>Hackathons</span></div>
+  <div style="flex:1 1 460px;min-width:300px;max-width:780px;display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:0 36px">
+    <div style="border-top:1px solid #d9d1c0;padding:18px 0 22px"><div style="font-size:16px;font-weight:700">HackNYU</div><p style="margin:6px 0 0;font-size:13.5px;line-height:1.5;color:#6f6653">An Acorns alternative with far more control over risk appetite and investment types.</p></div>
+    <div style="border-top:1px solid #d9d1c0;padding:18px 0 22px"><div style="font-size:16px;font-weight:700">Kiro Hackathon</div><p style="margin:6px 0 0;font-size:13.5px;line-height:1.5;color:#6f6653">chromeControl, an MCP-compliant Chrome AI assistant (see Projects).</p></div>
+    <div style="border-top:1px solid #d9d1c0;padding:18px 0 22px"><div style="font-size:16px;font-weight:700">Reddit · Devvit</div><p style="margin:6px 0 0;font-size:13.5px;line-height:1.5;color:#6f6653"><a href="https://squaris.vercel.app/">Squaris</a>, a spatial packing puzzle game.</p></div>
+    <div style="border-top:1px solid #d9d1c0;padding:18px 0 22px"><div style="font-size:16px;font-weight:700">YQuantum</div><p style="margin:6px 0 0;font-size:13.5px;line-height:1.5;color:#6f6653">Attempted the BlueQubit problem of Peaked Circuits.</p></div>
+    <div style="border-top:1px solid #d9d1c0;padding:18px 0 22px"><div style="font-size:16px;font-weight:700">IMC Prosperity 3</div><p style="margin:6px 0 0;font-size:13.5px;line-height:1.5;color:#6f6653">Financial modelling for max profit — algorithmic and manual trading tracks.</p></div>
+    <div style="border-top:1px solid #d9d1c0;padding:18px 0 22px"><div style="font-size:16px;font-weight:700">Hackfinity</div><p style="margin:6px 0 0;font-size:13.5px;line-height:1.5;color:#6f6653">A RAG/LangChain chatbot helping students grasp hard-to-find topics.</p></div>
+  </div>
+</section>
 
-            // Active nav highlighting
-            var navLinks = document.querySelectorAll('.nav-link');
-            var sections = [];
-            for (var j = 0; j < navLinks.length; j++) {
-                var sel = navLinks[j].getAttribute('href');
-                var el = sel && document.querySelector(sel);
-                if (el) sections.push(el);
-            }
-            if ('IntersectionObserver' in window) {
-                var obs = new IntersectionObserver(function (entries) {
-                    entries.forEach(function (en) {
-                        if (en.isIntersecting) {
-                            var id = en.target.id;
-                            navLinks.forEach(function (l) {
-                                l.classList.toggle('active', l.getAttribute('href') === '#' + id);
-                            });
-                        }
-                    });
-                }, { rootMargin: '-45% 0px -50% 0px', threshold: 0 });
-                sections.forEach(function (s) { obs.observe(s); });
-            }
-        })();
-    </script>
+<section id="beyond" style="display:flex;flex-wrap:wrap;gap:24px 56px;padding:56px clamp(20px,5vw,56px);border-top:1px solid #d9d1c0">
+  <div style="flex:0 0 180px;position:sticky;top:24px;align-self:flex-start;display:flex;gap:12px;align-items:baseline;font-family:Helvetica,Arial,sans-serif;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#7d7466"><span style="font-family:Georgia,serif;font-style:italic;font-size:15px;letter-spacing:0;color:var(--accent)">07</span><span>Beyond work</span></div>
+  <div style="flex:1 1 460px;min-width:300px;max-width:780px;display:flex;flex-direction:column;gap:16px">
+    <p style="margin:0;font-size:15.5px;line-height:1.6;color:#3d382e"><span style="font-family:Helvetica,Arial,sans-serif;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:#7d7466">Bridge</span> &nbsp;Represented NYU in contract bridge — intercollege tournaments, scrimmages, and the North American Bridge Championships (Philadelphia, 2025).</p>
+    <p style="margin:0;font-size:15.5px;line-height:1.6;color:#3d382e"><span style="font-family:Helvetica,Arial,sans-serif;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:#7d7466">Poker</span> &nbsp;Represented NYU at the <a href="https://pokeripa.com/teams/new-york-university-2024-2025/">Intercollegiate Poker Association</a> annual tournament, 2025.</p>
+    <p style="margin:0;font-size:15.5px;line-height:1.6;color:#3d382e"><span style="font-family:Helvetica,Arial,sans-serif;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:#7d7466">Clubs</span> &nbsp;Bridge &amp; Spades, SASE, IEEE, soccer intramurals (5v5, 9v9).</p>
+  </div>
+</section>
+
+<footer style="margin:0 clamp(20px,5vw,56px) 56px;border-top:2px solid #1c1914"></footer>
+
+<div id="modal" hidden style="position:fixed;inset:0;z-index:100;display:flex;align-items:center;justify-content:center;padding:24px">
+  <div data-close style="position:absolute;inset:0;background:rgba(28,25,20,.45)"></div>
+  <div role="dialog" aria-modal="true" aria-labelledby="modal-title" style="position:relative;z-index:1;background:#faf7ef;border:1px solid #d9d1c0;max-width:660px;width:100%;max-height:86vh;overflow-y:auto;padding:40px 44px 44px;box-shadow:0 24px 70px rgba(28,25,20,.35)">
+    <div role="button" tabindex="0" data-close style="position:absolute;top:16px;right:20px;cursor:pointer;font-family:Helvetica,Arial,sans-serif;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#7d7466">Close ×</div>
+    <div id="modal-kicker" style="font-family:Helvetica,Arial,sans-serif;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)"></div>
+    <h3 id="modal-title" style="margin:10px 32px 4px 0;font-size:27px;font-weight:700;line-height:1.2"></h3>
+    <div id="modal-meta" style="font-family:Helvetica,Arial,sans-serif;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#7d7466;margin:0 0 20px"></div>
+    <div id="modal-bullets" style="border-top:1px solid #d9d1c0;padding-top:20px"></div>
+  </div>
+</div>
+
+<script>
+(function () {
+  var DETAILS = {
+    starboard: {
+      kicker: "Experience · Starboard",
+      title: "Founding Engineer",
+      meta: "Remote (NY) · Oct 2025 – Present",
+      bullets: [
+        "Built and deployed multi-agent systems with function calling and tool use that autonomously process shipment tracking updates, monitor carrier websites, and resolve data discrepancies across logistics platforms.",
+        "Designed web scrapers and data pipelines extracting structured shipment data from carrier portals — 95%+ accuracy on real-time tracking, plus automated invoice reconciliation.",
+        "Fine-tuned open-source LLMs for entity extraction and document parsing, cutting average processing time from 2.5 minutes to under 10 seconds per document."
+      ]
+    },
+    cqip: {
+      kicker: "Experience · New York University",
+      title: "Research Intern, CQIP",
+      meta: "New York · Jan – May 2025",
+      bullets: [
+        "Research intern under Prof. Javad Shabani at the Center for Quantum Information Physics.",
+        "Built a hybrid classical–quantum neural network measuring six-year cancer risk from a single low-dose CT scan (3D image).",
+        "Focused on faster inference at acceptable predictive accuracy, rather than outperforming existing models like Sybil."
+      ]
+    },
+    tiny: {
+      kicker: "Experience · Tiny Archives",
+      title: "Software Development Intern",
+      meta: "New York · Sept – Dec 2024",
+      bullets: [
+        "Developed and maintained backend systems with Python, Django, and PostgreSQL to archive files for organizations and individuals.",
+        "Improved scalability by optimizing system architecture and performance for increased user demand and data processing."
+      ]
+    },
+    finflux: {
+      kicker: "Experience · Finflux",
+      title: "Software Development Engineer 1",
+      meta: "Bangalore · Nov 2022 – July 2023",
+      bullets: [
+        "Developed ELMS, a standalone product calculating a customer’s total exposure across multiple financial services within a single institution.",
+        "Collaborated with backend engineers and joined client meetings to pin down and implement requirements.",
+        "Addressed Level 3 bugs, resolving production issues in the core Loan Management System (LMS)."
+      ]
+    },
+    opensigmoid: {
+      kicker: "Project · Personal",
+      title: "OpenSigmoid — Web3 Messaging",
+      meta: "May 2025 – Present",
+      bullets: [
+        "Ethereum and Solana wallet integration with end-to-end encryption (AES-256-GCM), real-time WebSockets, token-gated communities, and in-chat crypto payments.",
+        "Secure Web3 authentication with wallet-based account recovery, JWT management, and multi-chain wallet linking.",
+        "Real-time messaging infrastructure with connection management, automatic reconnection, heartbeats, and delivery confirmation for 1-to-1, group, and channel chats."
+      ]
+    },
+    chrome: {
+      kicker: "Project · Kiro Hackathon",
+      title: "chromeControl — AI Sidebar",
+      meta: "Aug – Sept 2025",
+      bullets: [
+        "Sidebar stays active across tabs, delivering real-time page analysis and contextual AI assistance with custom task automation.",
+        "Modular TypeScript/React codebase — background worker, content scripts, sidebar UI, shared services.",
+        "Privacy-first safeguards: local processing, sensitive-data filtering, and domain-based security tiers.",
+        "Tooling for prompt debugging, smart context building, and an intelligent text-extraction pipeline."
+      ]
+    },
+    quantum: {
+      kicker: "Project · New York University",
+      title: "Quantum-Classical Neural Network",
+      meta: "Jan – May 2025",
+      bullets: [
+        "Simulated a hybrid classical-quantum neural network measuring cancer risk over the next six years from a single low-dose CT scan.",
+        "Verified feasibility by over-fitting on a single image, given the exponential cost of operations on entangled qubits.",
+        "Used Qiskit to store model weights in qubits, later used for inference."
+      ]
+    },
+    squaris: {
+      kicker: "Project · Reddit Devvit",
+      title: "Squaris — Spatial Packing Puzzle",
+      meta: "Sept 2025",
+      bullets: [
+        "Three variants — 2D square tiling, 3D polycube packing on a 4×4×4 lattice, and a Tetris-style bent-polycube mode — over a single procedural-generation kernel.",
+        "Reverse-construction generator tiles the container with seeded placements and shuffles the solution into the inventory, guaranteeing solvability with date-seeded dailies.",
+        "Cube rotation group generated as the closure of three 90° axis rotations — 24 unique orientations per polycube, verified via BFS over the orientation graph.",
+        "Jest suite covering generator invariants, rotation-group completeness, and anchor regressions; deployed on Vercel."
+      ]
+    },
+    qubitquery: {
+      kicker: "Project · Personal",
+      title: "QubitQuery RAG Assistant",
+      meta: "June 2025",
+      bullets: [
+        "LangChain splits lecture notes into chunks, embedded via the OpenAI API and stored in a FAISS vector database.",
+        "Similarity search retrieves the most relevant chunks, which feed an LLM through a terminal-based interface."
+      ]
+    },
+    elms: {
+      kicker: "Project · Finflux",
+      title: "Enterprise Limit Management System",
+      meta: "Jan – July 2023",
+      bullets: [
+        "Calculates the exposure of individuals and groups, flagging the lending system when exposure constraints are exceeded.",
+        "Aggregated personal and transaction data for 35M+ customers; mitigates default and fraud risk across products.",
+        "Stack: Java 17, Spring Boot, MySQL, Liquibase, Docker, Jenkins, ArgoCD."
+      ]
+    },
+    stock: {
+      kicker: "Project · New York University",
+      title: "Stock Direction Prediction",
+      meta: "Feb – May 2024",
+      bullets: [
+        "Fine-tuned FinBERT, BERT, Gemma-7B, and Llama-11B to extract sentiment from Reddit data.",
+        "Sentiment and other features fed a Random Forest predicting GameStop’s direction; price data from Yahoo Finance. Accuracy 0.59."
+      ]
+    },
+    paper: {
+      kicker: "Paper · Independent",
+      title: "Coin-Flip Pricing in a Tournament-Winner Market",
+      meta: "June 2026",
+      bullets: [
+        "The market quoted the two top seeds (RCB $0.38, GT $0.37) — pricing consistent with every playoff fixture being a fair coin toss (combined 75%).",
+        "Against this: 14 of 15 champions under the post-2011 format came from the top two (93.3%); a Beta(15,2) Bayesian posterior centers at 88.2%.",
+        "A paired RCB + GT position ($0.75 combined, $1.00 payoff) was +EV above the fee-inclusive break-even of 78.3%.",
+        "Ex post, both top seeds reached the final and RCB won — net return ~27.7%. The outcome corroborates but does not prove the decision quality."
+      ]
+    }
+  };
+
+  var modal = document.getElementById('modal');
+  var kicker = document.getElementById('modal-kicker');
+  var title = document.getElementById('modal-title');
+  var meta = document.getElementById('modal-meta');
+  var bullets = document.getElementById('modal-bullets');
+  var lastFocused = null;
+
+  function openModal(id) {
+    var d = DETAILS[id];
+    if (!d) return;
+    kicker.textContent = d.kicker || '';
+    title.textContent = d.title || '';
+    meta.textContent = d.meta || '';
+    bullets.innerHTML = '';
+    (d.bullets || []).forEach(function (b) {
+      var row = document.createElement('div');
+      row.setAttribute('style', 'display:flex;gap:12px;margin:0 0 12px;font-size:15px;line-height:1.6;color:#3d382e');
+      var dash = document.createElement('span');
+      dash.setAttribute('style', 'color:var(--accent)');
+      dash.textContent = '—';
+      var text = document.createElement('span');
+      text.textContent = b;
+      row.appendChild(dash);
+      row.appendChild(text);
+      bullets.appendChild(row);
+    });
+    lastFocused = document.activeElement;
+    modal.hidden = false;
+    document.body.classList.add('no-scroll');
+    var closeBtn = modal.querySelector('[data-close][role="button"]');
+    if (closeBtn) closeBtn.focus();
+  }
+
+  function closeModal() {
+    modal.hidden = true;
+    document.body.classList.remove('no-scroll');
+    if (lastFocused && lastFocused.focus) lastFocused.focus();
+  }
+
+  document.addEventListener('click', function (e) {
+    if (!e.target.closest) return;
+    var trigger = e.target.closest('[data-modal]');
+    if (trigger) { openModal(trigger.getAttribute('data-modal')); return; }
+    if (e.target.closest('[data-close]')) closeModal();
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && !modal.hidden) { closeModal(); return; }
+    if (e.key !== 'Enter' && e.key !== ' ' && e.key !== 'Spacebar') return;
+    var el = document.activeElement;
+    if (!el || !el.hasAttribute) return;
+    if (el.hasAttribute('data-modal')) { e.preventDefault(); openModal(el.getAttribute('data-modal')); }
+    else if (el.hasAttribute('data-close')) { e.preventDefault(); closeModal(); }
+  });
+})();
+</script>
 </body>
 </html>
