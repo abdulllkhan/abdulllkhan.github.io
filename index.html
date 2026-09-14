@@ -5,206 +5,253 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Abdul Samad Zaheer Khan — Founding Engineer at Starboard. AI systems, multi-agent architectures, and applied machine learning.">
 <title>Abdul Samad Zaheer Khan — Founding Engineer</title>
-<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23f5f1e8'/%3E%3Ctext x='32' y='47' font-family='Georgia,serif' font-style='italic' font-size='46' fill='%239a3b26' text-anchor='middle'%3EK%3C/text%3E%3C/svg%3E">
 <style>
-  html{scroll-behavior:smooth}
+  html{scroll-behavior:smooth;scrollbar-color:#b9ad94 #f5f1e8}
   body{margin:0;background:#f5f1e8;color:#1c1914;font-family:Georgia,'Times New Roman',serif;-webkit-font-smoothing:antialiased;--accent:#9a3b26}
-  a{color:inherit;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px;text-decoration-color:#c2b59d;transition:color .15s,text-decoration-color .15s}
+  a{color:inherit;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px;text-decoration-color:#6a6154;transition:color .15s,text-decoration-color .15s}
   a:hover{color:var(--accent);text-decoration-color:var(--accent)}
+  a:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
   ::selection{background:#e9dcc3}
-  [data-modal]:hover{opacity:.65}
-  [data-modal]:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+  h3{text-wrap:balance}
+  p{text-wrap:pretty}
+  .ico{display:inline-flex;align-items:center;color:#6a6154;text-decoration:none;transition:color .15s;padding:12px;margin:-12px}
+  .ico:hover{color:var(--accent)}
+  .ico svg{display:block}
+  .arr{display:inline-block;transition:transform .15s}
+  [data-modal]:hover .arr{transform:translateX(4px)}
+  [data-modal]:focus-visible,[data-close]:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
   #modal{position:fixed;inset:0;z-index:100;display:flex;align-items:center;justify-content:center;padding:24px}
   #modal[hidden]{display:none!important}
+  #modal [role="dialog"]{transition:transform .16s ease,opacity .16s ease}
+  @starting-style{#modal:not([hidden]) [role="dialog"]{opacity:0;transform:translateY(8px)}}
   body.no-scroll{overflow:hidden}
+  @media (max-width:600px){
+    .col{min-width:0!important}
+    .cards{grid-template-columns:minmax(0,1fr)!important}
+    .pm{white-space:normal!important}
+    .lbl{position:static!important}
+    .em{order:-1;margin-left:0!important;text-align:left!important;line-height:1.6!important}
+    nav a{padding:8px 0}
+    body>div:first-child a{padding:8px 0}
+    #modal{padding:14px}
+    #modal h3{font-size:20px!important;margin-right:16px!important}
+    [role="dialog"]{padding:30px 22px 32px!important}
+  }
   @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
 </style>
 </head>
 <body>
 
-<div style="display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:8px 24px;padding:15px clamp(20px,5vw,56px);border-bottom:1px solid #d9d1c0;font-family:Helvetica,Arial,sans-serif;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#7d7466">
+<div style="display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:8px 24px;padding:15px clamp(20px,5vw,56px);border-bottom:1px solid #d9d1c0;font-family:Helvetica,Arial,sans-serif;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#6a6154">
   <div>New York, NY</div>
   <div style="display:flex;gap:22px;flex-wrap:wrap">
     <a style="text-decoration:none" href="mailto:ak9943@nyu.edu">Email</a>
-    <a style="text-decoration:none" href="https://github.com/abdulllkhan">GitHub</a>
-    <a style="text-decoration:none" href="https://www.linkedin.com/in/abdulsamadzkhan/">LinkedIn</a>
+    <a target="_blank" rel="noopener" style="text-decoration:none" href="https://github.com/abdulllkhan">GitHub</a>
+    <a target="_blank" rel="noopener" style="text-decoration:none" href="https://www.linkedin.com/in/abdulsamadzkhan/">LinkedIn</a>
     <a style="text-decoration:none;color:var(--accent)" href="./basic.html">Basic&nbsp;version</a>
   </div>
 </div>
 
 <header style="padding:60px clamp(20px,5vw,56px) 40px">
-  <h1 style="margin:0;font-size:clamp(52px,8.5vw,112px);line-height:.98;font-weight:400;letter-spacing:-.015em">Abdul Samad<br>Zaheer Khan</h1>
-  <p style="margin:26px 0 0;font-style:italic;font-size:clamp(17px,2vw,21px);color:#6f6653;max-width:620px;line-height:1.5">Founding Engineer · MS Computer Engineering, NYU</p>
+  <h1 style="margin:0;font-size:clamp(44px,9vw,112px);line-height:.98;font-weight:400;letter-spacing:-.015em">Abdul Samad<br>Zaheer Khan</h1>
+  <p style="margin:26px 0 0;font-style:italic;font-size:clamp(17px,2vw,21px);color:#6f6653;line-height:1.5">Founding Engineer at Starboard&nbsp;· MS Computer Engineering,&nbsp;NYU</p>
 </header>
 
 <div style="margin:0 clamp(20px,5vw,56px);border-top:2px solid #1c1914"></div>
 
-<nav style="display:flex;flex-wrap:wrap;gap:8px 26px;margin:3px clamp(20px,5vw,56px) 0;padding:12px 0;border-top:1px solid #1c1914;font-family:Helvetica,Arial,sans-serif;font-size:11px;letter-spacing:.14em;text-transform:uppercase">
-  <a style="text-decoration:none" href="#about"><span style="color:var(--accent)">01</span>&nbsp; About</a>
-  <a style="text-decoration:none" href="#education"><span style="color:var(--accent)">02</span>&nbsp; Education</a>
-  <a style="text-decoration:none" href="#experience"><span style="color:var(--accent)">03</span>&nbsp; Experience</a>
-  <a style="text-decoration:none" href="#projects"><span style="color:var(--accent)">04</span>&nbsp; Projects</a>
-  <a style="text-decoration:none" href="#writing"><span style="color:var(--accent)">05</span>&nbsp; Writing</a>
-  <a style="text-decoration:none" href="#hackathons"><span style="color:var(--accent)">06</span>&nbsp; Hackathons</a>
+<nav style="display:flex;flex-wrap:wrap;gap:8px 26px;margin:3px clamp(20px,5vw,56px) 0;padding:12px 0;border-top:1px solid #1c1914;font-family:Helvetica,Arial,sans-serif;font-size:11px;letter-spacing:.12em;text-transform:uppercase">
+  <a style="text-decoration:none" href="#about"><span style="color:var(--accent);font-family:Georgia,serif;font-style:italic;font-size:13px;letter-spacing:0">01</span>&nbsp; About</a>
+  <a style="text-decoration:none" href="#education"><span style="color:var(--accent);font-family:Georgia,serif;font-style:italic;font-size:13px;letter-spacing:0">02</span>&nbsp; Education</a>
+  <a style="text-decoration:none" href="#experience"><span style="color:var(--accent);font-family:Georgia,serif;font-style:italic;font-size:13px;letter-spacing:0">03</span>&nbsp; Experience</a>
+  <a style="text-decoration:none" href="#projects"><span style="color:var(--accent);font-family:Georgia,serif;font-style:italic;font-size:13px;letter-spacing:0">04</span>&nbsp; Projects</a>
+  <a style="text-decoration:none" href="#writing"><span style="color:var(--accent);font-family:Georgia,serif;font-style:italic;font-size:13px;letter-spacing:0">05</span>&nbsp; Writing</a>
+  <a style="text-decoration:none" href="#hackathons"><span style="color:var(--accent);font-family:Georgia,serif;font-style:italic;font-size:13px;letter-spacing:0">06</span>&nbsp; Hackathons</a>
+  <a style="text-decoration:none" href="#beyond"><span style="color:var(--accent);font-family:Georgia,serif;font-style:italic;font-size:13px;letter-spacing:0">07</span>&nbsp; Beyond work</a>
 </nav>
 
 <section id="about" style="display:flex;flex-wrap:wrap;gap:24px 56px;padding:56px clamp(20px,5vw,56px);border-top:1px solid #d9d1c0">
-  <div style="flex:0 0 180px;position:sticky;top:24px;align-self:flex-start;display:flex;gap:12px;align-items:baseline;font-family:Helvetica,Arial,sans-serif;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#7d7466"><span style="font-family:Georgia,serif;font-style:italic;font-size:15px;letter-spacing:0;color:var(--accent)">01</span><span>About</span></div>
-  <div style="flex:1 1 460px;min-width:300px;max-width:780px">
-    <p style="margin:0;font-size:clamp(19px,2.2vw,23px);line-height:1.55">I'm a founding engineer with an MS in Computer Engineering from NYU, specializing in AI systems, multi-agent architectures, and applied machine learning. I build production-grade AI — from fine-tuning LLMs to deploying autonomous agent systems that handle real-world logistics and data-processing problems.</p>
+  <div class="lbl" style="flex:0 0 180px;position:sticky;top:24px;align-self:flex-start;display:flex;gap:12px;align-items:baseline;font-family:Helvetica,Arial,sans-serif;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#6a6154"><span style="font-family:Georgia,serif;font-style:italic;font-size:15px;letter-spacing:0;color:var(--accent)">01</span><span>About</span></div>
+  <div class="col" style="flex:1 1 460px;min-width:300px;max-width:780px">
+    <p style="margin:0;font-size:clamp(19px,2.2vw,23px);line-height:1.55">I’m a founding engineer with an MS in Computer Engineering from NYU, specializing in AI systems, multi-agent architectures, and applied machine learning. I build production-grade AI — from fine-tuning LLMs to deploying autonomous agent systems that handle real-world logistics and data-processing problems.</p>
     <p style="margin:20px 0 0;font-size:16px;line-height:1.6;color:#6f6653;font-style:italic">Away from the keyboard: competitive contract bridge and poker, and an interest in strategy games.</p>
   </div>
 </section>
 
 <section id="education" style="display:flex;flex-wrap:wrap;gap:24px 56px;padding:56px clamp(20px,5vw,56px);border-top:1px solid #d9d1c0">
-  <div style="flex:0 0 180px;position:sticky;top:24px;align-self:flex-start;display:flex;gap:12px;align-items:baseline;font-family:Helvetica,Arial,sans-serif;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#7d7466"><span style="font-family:Georgia,serif;font-style:italic;font-size:15px;letter-spacing:0;color:var(--accent)">02</span><span>Education</span></div>
-  <div style="flex:1 1 460px;min-width:300px;max-width:780px">
+  <div class="lbl" style="flex:0 0 180px;position:sticky;top:24px;align-self:flex-start;display:flex;gap:12px;align-items:baseline;font-family:Helvetica,Arial,sans-serif;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#6a6154"><span style="font-family:Georgia,serif;font-style:italic;font-size:15px;letter-spacing:0;color:var(--accent)">02</span><span>Education</span></div>
+  <div class="col" style="flex:1 1 460px;min-width:300px;max-width:780px">
     <div style="display:flex;flex-wrap:wrap;gap:4px 32px;align-items:baseline;padding:0 0 24px">
       <div style="flex:1 1 320px;min-width:240px">
         <div style="font-size:20px"><strong>New York University</strong> <span style="font-style:italic;color:#6f6653">· MS, Computer Engineering</span></div>
-        <p style="margin:8px 0 0;font-size:13.5px;line-height:1.6;color:#7d7466;max-width:620px"><span style="font-family:Helvetica,Arial,sans-serif;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase">Coursework</span> — Quantum Computing, Machine Learning, Deep Learning, Computer System Architecture, Network Security, Mathematics, Physics, Finance.</p>
+        <p style="margin:8px 0 0;font-size:14.5px;line-height:1.6;color:#6a6154;max-width:620px"><span style="font-family:Helvetica,Arial,sans-serif;font-size:11px;letter-spacing:.12em;text-transform:uppercase">Coursework</span> — Quantum Computing, Machine Learning, Deep Learning, Computer System Architecture, Network Security, Mathematics, Physics, Finance.</p>
       </div>
-      <div style="flex:0 0 auto;margin-left:auto;text-align:right;font-family:Helvetica,Arial,sans-serif;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#7d7466;line-height:1.9">2023 – 2025<br>GPA 3.8 / 4.00</div>
+      <div class="em" style="flex:0 0 auto;margin-left:auto;text-align:right;font-family:Helvetica,Arial,sans-serif;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#6a6154;line-height:1.9">2023 – 2025<br>GPA 3.80 / 4.00</div>
     </div>
     <div style="display:flex;flex-wrap:wrap;gap:4px 32px;align-items:baseline;border-top:1px solid #d9d1c0;padding:24px 0 0">
       <div style="flex:1 1 320px;min-width:240px">
         <div style="font-size:20px"><strong>The National Institute of Engineering</strong> <span style="font-style:italic;color:#6f6653">· BE, Computer Science</span></div>
-        <p style="margin:8px 0 0;font-size:13.5px;line-height:1.6;color:#7d7466;max-width:620px"><span style="font-family:Helvetica,Arial,sans-serif;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase">Coursework</span> — Advanced Mathematics &amp; Statistics, Advanced Algorithms, Parallel Programming, Formal Language &amp; Automata Theory, Computer Networks.</p>
+        <p style="margin:8px 0 0;font-size:14.5px;line-height:1.6;color:#6a6154;max-width:620px"><span style="font-family:Helvetica,Arial,sans-serif;font-size:11px;letter-spacing:.12em;text-transform:uppercase">Coursework</span> — Advanced Mathematics &amp; Statistics, Advanced Algorithms, Parallel Programming, Formal Language &amp; Automata Theory, Computer Networks.</p>
       </div>
-      <div style="flex:0 0 auto;margin-left:auto;text-align:right;font-family:Helvetica,Arial,sans-serif;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#7d7466;line-height:1.9">2017 – 2021<br>GPA 9.00 / 10.00</div>
+      <div class="em" style="flex:0 0 auto;margin-left:auto;text-align:right;font-family:Helvetica,Arial,sans-serif;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#6a6154;line-height:1.9">2017 – 2021<br>GPA 9.00 / 10.00</div>
     </div>
   </div>
 </section>
 
 <section id="experience" style="display:flex;flex-wrap:wrap;gap:24px 56px;padding:56px clamp(20px,5vw,56px);border-top:1px solid #d9d1c0">
-  <div style="flex:0 0 180px;position:sticky;top:24px;align-self:flex-start;display:flex;gap:12px;align-items:baseline;font-family:Helvetica,Arial,sans-serif;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#7d7466"><span style="font-family:Georgia,serif;font-style:italic;font-size:15px;letter-spacing:0;color:var(--accent)">03</span><span>Experience</span></div>
-  <div style="flex:1 1 460px;min-width:300px;max-width:780px">
+  <div class="lbl" style="flex:0 0 180px;position:sticky;top:24px;align-self:flex-start;display:flex;gap:12px;align-items:baseline;font-family:Helvetica,Arial,sans-serif;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#6a6154"><span style="font-family:Georgia,serif;font-style:italic;font-size:15px;letter-spacing:0;color:var(--accent)">03</span><span>Experience</span></div>
+  <div class="col" style="flex:1 1 460px;min-width:300px;max-width:780px">
     <div style="display:flex;flex-wrap:wrap;gap:4px 32px;align-items:baseline;padding:0 0 24px">
       <div style="flex:1 1 320px;min-width:240px">
         <div style="font-size:20px"><strong>Founding Engineer</strong> <span style="font-style:italic;color:#6f6653">· Starboard</span></div>
-        <p style="margin:8px 0 0;font-size:15.5px;line-height:1.55;color:#3d382e;max-width:600px">Multi-agent systems with tool use that autonomously process shipment tracking, monitor carrier portals, and reconcile data across logistics platforms. Fine-tuned open-source LLMs for document parsing.</p>
-        <div role="button" tabindex="0" data-modal="starboard" style="margin:14px 0 0;display:inline-block;cursor:pointer;font-family:Helvetica,Arial,sans-serif;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)">View details →</div>
+        <p style="margin:8px 0 0;font-size:15.5px;line-height:1.6;color:#3d382e;max-width:600px">Multi-agent systems with tool use that autonomously process shipment tracking, monitor carrier portals, and reconcile data across logistics platforms. Fine-tuned open-source LLMs for document parsing.</p>
+        <div role="button" tabindex="0" data-modal="starboard" style="margin:8px 0 -6px;padding:6px 0;display:inline-block;cursor:pointer;font-family:Helvetica,Arial,sans-serif;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)">View details <span class="arr">→</span></div>
       </div>
-      <div style="flex:0 0 auto;margin-left:auto;text-align:right;font-family:Helvetica,Arial,sans-serif;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#7d7466;line-height:1.9">Oct 2025 – Present<br>Remote · New York</div>
+      <div class="em" style="flex:0 0 auto;margin-left:auto;text-align:right;font-family:Helvetica,Arial,sans-serif;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#6a6154;line-height:1.9">Oct 2025 – Present<br>Remote · New York</div>
     </div>
     <div style="display:flex;flex-wrap:wrap;gap:4px 32px;align-items:baseline;border-top:1px solid #d9d1c0;padding:24px 0">
       <div style="flex:1 1 320px;min-width:240px">
         <div style="font-size:20px"><strong>Research Intern</strong> <span style="font-style:italic;color:#6f6653">· NYU, Center for Quantum Information Physics</span></div>
-        <p style="margin:8px 0 0;font-size:15.5px;line-height:1.55;color:#3d382e;max-width:600px">Hybrid classical–quantum neural network estimating six-year lung-cancer risk from a single low-dose CT scan.</p>
-        <div role="button" tabindex="0" data-modal="cqip" style="margin:14px 0 0;display:inline-block;cursor:pointer;font-family:Helvetica,Arial,sans-serif;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)">View details →</div>
+        <p style="margin:8px 0 0;font-size:15.5px;line-height:1.6;color:#3d382e;max-width:600px">Hybrid quantum–classical neural network estimating six-year lung-cancer risk from a single low-dose CT scan.</p>
+        <div role="button" tabindex="0" data-modal="cqip" style="margin:8px 0 -6px;padding:6px 0;display:inline-block;cursor:pointer;font-family:Helvetica,Arial,sans-serif;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)">View details <span class="arr">→</span></div>
       </div>
-      <div style="flex:0 0 auto;margin-left:auto;text-align:right;font-family:Helvetica,Arial,sans-serif;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#7d7466;line-height:1.9">Jan – May 2025<br>New York</div>
+      <div class="em" style="flex:0 0 auto;margin-left:auto;text-align:right;font-family:Helvetica,Arial,sans-serif;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#6a6154;line-height:1.9">Jan – May 2025<br>New York</div>
     </div>
     <div style="display:flex;flex-wrap:wrap;gap:4px 32px;align-items:baseline;border-top:1px solid #d9d1c0;padding:24px 0">
       <div style="flex:1 1 320px;min-width:240px">
         <div style="font-size:20px"><strong>Software Development Intern</strong> <span style="font-style:italic;color:#6f6653">· Tiny Archives</span></div>
-        <p style="margin:8px 0 0;font-size:15.5px;line-height:1.55;color:#3d382e;max-width:600px">Built and scaled backend archival systems for organizations and individuals with Python, Django, and PostgreSQL.</p>
-        <div role="button" tabindex="0" data-modal="tiny" style="margin:14px 0 0;display:inline-block;cursor:pointer;font-family:Helvetica,Arial,sans-serif;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)">View details →</div>
+        <p style="margin:8px 0 0;font-size:15.5px;line-height:1.6;color:#3d382e;max-width:600px">Built and scaled backend archival systems for organizations and individuals with Python, Django, and PostgreSQL.</p>
+        <div role="button" tabindex="0" data-modal="tiny" style="margin:8px 0 -6px;padding:6px 0;display:inline-block;cursor:pointer;font-family:Helvetica,Arial,sans-serif;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)">View details <span class="arr">→</span></div>
       </div>
-      <div style="flex:0 0 auto;margin-left:auto;text-align:right;font-family:Helvetica,Arial,sans-serif;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#7d7466;line-height:1.9">Sept – Dec 2024<br>New York</div>
+      <div class="em" style="flex:0 0 auto;margin-left:auto;text-align:right;font-family:Helvetica,Arial,sans-serif;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#6a6154;line-height:1.9">Sept – Dec 2024<br>New York</div>
     </div>
     <div style="display:flex;flex-wrap:wrap;gap:4px 32px;align-items:baseline;border-top:1px solid #d9d1c0;padding:24px 0 0">
       <div style="flex:1 1 320px;min-width:240px">
         <div style="font-size:20px"><strong>Software Development Engineer I</strong> <span style="font-style:italic;color:#6f6653">· Finflux</span></div>
-        <p style="margin:8px 0 0;font-size:15.5px;line-height:1.55;color:#3d382e;max-width:600px">Built ELMS, an exposure and limit-management engine covering 35M+ customers, and resolved production issues in the core Loan Management System.</p>
-        <div role="button" tabindex="0" data-modal="finflux" style="margin:14px 0 0;display:inline-block;cursor:pointer;font-family:Helvetica,Arial,sans-serif;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)">View details →</div>
+        <p style="margin:8px 0 0;font-size:15.5px;line-height:1.6;color:#3d382e;max-width:600px">Built ELMS, an exposure and limit-management engine covering 35M+ customers, and resolved production issues in the core Loan Management System.</p>
+        <div role="button" tabindex="0" data-modal="finflux" style="margin:8px 0 -6px;padding:6px 0;display:inline-block;cursor:pointer;font-family:Helvetica,Arial,sans-serif;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)">View details <span class="arr">→</span></div>
       </div>
-      <div style="flex:0 0 auto;margin-left:auto;text-align:right;font-family:Helvetica,Arial,sans-serif;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#7d7466;line-height:1.9">Nov 2022 – July 2023<br>Bangalore</div>
+      <div class="em" style="flex:0 0 auto;margin-left:auto;text-align:right;font-family:Helvetica,Arial,sans-serif;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#6a6154;line-height:1.9">Nov 2022 – July 2023<br>Bangalore</div>
     </div>
   </div>
 </section>
 
 <section id="projects" style="display:flex;flex-wrap:wrap;gap:24px 56px;padding:56px clamp(20px,5vw,56px);border-top:1px solid #d9d1c0">
-  <div style="flex:0 0 180px;position:sticky;top:24px;align-self:flex-start;display:flex;gap:12px;align-items:baseline;font-family:Helvetica,Arial,sans-serif;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#7d7466"><span style="font-family:Georgia,serif;font-style:italic;font-size:15px;letter-spacing:0;color:var(--accent)">04</span><span>Projects</span></div>
-  <div style="flex:1 1 460px;min-width:300px;max-width:780px;display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:0 44px">
+  <div class="lbl" style="flex:0 0 180px;position:sticky;top:24px;align-self:flex-start;display:flex;gap:12px;align-items:baseline;font-family:Helvetica,Arial,sans-serif;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#6a6154"><span style="font-family:Georgia,serif;font-style:italic;font-size:15px;letter-spacing:0;color:var(--accent)">04</span><span>Projects</span></div>
+  <div class="col cards" style="flex:1 1 460px;min-width:300px;max-width:780px;display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:0 44px">
     <div style="border-top:1px solid #d9d1c0;padding:20px 0 26px">
-      <div style="display:flex;justify-content:space-between;gap:12px;align-items:baseline"><a href="https://opensigmoid.com/" style="font-size:19px;font-weight:700;text-decoration:none">OpenSigmoid</a><span style="font-family:Helvetica,Arial,sans-serif;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:#7d7466;white-space:nowrap">Personal · 2025 –</span></div>
-      <p style="margin:8px 0 12px;font-size:14.5px;line-height:1.55;color:#3d382e">Decentralized, end-to-end encrypted Web3 messaging with token-gated communities and in-chat crypto payments.</p>
-      <div style="font-family:Helvetica,Arial,sans-serif;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)">Go · React · PostgreSQL · WebSockets</div>
-      <div role="button" tabindex="0" data-modal="opensigmoid" style="margin:14px 0 0;display:inline-block;cursor:pointer;font-family:Helvetica,Arial,sans-serif;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)">View details →</div>
+      <div style="display:flex;justify-content:space-between;gap:12px;align-items:baseline"><span style="display:inline-flex;align-items:center;gap:9px;min-width:0"><a target="_blank" rel="noopener" href="https://github.com/abdulllkhan/ticTACpro-sim" style="font-size:20px;font-weight:700;text-decoration:none">TicTacPro RL</a></span><span class="pm" style="font-family:Helvetica,Arial,sans-serif;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#6a6154;white-space:nowrap">Personal · 2026</span></div>
+      <p style="margin:8px 0 12px;font-size:14.5px;line-height:1.6;color:#3d382e">A Dueling Double DQN trained with a curriculum of rule-based opponents, plus an exact alpha-beta solve proving the game is a first-player win from all 27 openings.</p>
+      <div style="font-family:Helvetica,Arial,sans-serif;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#6a6154">PyTorch · DQN · Alpha-Beta</div>
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:16px;margin:14px 0 0"><span role="button" tabindex="0" data-modal="tictacpro" style="cursor:pointer;padding:6px 0;margin:-6px 0;font-family:Helvetica,Arial,sans-serif;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)">View details <span class="arr">→</span></span><a class="ico" href="https://github.com/abdulllkhan/ticTACpro-sim" target="_blank" rel="noopener" title="Code on GitHub" aria-label="TicTacPro RL — code on GitHub"><svg width="15" height="15" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M8 .2A8 8 0 0 0 5.47 15.79c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.13 0 0 .67-.21 2.2.82a7.5 7.5 0 0 1 4 0c1.53-1.04 2.2-.82 2.2-.82.44 1.11.16 1.93.08 2.13.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8 8 0 0 0 8 .2z"/></svg></a></div>
     </div>
     <div style="border-top:1px solid #d9d1c0;padding:20px 0 26px">
-      <div style="display:flex;justify-content:space-between;gap:12px;align-items:baseline"><a href="https://github.com/abdulllkhan/chromecontrol" style="font-size:19px;font-weight:700;text-decoration:none">chromeControl</a><span style="font-family:Helvetica,Arial,sans-serif;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:#7d7466;white-space:nowrap">Hackathon · 2025</span></div>
-      <p style="margin:8px 0 12px;font-size:14.5px;line-height:1.55;color:#3d382e">MCP-compliant Chrome sidebar extension delivering real-time page analysis and contextual AI assistance across tabs.</p>
-      <div style="font-family:Helvetica,Arial,sans-serif;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)">TypeScript · React · MCP</div>
-      <div role="button" tabindex="0" data-modal="chrome" style="margin:14px 0 0;display:inline-block;cursor:pointer;font-family:Helvetica,Arial,sans-serif;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)">View details →</div>
+      <div style="display:flex;justify-content:space-between;gap:12px;align-items:baseline"><span style="display:inline-flex;align-items:center;gap:9px;min-width:0"><a target="_blank" rel="noopener" href="https://github.com/abdulllkhan/multi_step_ai_tool_attack" style="font-size:20px;font-weight:700;text-decoration:none">Multi-Step Tool Attacks</a></span><span class="pm" style="font-family:Helvetica,Arial,sans-serif;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#6a6154;white-space:nowrap">Kaggle · 2026</span></div>
+      <p style="margin:8px 0 12px;font-size:14.5px;line-height:1.6;color:#3d382e">A red-teaming entry that searches tool-using LLM agents (gpt-oss, gemma) for exfiltration chains — a 73.88 public score on Kaggle’s AI Agent Security challenge.</p>
+      <div style="font-family:Helvetica,Arial,sans-serif;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#6a6154">Python · llama.cpp · LLM Red-Teaming</div>
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:16px;margin:14px 0 0"><span role="button" tabindex="0" data-modal="toolattack" style="cursor:pointer;padding:6px 0;margin:-6px 0;font-family:Helvetica,Arial,sans-serif;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)">View details <span class="arr">→</span></span><a class="ico" href="https://github.com/abdulllkhan/multi_step_ai_tool_attack" target="_blank" rel="noopener" title="Code on GitHub" aria-label="Multi-Step Tool Attacks — code on GitHub"><svg width="15" height="15" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M8 .2A8 8 0 0 0 5.47 15.79c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.13 0 0 .67-.21 2.2.82a7.5 7.5 0 0 1 4 0c1.53-1.04 2.2-.82 2.2-.82.44 1.11.16 1.93.08 2.13.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8 8 0 0 0 8 .2z"/></svg></a></div>
     </div>
     <div style="border-top:1px solid #d9d1c0;padding:20px 0 26px">
-      <div style="display:flex;justify-content:space-between;gap:12px;align-items:baseline"><span style="font-size:19px;font-weight:700">Quantum-Classical NN</span><span style="font-family:Helvetica,Arial,sans-serif;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:#7d7466;white-space:nowrap">NYU · 2025</span></div>
-      <p style="margin:8px 0 12px;font-size:14.5px;line-height:1.55;color:#3d382e">Hybrid quantum-classical network predicting six-year lung-cancer risk from a single low-dose CT scan.</p>
-      <div style="font-family:Helvetica,Arial,sans-serif;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)">Qiskit · PyTorch · CT Imaging</div>
-      <div role="button" tabindex="0" data-modal="quantum" style="margin:14px 0 0;display:inline-block;cursor:pointer;font-family:Helvetica,Arial,sans-serif;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)">View details →</div>
+      <div style="display:flex;justify-content:space-between;gap:12px;align-items:baseline"><span style="display:inline-flex;align-items:center;gap:9px;min-width:0"><a target="_blank" rel="noopener" href="https://opensigmoid.com/" style="font-size:20px;font-weight:700;text-decoration:none">OpenSigmoid</a><a class="ico" href="https://opensigmoid.com/" target="_blank" rel="noopener" title="Open live site" aria-label="OpenSigmoid — live site"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a></span><span class="pm" style="font-family:Helvetica,Arial,sans-serif;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#6a6154;white-space:nowrap">Personal · 2025–</span></div>
+      <p style="margin:8px 0 12px;font-size:14.5px;line-height:1.6;color:#3d382e">Decentralized, end-to-end encrypted Web3 messaging with token-gated communities and in-chat crypto payments.</p>
+      <div style="font-family:Helvetica,Arial,sans-serif;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#6a6154">Go · React · PostgreSQL · WebSockets</div>
+      <div style="display:flex;align-items:center;min-height:15px;margin:14px 0 0"><span role="button" tabindex="0" data-modal="opensigmoid" style="cursor:pointer;padding:6px 0;margin:-6px 0;font-family:Helvetica,Arial,sans-serif;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)">View details <span class="arr">→</span></span></div>
     </div>
     <div style="border-top:1px solid #d9d1c0;padding:20px 0 26px">
-      <div style="display:flex;justify-content:space-between;gap:12px;align-items:baseline"><a href="https://squaris.vercel.app/" style="font-size:19px;font-weight:700;text-decoration:none">Squaris</a><span style="font-family:Helvetica,Arial,sans-serif;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:#7d7466;white-space:nowrap">Reddit Devvit · 2025</span></div>
-      <p style="margin:8px 0 12px;font-size:14.5px;line-height:1.55;color:#3d382e">Three procedurally-generated polycube packing puzzles spanning 2D tiling and 3D lattice modes.</p>
-      <div style="font-family:Helvetica,Arial,sans-serif;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)">React · TypeScript · Three.js</div>
-      <div role="button" tabindex="0" data-modal="squaris" style="margin:14px 0 0;display:inline-block;cursor:pointer;font-family:Helvetica,Arial,sans-serif;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)">View details →</div>
+      <div style="display:flex;justify-content:space-between;gap:12px;align-items:baseline"><span style="display:inline-flex;align-items:center;gap:9px;min-width:0"><a target="_blank" rel="noopener" href="https://github.com/abdulllkhan/chromecontrol" style="font-size:20px;font-weight:700;text-decoration:none">chromeControl</a></span><span class="pm" style="font-family:Helvetica,Arial,sans-serif;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#6a6154;white-space:nowrap">Hackathon · 2025</span></div>
+      <p style="margin:8px 0 12px;font-size:14.5px;line-height:1.6;color:#3d382e">An MCP-compliant Chrome sidebar that stays open across tabs and answers questions about the page you’re on.</p>
+      <div style="font-family:Helvetica,Arial,sans-serif;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#6a6154">TypeScript · React · MCP</div>
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:16px;margin:14px 0 0"><span role="button" tabindex="0" data-modal="chrome" style="cursor:pointer;padding:6px 0;margin:-6px 0;font-family:Helvetica,Arial,sans-serif;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)">View details <span class="arr">→</span></span><a class="ico" href="https://github.com/abdulllkhan/chromecontrol" target="_blank" rel="noopener" title="Code on GitHub" aria-label="chromeControl — code on GitHub"><svg width="15" height="15" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M8 .2A8 8 0 0 0 5.47 15.79c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.13 0 0 .67-.21 2.2.82a7.5 7.5 0 0 1 4 0c1.53-1.04 2.2-.82 2.2-.82.44 1.11.16 1.93.08 2.13.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8 8 0 0 0 8 .2z"/></svg></a></div>
     </div>
     <div style="border-top:1px solid #d9d1c0;padding:20px 0 26px">
-      <div style="display:flex;justify-content:space-between;gap:12px;align-items:baseline"><a href="https://github.com/abdulllkhan/rag_llm" style="font-size:19px;font-weight:700;text-decoration:none">QubitQuery</a><span style="font-family:Helvetica,Arial,sans-serif;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:#7d7466;white-space:nowrap">Personal · 2025</span></div>
-      <p style="margin:8px 0 12px;font-size:14.5px;line-height:1.55;color:#3d382e">Self-contained RAG assistant over lecture notes to make professors' office hours more productive.</p>
-      <div style="font-family:Helvetica,Arial,sans-serif;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)">LangChain · FAISS · OpenAI</div>
-      <div role="button" tabindex="0" data-modal="qubitquery" style="margin:14px 0 0;display:inline-block;cursor:pointer;font-family:Helvetica,Arial,sans-serif;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)">View details →</div>
+      <div style="display:flex;justify-content:space-between;gap:12px;align-items:baseline"><span style="display:inline-flex;align-items:center;gap:9px;min-width:0"><span style="font-size:20px;font-weight:700">Quantum–Classical NN</span></span><span class="pm" style="font-family:Helvetica,Arial,sans-serif;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#6a6154;white-space:nowrap">NYU · 2025</span></div>
+      <p style="margin:8px 0 12px;font-size:14.5px;line-height:1.6;color:#3d382e">Hybrid quantum–classical network estimating six-year lung-cancer risk from a single low-dose CT scan.</p>
+      <div style="font-family:Helvetica,Arial,sans-serif;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#6a6154">Qiskit · PyTorch · CT Imaging</div>
+      <div style="display:flex;align-items:center;min-height:15px;margin:14px 0 0"><span role="button" tabindex="0" data-modal="quantum" style="cursor:pointer;padding:6px 0;margin:-6px 0;font-family:Helvetica,Arial,sans-serif;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)">View details <span class="arr">→</span></span></div>
     </div>
     <div style="border-top:1px solid #d9d1c0;padding:20px 0 26px">
-      <div style="display:flex;justify-content:space-between;gap:12px;align-items:baseline"><span style="font-size:19px;font-weight:700">ELMS</span><span style="font-family:Helvetica,Arial,sans-serif;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:#7d7466;white-space:nowrap">Finflux · 2023</span></div>
-      <p style="margin:8px 0 12px;font-size:14.5px;line-height:1.55;color:#3d382e">Enterprise exposure and limit management aggregating personal and transaction data for 35M+ customers.</p>
-      <div style="font-family:Helvetica,Arial,sans-serif;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)">Java 17 · Spring Boot · MySQL</div>
-      <div role="button" tabindex="0" data-modal="elms" style="margin:14px 0 0;display:inline-block;cursor:pointer;font-family:Helvetica,Arial,sans-serif;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)">View details →</div>
+      <div style="display:flex;justify-content:space-between;gap:12px;align-items:baseline"><span style="display:inline-flex;align-items:center;gap:9px;min-width:0"><a target="_blank" rel="noopener" href="https://squaris.vercel.app/" style="font-size:20px;font-weight:700;text-decoration:none">Squaris</a><a class="ico" href="https://squaris.vercel.app/" target="_blank" rel="noopener" title="Open live site" aria-label="Squaris — live site"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a></span><span class="pm" style="font-family:Helvetica,Arial,sans-serif;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#6a6154;white-space:nowrap">Reddit Devvit · 2025</span></div>
+      <p style="margin:8px 0 12px;font-size:14.5px;line-height:1.6;color:#3d382e">Three procedurally generated polycube packing puzzles: 2D tiling, 3D lattice, and a Tetris-style mode.</p>
+      <div style="font-family:Helvetica,Arial,sans-serif;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#6a6154">React · TypeScript · Three.js</div>
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:16px;margin:14px 0 0"><span role="button" tabindex="0" data-modal="squaris" style="cursor:pointer;padding:6px 0;margin:-6px 0;font-family:Helvetica,Arial,sans-serif;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)">View details <span class="arr">→</span></span><a class="ico" href="https://github.com/abdulllkhan/squaris" target="_blank" rel="noopener" title="Code on GitHub" aria-label="Squaris — code on GitHub"><svg width="15" height="15" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M8 .2A8 8 0 0 0 5.47 15.79c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.13 0 0 .67-.21 2.2.82a7.5 7.5 0 0 1 4 0c1.53-1.04 2.2-.82 2.2-.82.44 1.11.16 1.93.08 2.13.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8 8 0 0 0 8 .2z"/></svg></a></div>
     </div>
     <div style="border-top:1px solid #d9d1c0;padding:20px 0 26px">
-      <div style="display:flex;justify-content:space-between;gap:12px;align-items:baseline"><span style="font-size:19px;font-weight:700">Stock Direction Prediction</span><span style="font-family:Helvetica,Arial,sans-serif;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:#7d7466;white-space:nowrap">NYU · 2024</span></div>
-      <p style="margin:8px 0 12px;font-size:14.5px;line-height:1.55;color:#3d382e">Fine-tuned FinBERT and LLMs feeding a Random Forest to forecast GameStop's price direction.</p>
-      <div style="font-family:Helvetica,Arial,sans-serif;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)">FinBERT · Llama · Random Forest</div>
-      <div role="button" tabindex="0" data-modal="stock" style="margin:14px 0 0;display:inline-block;cursor:pointer;font-family:Helvetica,Arial,sans-serif;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)">View details →</div>
+      <div style="display:flex;justify-content:space-between;gap:12px;align-items:baseline"><span style="display:inline-flex;align-items:center;gap:9px;min-width:0"><a target="_blank" rel="noopener" href="https://github.com/abdulllkhan/rag_llm" style="font-size:20px;font-weight:700;text-decoration:none">QubitQuery</a></span><span class="pm" style="font-family:Helvetica,Arial,sans-serif;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#6a6154;white-space:nowrap">Personal · 2025</span></div>
+      <p style="margin:8px 0 12px;font-size:14.5px;line-height:1.6;color:#3d382e">Self-contained RAG assistant over lecture notes to make professors’ office hours more productive.</p>
+      <div style="font-family:Helvetica,Arial,sans-serif;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#6a6154">LangChain · FAISS · OpenAI</div>
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:16px;margin:14px 0 0"><span role="button" tabindex="0" data-modal="qubitquery" style="cursor:pointer;padding:6px 0;margin:-6px 0;font-family:Helvetica,Arial,sans-serif;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)">View details <span class="arr">→</span></span><a class="ico" href="https://github.com/abdulllkhan/rag_llm" target="_blank" rel="noopener" title="Code on GitHub" aria-label="QubitQuery — code on GitHub"><svg width="15" height="15" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M8 .2A8 8 0 0 0 5.47 15.79c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.13 0 0 .67-.21 2.2.82a7.5 7.5 0 0 1 4 0c1.53-1.04 2.2-.82 2.2-.82.44 1.11.16 1.93.08 2.13.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8 8 0 0 0 8 .2z"/></svg></a></div>
+    </div>
+    <div style="border-top:1px solid #d9d1c0;padding:20px 0 26px">
+      <div style="display:flex;justify-content:space-between;gap:12px;align-items:baseline"><span style="display:inline-flex;align-items:center;gap:9px;min-width:0"><span style="font-size:20px;font-weight:700">ELMS</span></span><span class="pm" style="font-family:Helvetica,Arial,sans-serif;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#6a6154;white-space:nowrap">Finflux · 2023</span></div>
+      <p style="margin:8px 0 12px;font-size:14.5px;line-height:1.6;color:#3d382e">Calculates exposure across products for 35M+ customers and flags breaches to the lending system.</p>
+      <div style="font-family:Helvetica,Arial,sans-serif;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#6a6154">Java 17 · Spring Boot · MySQL</div>
+      <div style="display:flex;align-items:center;min-height:15px;margin:14px 0 0"><span role="button" tabindex="0" data-modal="elms" style="cursor:pointer;padding:6px 0;margin:-6px 0;font-family:Helvetica,Arial,sans-serif;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)">View details <span class="arr">→</span></span></div>
+    </div>
+    <div style="border-top:1px solid #d9d1c0;padding:20px 0 26px">
+      <div style="display:flex;justify-content:space-between;gap:12px;align-items:baseline"><span style="display:inline-flex;align-items:center;gap:9px;min-width:0"><span style="font-size:20px;font-weight:700">Stock Direction Prediction</span></span><span class="pm" style="font-family:Helvetica,Arial,sans-serif;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#6a6154;white-space:nowrap">NYU · 2024</span></div>
+      <p style="margin:8px 0 12px;font-size:14.5px;line-height:1.6;color:#3d382e">FinBERT and Llama read Reddit sentiment; a Random Forest on top forecasts GameStop’s price direction (accuracy 0.59).</p>
+      <div style="font-family:Helvetica,Arial,sans-serif;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#6a6154">FinBERT · Llama · Random Forest</div>
+      <div style="display:flex;align-items:center;min-height:15px;margin:14px 0 0"><span role="button" tabindex="0" data-modal="stock" style="cursor:pointer;padding:6px 0;margin:-6px 0;font-family:Helvetica,Arial,sans-serif;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)">View details <span class="arr">→</span></span></div>
     </div>
   </div>
 </section>
 
 <section id="writing" style="display:flex;flex-wrap:wrap;gap:24px 56px;padding:56px clamp(20px,5vw,56px);border-top:1px solid #d9d1c0">
-  <div style="flex:0 0 180px;position:sticky;top:24px;align-self:flex-start;display:flex;gap:12px;align-items:baseline;font-family:Helvetica,Arial,sans-serif;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#7d7466"><span style="font-family:Georgia,serif;font-style:italic;font-size:15px;letter-spacing:0;color:var(--accent)">05</span><span>Writing</span></div>
-  <div style="flex:1 1 460px;min-width:300px;max-width:780px">
-    <div style="font-family:Helvetica,Arial,sans-serif;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:#7d7466">2026 · Independent</div>
-    <h3 style="margin:12px 0 6px;font-size:clamp(24px,3vw,32px);font-weight:400;font-style:italic;line-height:1.25">Coin-Flip Pricing in a Tournament-Winner Market</h3>
-    <p style="margin:0 0 14px;font-size:15px;color:#6f6653;font-style:italic">A paired-contract trade on the 2026 IPL champion.</p>
-    <p style="margin:0 0 16px;font-size:15.5px;line-height:1.6;color:#3d382e;max-width:620px">The market priced the two finalists like a coin flip (0.75 combined) while the base rate for a top-two seed winning sat at 93.3%. A paired RCB + GT position on Kalshi captured the gap — positive expected value, returning ~27.7%.</p>
-    <div style="font-family:Helvetica,Arial,sans-serif;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)">Prediction Markets · Probability · Bayesian Inference · Expected Value</div>
-    <div style="margin-top:16px;font-size:15px"><a href="./ipl_paper.pdf">Read the paper (PDF)</a></div>
-    <div role="button" tabindex="0" data-modal="paper" style="margin:14px 0 0;display:inline-block;cursor:pointer;font-family:Helvetica,Arial,sans-serif;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)">View abstract →</div>
+  <div class="lbl" style="flex:0 0 180px;position:sticky;top:24px;align-self:flex-start;display:flex;gap:12px;align-items:baseline;font-family:Helvetica,Arial,sans-serif;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#6a6154"><span style="font-family:Georgia,serif;font-style:italic;font-size:15px;letter-spacing:0;color:var(--accent)">05</span><span>Writing</span></div>
+  <div class="col" style="flex:1 1 460px;min-width:300px;max-width:780px">
+    <div style="font-family:Helvetica,Arial,sans-serif;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#6a6154">2026 · Independent</div>
+    <h3 style="margin:12px 0 6px;font-size:clamp(20px,3vw,32px);font-weight:400;font-style:italic;line-height:1.25">Coin-Flip Pricing in a Tournament-Winner Market</h3>
+    <p style="margin:0 0 14px;font-size:15.5px;color:#6f6653">A paired-contract trade on the 2026 IPL champion.</p>
+    <p style="margin:0 0 16px;font-size:15.5px;line-height:1.6;color:#3d382e;max-width:620px">The market priced the two top seeds like a coin flip (0.75 combined) while the base rate for a top-two seed winning sat at 93.3%. A paired RCB + GT position on Kalshi captured the gap — positive expected value, returning ~27.7%.</p>
+    <div style="font-family:Helvetica,Arial,sans-serif;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#6a6154">Prediction Markets · Probability · Bayesian Inference · Expected Value</div>
+    <div style="margin-top:16px;font-size:15.5px"><a href="./ipl_paper.pdf" style="display:inline-flex;align-items:center;gap:8px;color:var(--accent);text-decoration:none;font-weight:600"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="8" y1="13" x2="16" y2="13"/><line x1="8" y1="17" x2="16" y2="17"/><line x1="8" y1="9" x2="10" y2="9"/></svg><span style="text-decoration:underline;text-underline-offset:3px">Read the paper (PDF)</span></a><span style="color:#6a6154"> · </span><span role="button" tabindex="0" data-modal="paper" style="cursor:pointer;padding:6px 0;margin:-6px 0;color:var(--accent)">View abstract <span class="arr">→</span></span></div>
+    <div style="border-top:1px solid #d9d1c0;margin-top:36px;padding-top:32px"></div>
+    <div style="font-family:Helvetica,Arial,sans-serif;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#6a6154">2026 · Independent</div>
+    <h3 style="margin:12px 0 6px;font-size:clamp(20px,3vw,32px);font-weight:400;font-style:italic;line-height:1.25">TicTacPro: Exactly Solving a Combinatorial Piece-Placement Game and Stress-Testing Deep Q-Learning Against It</h3>
+    <p style="margin:0 0 14px;font-size:15.5px;color:#6f6653">Exact game solving meets deep reinforcement learning.</p>
+    <p style="margin:0 0 16px;font-size:15.5px;line-height:1.6;color:#3d382e;max-width:620px">An exhaustive alpha-beta solver proves TicTacPro is a first-player win from every one of its 27 openings (700M nodes, 246s) — refuting the opposite conclusion that time-limited minimax self-play had confidently converged on. A Dueling Double DQN (792K parameters) trained with a curriculum of rule-based opponents reaches 100% against random and bullseye opponents, with training-pipeline pitfalls reported as negative results.</p>
+    <div style="font-family:Helvetica,Arial,sans-serif;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#6a6154">Game Solving · Alpha-Beta Search · Deep RL · DQN</div>
+    <div style="margin-top:16px;font-size:15.5px"><a href="./tictacpro.pdf" style="display:inline-flex;align-items:center;gap:8px;color:var(--accent);text-decoration:none;font-weight:600"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="8" y1="13" x2="16" y2="13"/><line x1="8" y1="17" x2="16" y2="17"/><line x1="8" y1="9" x2="10" y2="9"/></svg><span style="text-decoration:underline;text-underline-offset:3px">Read the paper (PDF)</span></a><span style="color:#6a6154"> · </span><span role="button" tabindex="0" data-modal="tictacpaper" style="cursor:pointer;padding:6px 0;margin:-6px 0;color:var(--accent)">View abstract <span class="arr">→</span></span></div>
   </div>
 </section>
 
 <section id="hackathons" style="display:flex;flex-wrap:wrap;gap:24px 56px;padding:56px clamp(20px,5vw,56px);border-top:1px solid #d9d1c0">
-  <div style="flex:0 0 180px;position:sticky;top:24px;align-self:flex-start;display:flex;gap:12px;align-items:baseline;font-family:Helvetica,Arial,sans-serif;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#7d7466"><span style="font-family:Georgia,serif;font-style:italic;font-size:15px;letter-spacing:0;color:var(--accent)">06</span><span>Hackathons</span></div>
-  <div style="flex:1 1 460px;min-width:300px;max-width:780px;display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:0 36px">
-    <div style="border-top:1px solid #d9d1c0;padding:18px 0 22px"><div style="font-size:16px;font-weight:700">HackNYU</div><p style="margin:6px 0 0;font-size:13.5px;line-height:1.5;color:#6f6653">An Acorns alternative with far more control over risk appetite and investment types.</p></div>
-    <div style="border-top:1px solid #d9d1c0;padding:18px 0 22px"><div style="font-size:16px;font-weight:700">Kiro Hackathon</div><p style="margin:6px 0 0;font-size:13.5px;line-height:1.5;color:#6f6653">chromeControl, an MCP-compliant Chrome AI assistant (see Projects).</p></div>
-    <div style="border-top:1px solid #d9d1c0;padding:18px 0 22px"><div style="font-size:16px;font-weight:700">Reddit · Devvit</div><p style="margin:6px 0 0;font-size:13.5px;line-height:1.5;color:#6f6653"><a href="https://squaris.vercel.app/">Squaris</a>, a spatial packing puzzle game.</p></div>
-    <div style="border-top:1px solid #d9d1c0;padding:18px 0 22px"><div style="font-size:16px;font-weight:700">YQuantum</div><p style="margin:6px 0 0;font-size:13.5px;line-height:1.5;color:#6f6653">Attempted the BlueQubit problem of Peaked Circuits.</p></div>
-    <div style="border-top:1px solid #d9d1c0;padding:18px 0 22px"><div style="font-size:16px;font-weight:700">IMC Prosperity 3</div><p style="margin:6px 0 0;font-size:13.5px;line-height:1.5;color:#6f6653">Financial modelling for max profit — algorithmic and manual trading tracks.</p></div>
-    <div style="border-top:1px solid #d9d1c0;padding:18px 0 22px"><div style="font-size:16px;font-weight:700">Hackfinity</div><p style="margin:6px 0 0;font-size:13.5px;line-height:1.5;color:#6f6653">A RAG/LangChain chatbot helping students grasp hard-to-find topics.</p></div>
+  <div class="lbl" style="flex:0 0 180px;position:sticky;top:24px;align-self:flex-start;display:flex;gap:12px;align-items:baseline;font-family:Helvetica,Arial,sans-serif;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#6a6154"><span style="font-family:Georgia,serif;font-style:italic;font-size:15px;letter-spacing:0;color:var(--accent)">06</span><span>Hackathons</span></div>
+  <div class="col cards" style="flex:1 1 460px;min-width:300px;max-width:780px;display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:0 36px">
+    <div style="border-top:1px solid #d9d1c0;padding:18px 0 22px"><div style="font-size:16px;font-weight:700">Kaggle</div><p style="margin:6px 0 0;font-size:14.5px;line-height:1.6;color:#6f6653"><a target="_blank" rel="noopener" href="https://www.kaggle.com/competitions/ai-agent-security-multi-step-tool-attacks">AI Agent Security</a> — red-teamed tool-using LLM agents to a 73.88 public score.</p></div>
+    <div style="border-top:1px solid #d9d1c0;padding:18px 0 22px"><div style="font-size:16px;font-weight:700">HackNYU</div><p style="margin:6px 0 0;font-size:14.5px;line-height:1.6;color:#6f6653">An Acorns alternative with far more control over risk appetite and investment types.</p></div>
+    <div style="border-top:1px solid #d9d1c0;padding:18px 0 22px"><div style="font-size:16px;font-weight:700">Kiro Hackathon</div><p style="margin:6px 0 0;font-size:14.5px;line-height:1.6;color:#6f6653">chromeControl, an MCP-compliant Chrome AI assistant (see Projects).</p></div>
+    <div style="border-top:1px solid #d9d1c0;padding:18px 0 22px"><div style="font-size:16px;font-weight:700">Reddit Devvit</div><p style="margin:6px 0 0;font-size:14.5px;line-height:1.6;color:#6f6653"><a target="_blank" rel="noopener" href="https://squaris.vercel.app/">Squaris</a>, a spatial packing puzzle game.</p></div>
+    <div style="border-top:1px solid #d9d1c0;padding:18px 0 22px"><div style="font-size:16px;font-weight:700">YQuantum</div><p style="margin:6px 0 0;font-size:14.5px;line-height:1.6;color:#6f6653">Attempted the BlueQubit problem of Peaked Circuits.</p></div>
+    <div style="border-top:1px solid #d9d1c0;padding:18px 0 22px"><div style="font-size:16px;font-weight:700">IMC Prosperity 3</div><p style="margin:6px 0 0;font-size:14.5px;line-height:1.6;color:#6f6653">Financial modeling for max profit — algorithmic and manual trading tracks.</p></div>
+    <div style="border-top:1px solid #d9d1c0;padding:18px 0 22px"><div style="font-size:16px;font-weight:700">Hackfinity</div><p style="margin:6px 0 0;font-size:14.5px;line-height:1.6;color:#6f6653">A RAG/LangChain chatbot helping students grasp hard-to-find topics.</p></div>
   </div>
 </section>
 
 <section id="beyond" style="display:flex;flex-wrap:wrap;gap:24px 56px;padding:56px clamp(20px,5vw,56px);border-top:1px solid #d9d1c0">
-  <div style="flex:0 0 180px;position:sticky;top:24px;align-self:flex-start;display:flex;gap:12px;align-items:baseline;font-family:Helvetica,Arial,sans-serif;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#7d7466"><span style="font-family:Georgia,serif;font-style:italic;font-size:15px;letter-spacing:0;color:var(--accent)">07</span><span>Beyond work</span></div>
-  <div style="flex:1 1 460px;min-width:300px;max-width:780px;display:flex;flex-direction:column;gap:16px">
-    <p style="margin:0;font-size:15.5px;line-height:1.6;color:#3d382e"><span style="font-family:Helvetica,Arial,sans-serif;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:#7d7466">Bridge</span> &nbsp;Represented NYU in contract bridge — intercollege tournaments, scrimmages, and the North American Bridge Championships (Philadelphia, 2025).</p>
-    <p style="margin:0;font-size:15.5px;line-height:1.6;color:#3d382e"><span style="font-family:Helvetica,Arial,sans-serif;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:#7d7466">Poker</span> &nbsp;Represented NYU at the <a href="https://pokeripa.com/teams/new-york-university-2024-2025/">Intercollegiate Poker Association</a> annual tournament, 2025.</p>
-    <p style="margin:0;font-size:15.5px;line-height:1.6;color:#3d382e"><span style="font-family:Helvetica,Arial,sans-serif;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:#7d7466">Clubs</span> &nbsp;Bridge &amp; Spades, SASE, IEEE, soccer intramurals (5v5, 9v9).</p>
+  <div class="lbl" style="flex:0 0 180px;position:sticky;top:24px;align-self:flex-start;display:flex;gap:12px;align-items:baseline;font-family:Helvetica,Arial,sans-serif;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#6a6154"><span style="font-family:Georgia,serif;font-style:italic;font-size:15px;letter-spacing:0;color:var(--accent)">07</span><span>Beyond work</span></div>
+  <div class="col" style="flex:1 1 460px;min-width:300px;max-width:780px;display:flex;flex-direction:column;gap:16px">
+    <p style="margin:0;font-size:15.5px;line-height:1.6;color:#3d382e"><span style="font-family:Helvetica,Arial,sans-serif;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#6a6154">Bridge</span> &nbsp;Represented NYU in contract bridge — intercollegiate tournaments, scrimmages, and the North American Bridge Championships (Philadelphia, 2025).</p>
+    <p style="margin:0;font-size:15.5px;line-height:1.6;color:#3d382e"><span style="font-family:Helvetica,Arial,sans-serif;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#6a6154">Poker</span> &nbsp;Represented NYU at the <a target="_blank" rel="noopener" href="https://pokeripa.com/teams/new-york-university-2024-2025/">Intercollegiate Poker Association</a> annual tournament, 2025.</p>
+    <p style="margin:0;font-size:15.5px;line-height:1.6;color:#3d382e"><span style="font-family:Helvetica,Arial,sans-serif;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#6a6154">Clubs</span> &nbsp;Bridge &amp; Spades, SASE, IEEE, soccer intramurals (5v5, 9v9).</p>
   </div>
 </section>
 
-<footer style="margin:0 clamp(20px,5vw,56px) 56px;border-top:2px solid #1c1914"></footer>
+<footer style="margin:0 clamp(20px,5vw,56px) 56px">
+  <div style="height:3px;border-top:1px solid #1c1914;border-bottom:2px solid #1c1914"></div>
+  <div style="display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:8px 24px;padding-top:14px">
+    <span style="font-style:italic;color:var(--accent);font-size:15px">A.S.Z.K.</span>
+    <span style="font-family:Helvetica,Arial,sans-serif;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#6a6154">New York · Last updated September 2026</span>
+  </div>
+</footer>
 
 <div id="modal" hidden>
   <div data-close style="position:absolute;inset:0;background:rgba(28,25,20,.45)"></div>
-  <div role="dialog" aria-modal="true" aria-labelledby="modal-title" style="position:relative;z-index:1;background:#faf7ef;border:1px solid #d9d1c0;max-width:660px;width:100%;max-height:86vh;overflow-y:auto;padding:40px 44px 44px;box-shadow:0 24px 70px rgba(28,25,20,.35)">
-    <div role="button" tabindex="0" data-close style="position:absolute;top:16px;right:20px;cursor:pointer;font-family:Helvetica,Arial,sans-serif;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#7d7466">Close ×</div>
-    <div id="modal-kicker" style="font-family:Helvetica,Arial,sans-serif;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)"></div>
-    <h3 id="modal-title" style="margin:10px 32px 4px 0;font-size:27px;font-weight:700;line-height:1.2"></h3>
-    <div id="modal-meta" style="font-family:Helvetica,Arial,sans-serif;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#7d7466;margin:0 0 20px"></div>
+  <div role="dialog" aria-modal="true" aria-labelledby="modal-title" style="position:relative;z-index:1;background:#faf7ef;border:1px solid #d9d1c0;max-width:660px;width:100%;max-height:86vh;overflow-y:auto;padding:40px 44px 32px;box-shadow:0 24px 70px rgba(28,25,20,.35)">
+    <div role="button" tabindex="0" data-close style="position:sticky;top:0;float:right;margin:-24px -24px 0 0;padding:12px;background:#faf7ef;z-index:2;cursor:pointer;font-family:Helvetica,Arial,sans-serif;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#6a6154">Close ×</div>
+    <div id="modal-kicker" style="font-family:Helvetica,Arial,sans-serif;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)"></div>
+    <h3 id="modal-title" style="margin:10px 32px 4px 0;font-size:24px;font-weight:700;line-height:1.2"></h3>
+    <div id="modal-meta" style="font-family:Helvetica,Arial,sans-serif;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#6a6154;margin:0 0 20px"></div>
     <div id="modal-bullets" style="border-top:1px solid #d9d1c0;padding-top:20px"></div>
   </div>
 </div>
@@ -212,12 +259,36 @@
 <script>
 (function () {
   var DETAILS = {
+    tictacpro: {
+      kicker: "Project · Personal",
+      title: "TicTacPro — Deep RL Agent",
+      meta: "2026",
+      bullets: [
+        "TicTacPro extends tic-tac-toe with three piece sizes and stacking — you win by a same-size line or a “bullseye” (all three sizes in one cell), giving far more strategic depth.",
+        "Built the full stack: game engine, exact alpha-beta solver, MCTS and minimax tree-search agents, and a Dueling Double DQN (792,604 parameters) trained on an NVIDIA GB10 DGX Spark with BF16 and torch.compile.",
+        "The exact solve (pure negamax alpha-beta over the complete game tree, 700M nodes in 246 seconds on 20 cores) proves a first-player win from all 27 openings, reversing the answer bounded minimax self-play had converged on.",
+        "Trained over 1M+ episodes with 8-fold symmetry augmentation, GPU-side prioritized replay (10M buffer), a C rollout extension (4.3× speedup), and a curriculum of rule-based opponents.",
+        "Result: 100% win rates against random and bullseye agents in both colors — the curriculum taught a defense pure self-play never discovered (0/20 → 40/40)."
+      ]
+    },
+    toolattack: {
+      kicker: "Project · Kaggle",
+      title: "Multi-Step Tool Attacks",
+      meta: "Kaggle · AI Agent Security · 2026",
+      bullets: [
+        "A red-teaming entry for Kaggle’s AI Agent Security challenge: a single attack.py searches sandboxed tool-using agents (gpt-oss-20b and gemma) for message chains that trip security predicates, and returns replayable attack candidates.",
+        "The core exploit fires the exfiltration predicate with a benign http.post whose body is a literal marker sent to a unique host. The guardrail inspects only the URL, so the untainted call is allowed while each post lands in its own score cell.",
+        "Two throughput levers drove the climb: a tool-call prompt format that roughly doubled single-post throughput, and a forged-analysis multipost that amortizes the fixed prefill across eight to ten posts per interaction. A behavioral probe routes each target model to the right technique.",
+        "Reached a 73.88 public score, up from a 0.015 baseline. The hidden private guardrail (provenance tracking) blocked the exfiltration line, so the private score was 0 — a clean case of overfitting to the visible guardrail.",
+        "Both targets were reproduced locally as Q4 GGUF models through llama.cpp to keep the throughput measurements faithful."
+      ]
+    },
     starboard: {
       kicker: "Experience · Starboard",
       title: "Founding Engineer",
-      meta: "Remote (NY) · Oct 2025 – Present",
+      meta: "Remote · New York · Oct 2025 – Present",
       bullets: [
-        "Built and deployed multi-agent systems with function calling and tool use that autonomously process shipment tracking updates, monitor carrier websites, and resolve data discrepancies across logistics platforms.",
+        "Deployed to production: the agents use function calling and tool use to act on carrier portals and resolve data discrepancies directly.",
         "Designed web scrapers and data pipelines extracting structured shipment data from carrier portals — 95%+ accuracy on real-time tracking, plus automated invoice reconciliation.",
         "Fine-tuned open-source LLMs for entity extraction and document parsing, cutting average processing time from 2.5 minutes to under 10 seconds per document."
       ]
@@ -228,7 +299,7 @@
       meta: "New York · Jan – May 2025",
       bullets: [
         "Research intern under Prof. Javad Shabani at the Center for Quantum Information Physics.",
-        "Built a hybrid classical–quantum neural network measuring six-year cancer risk from a single low-dose CT scan (3D image).",
+        "Built a hybrid quantum–classical neural network estimating six-year lung-cancer risk from a single low-dose CT scan (3D volume).",
         "Focused on faster inference at acceptable predictive accuracy, rather than outperforming existing models like Sybil."
       ]
     },
@@ -238,12 +309,12 @@
       meta: "New York · Sept – Dec 2024",
       bullets: [
         "Developed and maintained backend systems with Python, Django, and PostgreSQL to archive files for organizations and individuals.",
-        "Improved scalability by optimizing system architecture and performance for increased user demand and data processing."
+        "Reworked the archival backend as user demand and data volume grew."
       ]
     },
     finflux: {
       kicker: "Experience · Finflux",
-      title: "Software Development Engineer 1",
+      title: "Software Development Engineer I",
       meta: "Bangalore · Nov 2022 – July 2023",
       bullets: [
         "Developed ELMS, a standalone product calculating a customer’s total exposure across multiple financial services within a single institution.",
@@ -257,8 +328,8 @@
       meta: "May 2025 – Present",
       bullets: [
         "Ethereum and Solana wallet integration with end-to-end encryption (AES-256-GCM), real-time WebSockets, token-gated communities, and in-chat crypto payments.",
-        "Secure Web3 authentication with wallet-based account recovery, JWT management, and multi-chain wallet linking.",
-        "Real-time messaging infrastructure with connection management, automatic reconnection, heartbeats, and delivery confirmation for 1-to-1, group, and channel chats."
+        "Authentication is wallet-based: an account can be recovered via its wallet and can link wallets across chains; JWTs handle sessions.",
+        "The messaging layer handles reconnection, heartbeats, and delivery receipts for 1-to-1, group, and channel chats."
       ]
     },
     chrome: {
@@ -266,18 +337,18 @@
       title: "chromeControl — AI Sidebar",
       meta: "Aug – Sept 2025",
       bullets: [
-        "Sidebar stays active across tabs, delivering real-time page analysis and contextual AI assistance with custom task automation.",
+        "The sidebar persists as you switch tabs; it reads the current page and can run custom task automations.",
         "Modular TypeScript/React codebase — background worker, content scripts, sidebar UI, shared services.",
         "Privacy-first safeguards: local processing, sensitive-data filtering, and domain-based security tiers.",
-        "Tooling for prompt debugging, smart context building, and an intelligent text-extraction pipeline."
+        "Tooling for prompt debugging, context building, and text extraction."
       ]
     },
     quantum: {
       kicker: "Project · New York University",
-      title: "Quantum-Classical Neural Network",
+      title: "Quantum–Classical Neural Network",
       meta: "Jan – May 2025",
       bullets: [
-        "Simulated a hybrid classical-quantum neural network measuring cancer risk over the next six years from a single low-dose CT scan.",
+        "Simulated a hybrid quantum–classical neural network estimating six-year lung-cancer risk from a single low-dose CT scan.",
         "Verified feasibility by over-fitting on a single image, given the exponential cost of operations on entangled qubits.",
         "Used Qiskit to store model weights in qubits, later used for inference."
       ]
@@ -287,7 +358,7 @@
       title: "Squaris — Spatial Packing Puzzle",
       meta: "Sept 2025",
       bullets: [
-        "Three variants — 2D square tiling, 3D polycube packing on a 4×4×4 lattice, and a Tetris-style bent-polycube mode — over a single procedural-generation kernel.",
+        "Three variants (2D square tiling, 3D polycube packing on a 4×4×4 lattice, and a Tetris-style bent-polycube mode) built on a single procedural-generation kernel.",
         "Reverse-construction generator tiles the container with seeded placements and shuffles the solution into the inventory, guaranteeing solvability with date-seeded dailies.",
         "Cube rotation group generated as the closure of three 90° axis rotations — 24 unique orientations per polycube, verified via BFS over the orientation graph.",
         "Jest suite covering generator invariants, rotation-group completeness, and anchor regressions; deployed on Vercel."
@@ -307,7 +378,7 @@
       title: "Enterprise Limit Management System",
       meta: "Jan – July 2023",
       bullets: [
-        "Calculates the exposure of individuals and groups, flagging the lending system when exposure constraints are exceeded.",
+        "Calculates the exposure of individuals and groups, flagging breaches to the lending system when exposure constraints are exceeded.",
         "Aggregated personal and transaction data for 35M+ customers; mitigates default and fraud risk across products.",
         "Stack: Java 17, Spring Boot, MySQL, Liquibase, Docker, Jenkins, ArgoCD."
       ]
@@ -331,6 +402,18 @@
         "A paired RCB + GT position ($0.75 combined, $1.00 payoff) was +EV above the fee-inclusive break-even of 78.3%.",
         "Ex post, both top seeds reached the final and RCB won — net return ~27.7%. The outcome corroborates but does not prove the decision quality."
       ]
+    },
+    tictacpaper: {
+      kicker: "Paper · Independent",
+      title: "TicTacPro: Exactly Solving a Combinatorial Piece-Placement Game and Stress-Testing Deep Q-Learning Against It",
+      meta: "July 2026",
+      bullets: [
+        "An exhaustive alpha-beta solver proves TicTacPro is a first-player win from every one of the 27 opening moves: 700M nodes searched in 246 seconds on 20 CPU cores.",
+        "Time-limited minimax self-play had first converged, deterministically, on the opposite conclusion (a second-player win) — a spurious result the exact solver refutes. Agreement among strong but budget-bounded agents can masquerade as a game-theoretic proof.",
+        "Documents a block-priority bug that recurred across nine independent code paths; the reusable fix tracks bullseye and line threats separately. Shared decision logic should be shared code.",
+        "A Dueling Double DQN (792K parameters) trained with a curriculum of rule-based opponents over 1M+ episodes on an NVIDIA GB10 DGX Spark reaches 100% against random and bullseye opponents; the curriculum lifted it from 0/20 to 40/40 against the bullseye fork.",
+        "A post-hoc audit surfaces schedule-calibration and checkpoint-selection pitfalls, reported as negative results."
+      ]
     }
   };
 
@@ -350,9 +433,8 @@
     bullets.innerHTML = '';
     (d.bullets || []).forEach(function (b) {
       var row = document.createElement('div');
-      row.setAttribute('style', 'display:flex;gap:12px;margin:0 0 12px;font-size:15px;line-height:1.6;color:#3d382e');
+      row.setAttribute('style', 'display:flex;gap:12px;margin:0 0 12px;font-size:15.5px;line-height:1.6;color:#3d382e');
       var dash = document.createElement('span');
-      dash.setAttribute('style', 'color:var(--accent)');
       dash.textContent = '—';
       var text = document.createElement('span');
       text.textContent = b;
