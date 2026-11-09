@@ -231,6 +231,13 @@
     <p style="margin:0 0 16px;font-size:15.5px;line-height:1.6;color:#3d382e;max-width:620px">Only 58 of 4,407 training studies carried radiologist labels, so the models learned from labels that LLMs extracted from the radiology reports. An ensemble of 15 EfficientNetV2-S models and a public 2.5D ConvNeXt-T reader scored 0.927 macro AUC on the private leaderboard (0.941 public), and all 15 submissions kept their order from public to private. Distillation and a validated public model, by contrast, did not transfer their local gains.</p>
     <div style="font-family:Helvetica,Arial,sans-serif;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#6a6154">Medical Imaging · Weak Supervision · Ensembling · Validation</div>
     <div style="margin-top:16px;font-size:15.5px"><a href="./rsna_paper.pdf" style="display:inline-flex;align-items:center;gap:8px;color:var(--accent);text-decoration:none;font-weight:600"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="8" y1="13" x2="16" y2="13"/><line x1="8" y1="17" x2="16" y2="17"/><line x1="8" y1="9" x2="10" y2="9"/></svg><span style="text-decoration:underline;text-underline-offset:3px">Read the paper (PDF)</span></a><span style="color:#6a6154"> · </span><span role="button" tabindex="0" data-modal="rsnapaper" style="cursor:pointer;padding:6px 0;margin:-6px 0;color:var(--accent)">View abstract <span class="arr">→</span></span></div>
+    <div style="border-top:1px solid #d9d1c0;margin-top:36px;padding-top:32px"></div>
+    <div style="font-family:Helvetica,Arial,sans-serif;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#6a6154">2026 · Independent</div>
+    <h3 style="margin:12px 0 6px;font-size:clamp(20px,3vw,32px);font-weight:400;font-style:italic;line-height:1.25">AEGIS: Learning a Size-Invariant Interceptor Swarm for Drone Defense with a Classical Allocator and One Shared PPO Policy</h3>
+    <p style="margin:0 0 14px;font-size:15.5px;color:#6f6653">Classical coordination, learned flight, and one policy for every swarm size.</p>
+    <p style="margin:0 0 16px;font-size:15.5px;line-height:1.6;color:#3d382e;max-width:620px">End-to-end multi-agent RL with team rewards stalled at swarm scale, with defenders piling onto the nearest attacker. AEGIS moves coordination into a Hungarian allocator over intercept times and trains one PPO policy, shared by every defender, on a fixed-size ego-centric observation. In simulation it wins 98–100% from 1v1 to 20v20 under hills, wind and noise, and 100% at 50v40 and outnumbered 20v40 without training at those sizes.</p>
+    <div style="font-family:Helvetica,Arial,sans-serif;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#6a6154">Multi-Agent RL · PPO · Hungarian Assignment · Sim-to-Real</div>
+    <div style="margin-top:16px;font-size:15.5px"><a href="./dronevdrone_paper.pdf" style="display:inline-flex;align-items:center;gap:8px;color:var(--accent);text-decoration:none;font-weight:600"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="8" y1="13" x2="16" y2="13"/><line x1="8" y1="17" x2="16" y2="17"/><line x1="8" y1="9" x2="10" y2="9"/></svg><span style="text-decoration:underline;text-underline-offset:3px">Read the paper (PDF)</span></a><span style="color:#6a6154"> · </span><span role="button" tabindex="0" data-modal="dronepaper" style="cursor:pointer;padding:6px 0;margin:-6px 0;color:var(--accent)">View abstract <span class="arr">→</span></span></div>
   </div>
 </section>
 
@@ -484,6 +491,19 @@
         "Every change was gated in advance on stitched 5-fold out-of-fold AUC and on the 58 gold studies. The final ensemble scored 0.927 private (0.941 public), 3,011th of 6,299 teams, against a top private score of 0.960.",
         "Private scores ran 0.014–0.020 below public with all 15 submissions in the same order (Kendall τb = 0.995), and the first-choice final was the best private entry: the gap to the top came from the approach, not from overfitting.",
         "Two local gains did not transfer: distillation on out-of-fold targets leaked the held-out folds, and a public reader whose split was re-derived and proven added +0.0069 out-of-fold but only +0.001 public and +0.002 private."
+      ]
+    },
+    dronepaper: {
+      kicker: "Paper · Independent",
+      title: "AEGIS: Learning a Size-Invariant Interceptor Swarm for Drone Defense with a Classical Allocator and One Shared PPO Policy",
+      meta: "November 2026",
+      bullets: [
+        "End-to-end multi-agent RL with team rewards stalled at swarm scale: defenders piled onto the nearest attacker, and one seven-defender run intercepted 3%. A July audit traced the failure to the task, not the learner: team rewards that paid for piling on, and outcomes far beyond the discount horizon.",
+        "AEGIS keeps learning only for flight and interception. A classical allocator assigns defenders by Hungarian matching on intercept times, re-allocating every 0.5 s and on any death or detection, and one PPO policy shared by every defender flies from a fixed-size 56-d ego-centric observation.",
+        "In simulation it wins 98–100% from 1v1 to 20v20 under hills, wind and noise, and 100% at 50v40 and outnumbered 20v40, sizes it never trained on; one checkpoint defends one to four points (95–100%).",
+        "With the same allocator, scripted flight ties the learned policy in open field, but under realism the policy lowers the breach rate in 67 of 114 entries and cuts defender losses from 17.4% to 2.5%. Reusable interceptors raised outnumbered wins from 24% to 68%.",
+        "Learned attackers found kamikaze-baiting, luring pursuers into hills (win 0.78 → 0.01); adversarial co-training shrank the exploit from 0.75 to 0.094 with no scripted regression.",
+        "A CrazyFlie 2.1 deployment maps the arena onto an 8 × 8 m lab by unit scaling alone; it is verified in software, including a 2v2 dry run, but has not yet flown."
       ]
     }
   };
